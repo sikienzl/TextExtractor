@@ -7,5 +7,5 @@
     ```apt-get install catdoc```
 - Überlegung für das Modul "docxTxt":
   http://www.commandlinefu.com/commands/view/4311/extract-plain-text-from-ms-word-docx-files
-  --> getestet in Konsole: funktioniert
+  --> getestet in Konsole: :heavy_check_mark:
 - Formatieren mit autopep8
