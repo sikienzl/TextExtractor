@@ -9,4 +9,5 @@
   http://www.commandlinefu.com/commands/view/4311/extract-plain-text-from-ms-word-docx-files
   --> getestet in Konsole: :heavy_check_mark:
 - Formatieren mit autopep8
-- PDF durchsuchen: find /media/mark/Ivonnes_Festplatte/PDF\(6524\)/ -name '*.pdf' -exec sh -c 'pdftotext "{}" - | grep --with-filename --label="{}" --color "Alex"' \; > ja.txt
+- Für PDF das Paket pdftotext installieren:
+    ```apt-get install pdftotext```
