@@ -3,19 +3,22 @@
 
 from docTxt import *
 from pdfTxt import *
+import sys
 
 class Converter:
 	def __init__(self):
 		pass
 
 	def main():
-		path = '/home/siegfried/python/converter/endungen/doc_example.doc'
+		path = sys.argv[1]		
+		#path = '/home/siegfried/python/converter/endungen/doc_example.doc'
 		filename, extension = path.split(".")
 		if extension == "doc":
-			txt = docTxt('/home/siegfried/python/converter/endungen/doc_example.doc')
+			text = docTxt(path)
 			print(txt)
 		if extension == "pdf":
-			pdf = pdfTxt('home/siegfried/python/converter/endungen/pdf_example.doc')
+			text = pdfTxt(path)
+		print(text)
 			
 
 	if __name__ =='__main__':main()
