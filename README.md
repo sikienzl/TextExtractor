@@ -41,6 +41,12 @@ Muss bug gefixt werden für python3, wenn man ```pip3 install textract``` macht.
 
 How to install textract for python3: http://www.tysonmaly.com/installing-textract-for-python-3/
 
+Fehler bei ```pip install textract``` auf Ubuntu 14.04.05-LTS VM: 
+ValueError: jpeg is required unless explicitly disabled using --disable-jpeg, aborting.
+
+Mögliche Lösung:
+```apt-get install libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk```
+
 ### Überlegungen
 ----------------
 - Verwendung dieser Bibliothek
