@@ -37,7 +37,7 @@ flac ffmpeg lame libmad0 libsox-fmt-mp3 sox```
 
 ```pip install textract```
 
-Muss bug gefixt werden für python3, wenn man pip3 install textract macht.
+Muss bug gefixt werden für python3, wenn man ```pip3 install textract``` macht.
 
 How to install textract for python3: http://www.tysonmaly.com/installing-textract-for-python-3/
 
