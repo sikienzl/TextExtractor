@@ -37,6 +37,8 @@ flac ffmpeg lame libmad0 libsox-fmt-mp3 sox```
 
 ```pip install textract```
 
+How to install textract for python3: http://www.tysonmaly.com/installing-textract-for-python-3/
+
 ### Überlegungen
 ----------------
 - Verwendung dieser Bibliothek
