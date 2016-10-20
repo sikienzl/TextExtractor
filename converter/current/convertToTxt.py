@@ -10,7 +10,7 @@ class Converter:
     def __init__(self):
         pass
 
-    def main(self):
+    def main():
         path = sys.argv[1]
         #path = '/home/siegfried/python/converter/endungen/doc_example.doc'
         filename, extension = path.split(".")
@@ -18,7 +18,7 @@ class Converter:
             text = docTxt.doc_txt(path)
         if extension == "pdf":
             text = pdfTxt.pdf_txt(path)
-            print(text)
+        print(text)
 
     if __name__ == '__main__':
         main()
