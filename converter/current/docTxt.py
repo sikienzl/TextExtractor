@@ -2,7 +2,8 @@
 
 import subprocess 
 
-def docTxt(filename):
-	process = subprocess.Popen(['catdoc','-w', filename], stdout=subprocess.PIPE)
-	process.wait()
-	return process.stdout.read()
+
+def doc_txt(filename):
+    process = subprocess.Popen(['catdoc','-w', filename], stdout=subprocess.PIPE)
+    process.wait()
+    return process.stdout.read()

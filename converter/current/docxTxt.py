@@ -2,7 +2,8 @@
 
 import subprocess
 
-def docxTxt(filename):
-	process = subprocess.Popen(["unzip", "-p", filename,"word/document.xml"], stdout=subprocess.PIPE)
-	process.wait()
-	return process.stdout.read()
+
+def docx_txt(filename):
+    process = subprocess.Popen(["unzip", "-p", filename,"word/document.xml"], stdout=subprocess.PIPE)
+    process.wait()
+    return process.stdout.read()

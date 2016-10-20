@@ -2,7 +2,8 @@
 
 import subprocess 
 
-def pdfTxt(filename):
-	process = subprocess.Popen(['pdftotext', filename,'-'], stdout=subprocess.PIPE)
-	process.wait()
-	return process.stdout.read()
+
+def pdf_txt(filename):
+    process = subprocess.Popen(["pdftotext", filename,'-'], stdout=subprocess.PIPE)
+    process.wait()
+    return process.stdout.read()
