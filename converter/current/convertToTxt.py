@@ -15,7 +15,6 @@ class Converter:
 		filename, extension = path.split(".")
 		if extension == "doc":
 			text = docTxt(path)
-			print(txt)
 		if extension == "pdf":
 			text = pdfTxt(path)
 		print(text)
