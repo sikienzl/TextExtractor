@@ -50,3 +50,4 @@ Lösung:
 ### Überlegungen
 ----------------
 - Verwendung dieser Bibliothek
+- Wechseln wieder zu Vorgehensweise 1
