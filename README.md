@@ -14,6 +14,8 @@
     ```apt-get install catdoc```
 - Für PDF das Paket pdftotext installieren:
     ```apt-get install pdftotext```
+- Unter Debian heißt das Paket "poppler-utils":
+    ```apt-get install poppler-utils```
 
 ### Überlegungen
 ---------------
