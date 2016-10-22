@@ -4,6 +4,10 @@ import subprocess
 
 
 def docx_txt(filename):
-    process = subprocess.Popen(["unzip", "-p", filename,"word/document.xml"], stdout=subprocess.PIPE)
-    process.wait()
-    return process.stdout.read()
+    try:
+        process = subprocess.Popen(["unzip", "-p", filename,"word/document.xml"], stdout=subprocess.PIPE)
+        process.wait()
+        return process.stdout.read()
+    
+    except:
+        logging.error("filed to process " + filename)

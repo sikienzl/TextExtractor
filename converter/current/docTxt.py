@@ -4,6 +4,10 @@ import subprocess
 
 
 def doc_txt(filename):
-    process = subprocess.Popen(['catdoc','-w', filename], stdout=subprocess.PIPE)
-    process.wait()
-    return process.stdout.read()
+    try:
+        process = subprocess.Popen(['catdoc','-w', filename], stdout=subprocess.PIPE)
+        process.wait()
+        return process.stdout.read()
+    
+    except:
+        logging.error("filed to process " + filename)
