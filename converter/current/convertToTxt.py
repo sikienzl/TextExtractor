@@ -16,7 +16,7 @@ class Converter:
         pass
 
     def main():
-
+        text = None
         logging.basicConfig(filename=logFileName, level=logging.INFO, format='%(asctime)s : %(levelname)s : %(message)s')
         logging.info('Started text extract')
 
