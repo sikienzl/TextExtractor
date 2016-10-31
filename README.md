@@ -28,6 +28,12 @@
     
     ```easy_install3 lxml```
 
+- Verwendung von python-docx2txt, Installation wie folgt:
+
+    ```pip3 install docx2txt```
+    
+    ```easy_install3 docx2txt```
+
 ### Überlegungen
 ---------------
 - Überlegung für das Modul "docxTxt":
