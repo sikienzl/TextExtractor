@@ -6,7 +6,7 @@
 --------------------
 - Main-File "convertToTxt" implementiert
 - Modul "docTxt" implementiert
-- Modul "docxTxt" angefangen zu implementieren
+- Modul "docxTxt" implementiert
 
 ### benötigte Installationen
 ---------------------------
