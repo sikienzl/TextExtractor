@@ -17,10 +17,15 @@
 - Unter Debian heißt das Paket "poppler-utils":
     ```apt-get install poppler-utils```
 - Probleme beim Installieren von lxml, Lösung:
+
     ```apt-get install python3-setuptools```
+    
     ```apt-get install libxml2-dev libxslt1-dev```
+    
     ```apt-get install libxslt-dev```
+    
     ```apt-get install python3-dev```
+    
     ```easy_install3 lxml```
 
 ### Überlegungen
