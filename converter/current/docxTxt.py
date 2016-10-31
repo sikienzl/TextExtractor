@@ -1,16 +1,13 @@
-""" Modul zur Extrahierung von Text aus einer .docx-Datei """
+""" Modul zur Extrahierung von Text einer .docx-Datei"""
 
-import subprocess
-
+import docx2txt
+import logging
 
 def docx_txt(filename):
-    stderr = None
+    stderr = None 
     try:
-        process = subprocess.Popen(["unzip", "-p", filename,"word/document.xml"], 
-            stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        process.wait()
-        return process.stdout.read()
-    
+        text = docx2txt.process(filename)
+        return text
     except:
         logging.error(stderr)
 	#logging.error("filed to process " + filename)

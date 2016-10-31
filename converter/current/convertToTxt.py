@@ -2,6 +2,7 @@
 """Converts any files into txt-files"""
 
 import docTxt
+import docxTxt
 import pdfTxt
 import rtfTxt
 import sys
@@ -25,6 +26,8 @@ class Converter:
         filename, extension = path.split(".")
         if extension == "doc":
             text = docTxt.doc_txt(path)
+        if extension == "docx":
+            text = docxTxt.docx_txt(path)
         if extension == "pdf":
             text = pdfTxt.pdf_txt(path)
         if extension == "rtf":
