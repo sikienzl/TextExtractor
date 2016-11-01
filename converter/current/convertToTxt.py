@@ -6,6 +6,7 @@ import docxTxt
 import pdfTxt
 import rtfTxt
 import sys
+import getopt
 import logging
 
 logFileName = 'logfile.log'
