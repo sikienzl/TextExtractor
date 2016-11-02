@@ -34,6 +34,7 @@ class Converter:
         if extension == "rtf":
             text = rtfTxt.rtf_txt(path)
         logging.info('End text extract')
+        
         print(text)
 
     if __name__ == '__main__':
