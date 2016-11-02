@@ -7,6 +7,8 @@
 - Main-File "convertToTxt" implementiert
 - Modul "docTxt" implementiert
 - Modul "docxTxt" implementiert
+- Modul "pdfTxt" implementiert
+- Modul "rtfTxt" implementiert
 
 ### benötigte Installationen
 ---------------------------
