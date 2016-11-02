@@ -14,10 +14,11 @@
 ---------------------------
 - wird das Paket catdoc benötigt; Installation unter debian/ubuntu:
     ```apt-get install catdoc```
-- Für PDF das Paket pdftotext installieren:
-    ```apt-get install pdftotext```
-- Unter Debian heißt das Paket "poppler-utils":
+- Für PDF das Paket "poppler-utils" installieren:
     ```apt-get install poppler-utils```
+- Für RTF das Paket "unrtf" installieren:
+    ```apt-get install unrtf```
+    
 - Probleme beim Installieren von lxml, Lösung:
 
     ```apt-get install python3-setuptools```
