@@ -9,6 +9,7 @@
 - Modul "docxTxt" implementiert
 - Modul "pdfTxt" implementiert
 - Modul "rtfTxt" implementiert
+- Modul "odtTxt" implementiert
 
 ### benötigte Installationen
 ---------------------------
@@ -18,6 +19,8 @@
     ```apt-get install poppler-utils```
 - Für RTF das Paket "unrtf" installieren:
     ```apt-get install unrtf```
+- Für odt das Paket "odt2txt" installieren:
+    ```apt-get install odt2txt```
     
 - Probleme beim Installieren von lxml, Lösung:
 
