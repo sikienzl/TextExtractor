@@ -9,6 +9,7 @@ def rtf_txt(filename):
         process.wait()
         text = process.stdout.read()
         #the 'split' deletes the unnessasary head information from the textfile
-        return str(text,'utf-8').split('-'*17+'\n', 1)[-1]
+        rtfString = str(text,'utf-8').split('-'*17+'\n', 1)[-1]
+        return rtfString.encode()
     except:
         logging.error("filed to process " + filename)
