@@ -35,7 +35,8 @@ class Converter:
         if extension == "odt":
             text = odtTxt.odt_txt(path)
         logging.info('End text extract')
-        print(text)
+        encodedText = text.decode('utf-8')
+        print(encodedText)
 
     if __name__ == '__main__':
         main()
