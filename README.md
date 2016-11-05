@@ -3,7 +3,7 @@
 ## alte Vorgehensweise
 ----------------------
 ### Implementierungen
---------------------
+---------------------
 - Main-File "convertToTxt" implementiert
 - Modul "docTxt" implementiert
 - Modul "docxTxt" implementiert
@@ -12,7 +12,7 @@
 - Modul "odtTxt" implementiert
 
 ### benötigte Installationen
----------------------------
+----------------------------
 - wird das Paket catdoc benötigt; Installation unter debian/ubuntu:
     ```apt-get install catdoc```
 - Für PDF das Paket "poppler-utils" installieren:
@@ -76,3 +76,13 @@ Lösung:
 ----------------
 - Verwendung dieser Bibliothek
 - Wechseln wieder zu Vorgehensweise 1
+
+## Installationskript
+---------------------
+
+### TODO-Liste
+--------------
+- Prüfung auf python-docx2txt fehlt, da die Installation über ```pip3 install doc2txt``` und ```easy_install3 doc2txt``` erfolgt
+- Kommentare fehlen
+- an einigen Stellen fehlt eine Fehlerbehandlung
+- Finally: Funktionstest ob alle Abhängigkeiten abgedeckt wurden
