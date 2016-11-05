@@ -42,6 +42,8 @@ while true
 	if [ -n "$path" ] ; then 
 		# Extract moduls.tar into Destination-Path
 		tar xfv $pathTar -C $path
+	else 
+		continue
 	fi
 	break
   done
