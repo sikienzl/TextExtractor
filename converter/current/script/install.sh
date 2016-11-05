@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Check if file not exist
 if [ ! -f "/usr/bin/dialog" ] ; then
 	apt-get install dialog
 fi
@@ -25,7 +26,7 @@ pathTar="./moduls.tar"
 while true
    do
 	path=`dialog --inputbox "Wohin sollen die Python-Scripts installiert werden?" 0 0 3>&1 1>&2 2>&3`
-
+	# Check if path not exist
 	if [ ! -d $path ] ; then
 		dialog --title "Create Path" --yesno "Soll Pfad erstellt werden?" 15 60 
 		antwort=$?
@@ -37,8 +38,9 @@ while true
 			1) continue;;
 		esac
 	fi
-	echo "$path"
+	# Check if Destination-Path-Variable not empty
 	if [ -n "$path" ] ; then 
+		# Extract moduls.tar into Destination-Path
 		tar xfv $pathTar -C $path
 	fi
 	break
