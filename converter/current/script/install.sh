@@ -26,6 +26,9 @@ pathTar="./moduls.tar"
 while true
    do
 	path=`dialog --inputbox "Wohin sollen die Python-Scripts installiert werden?" 0 0 3>&1 1>&2 2>&3`
+	respose=$?
+	case $respose in
+	  0)
 	# Check if path not exist
 	if [ ! -d $path ] ; then
 		dialog --title "Create Path" --yesno "Soll Pfad erstellt werden?" 15 60 
@@ -45,5 +48,10 @@ while true
 	else 
 		continue
 	fi
+	;;
+	  1)
+	break
+	;;
+	esac
 	break
   done
