@@ -46,7 +46,9 @@ Beispiel-Fehler:
 ```bash: ./inst.sh : /bin/sh^^M: Defekter Interpreter: Datei oder Verzeichnis nicht gefunden```
 
 Lösung:
+
 ```dos2unix```
+
 
 ### Überlegungen
 ---------------
