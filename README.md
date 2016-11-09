@@ -39,6 +39,17 @@
     ```pip3 install docx2txt```
     
     ```easy_install3 docx2txt```
+    
+### Problemlösungen
+-------------------
+Beispiel-Fehler:
+
+```bash: ./inst.sh : /bin/sh^M: Defekter Interpreter: Datei oder Verzeichnis nicht gefunden```
+
+Lösung:
+
+--> dos2unix
+
 
 ### Überlegungen
 ---------------
