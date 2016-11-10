@@ -25,6 +25,16 @@ if [ ! -f "/usr/bin/pdftotxt" ] ; then
 	apt-get install poppler-utils
 fi
 
+#checks if python-modul is installed and write the error into numpy_check
+docx2txt_check=$(python3 -c "import docx2txt" 2>&1)
+
+if [ -n "$docx2txt_check" ] ; then
+	pip3 install docx2txt
+	easy_install3 docx2txt
+fi
+
+
+
 #includes all python-scripts
 pathTar="moduls.tar"
 
