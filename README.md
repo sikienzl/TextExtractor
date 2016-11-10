@@ -53,20 +53,27 @@ Lösung:
 ### TESTS
 ---------
 
-## Funktionstest
+#### Funktionstest
 ----------------
 
-# Pythonmodule:
----------------
+##### Pythonmodule:
+-------------------
+
 docTxt.py :heavy_check_mark:
+
 docxTxt.py :heavy_check_mark:
+
 pdfTxt.py :heavy_check_mark:
+
 rtfTxt.py :heavy_check_mark:
+
 odtTxt.py :heavy_check_mark:
 
-# Bashscript:
--------------
+##### Bashscript:
+-----------------
+
 inst.sh :heavy_check_mark:
+
 ubuntu.sh :heavy_check_mark:
 
 ### Überlegungen
