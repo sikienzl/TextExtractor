@@ -59,15 +59,15 @@ Lösung:
 ##### Pythonmodule:
 -------------------
 
-docTxt.py :heavy_check_mark:
+docTxt.py :heavy_check_mark: :heavy_check_mark: 
 
-docxTxt.py :heavy_check_mark:
+docxTxt.py :heavy_check_mark: :heavy_check_mark:
 
-pdfTxt.py :heavy_check_mark:
+pdfTxt.py :heavy_check_mark: :heavy_check_mark:
 
-rtfTxt.py :heavy_check_mark:
+rtfTxt.py :heavy_check_mark: :heavy_check_mark:
 
-odtTxt.py :heavy_check_mark:
+odtTxt.py :heavy_check_mark: :heavy_check_mark:
 
 ##### Bashscript:
 -----------------
