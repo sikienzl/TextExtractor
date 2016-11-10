@@ -2,31 +2,31 @@
 
 # Check if files not exist (-f)
 if [ ! -f "/usr/bin/dialog" ] ; then
-	apt-get install dialog 
+	apt-get -y install dialog 
 fi
 
 if [ ! -f "/usr/bin/pv" ] ; then
-	apt-get install pv
+	apt-get -y install pv
 fi
 
 if [ ! -f "/usr/bin/catdoc" ] ; then
-	apt-get install catdoc
+	apt-get -y install catdoc
 fi
 
 if [ ! -f "/usr/bin/unrtf" ] ; then
-	apt-get install unrtf
+	apt-get -y install unrtf
 fi
 
 if [ ! -f "/usr/bin/odt2txt" ] ; then
-	apt-get install odt2txt
+	apt-get -y install odt2txt
 fi
 
 if [ ! -f "/usr/bin/pdftotxt" ] ; then
-	apt-get install poppler-utils
+	apt-get -y install poppler-utils
 fi
 
 if [ ! -f "/usr/bin/easy_install3" ] ; then
-	apt-get install python3-setuptools
+	apt-get -y install python3-setuptools
 fi
 
 #checks if python-modul is installed and write the error into numpy_check
