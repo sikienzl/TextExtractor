@@ -75,6 +75,10 @@ odtTxt.py :heavy_check_mark: :heavy_check_mark:
   http://www.commandlinefu.com/commands/view/4311/extract-plain-text-from-ms-word-docx-files
   --> getestet in Konsole: :heavy_check_mark:
 - Formatieren mit autopep8
+- Wohin soll Text geschrieben werden?
+- Bild-Text-Erkennung?
+- eventuelle automatisierte Tests anfertigen?
+- Exceptions eventuell anpassen?
 
 ## Installationskript
 ---------------------
