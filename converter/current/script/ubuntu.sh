@@ -21,7 +21,7 @@ if [ ! -f "/usr/bin/odt2txt" ] ; then
 	apt-get -y install odt2txt
 fi
 
-if [ ! -f "/usr/bin/pdftotxt" ] ; then
+if [ ! -f "/usr/bin/pdftotext" ] ; then
 	apt-get -y install poppler-utils
 fi
 
