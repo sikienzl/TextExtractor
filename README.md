@@ -50,6 +50,24 @@ Lösung:
 
 --> dos2unix
 
+### TESTS
+---------
+
+#### Funktionstest
+----------------
+
+##### Pythonmodule:
+-------------------
+
+docTxt.py :heavy_check_mark: :heavy_check_mark: 
+
+docxTxt.py :heavy_check_mark: :heavy_check_mark:
+
+pdfTxt.py :heavy_check_mark: :heavy_check_mark:
+
+rtfTxt.py :heavy_check_mark: :heavy_check_mark:
+
+odtTxt.py :heavy_check_mark: :heavy_check_mark:
 
 ### Überlegungen
 ---------------
@@ -93,7 +111,13 @@ Lösung:
 
 ### TODO-Liste
 --------------
-- Prüfung auf python-docx2txt fehlt, da die Installation über ```pip3 install doc2txt``` und ```easy_install3 doc2txt``` erfolgt
+- Prüfung auf python-docx2txt fehlt, da die Installation über ```pip3 install doc2txt``` und ```easy_install3 doc2txt``` erfolgt :heavy_check_mark:
 - Kommentare fehlen
 - an einigen Stellen fehlt eine Fehlerbehandlung
-- Finally: Funktionstest ob alle Abhängigkeiten abgedeckt wurden
+
+### Funktionstest
+-----------------
+
+inst.sh :heavy_check_mark: :heavy_check_mark:
+
+ubuntu.sh :heavy_check_mark: :heavy_check_mark:

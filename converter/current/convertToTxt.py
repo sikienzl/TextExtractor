@@ -20,7 +20,8 @@ class Converter:
 
     def main():
         text = None
-        logging.basicConfig(filename=logFileName, level=logging.INFO, format='%(asctime)s : %(levelname)s : %(message)s')
+        logging.basicConfig(filename=logFileName, level=logging.INFO,
+                            format='%(asctime)s : %(levelname)s : %(message)s')
         logging.info('Started text extract')
         path = sys.argv[1]
         filename, extension = path.split(".")
