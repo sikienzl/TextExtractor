@@ -13,4 +13,3 @@ def doc_txt(filename):
         return process.stdout.read()
     except:
         logging.error(stderr)
-        #logging.error("filed to process " + filename)
