@@ -1,4 +1,4 @@
-""" Modul zur Umwandlung von einer .doc zu einer .txt """
+""" Modul zur Extrahierung von Text aus einer .doc-Datei """
 
 import subprocess
 import logging

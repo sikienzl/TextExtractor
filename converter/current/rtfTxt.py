@@ -1,4 +1,4 @@
-""" Modul zur Umwandlung von einer .rtf zu einer .txt """
+""" Modul zur Extrahierung von Text aus einer .rtf-Datei """
 import subprocess
 import logging
 

@@ -1,4 +1,4 @@
-""" Modul zur Umwandlung von einer .pdf zu einer .txt """
+""" Modul zur Extrahierung von Text aus einer .pdf-Datei """
 
 import subprocess
 

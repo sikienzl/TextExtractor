@@ -1,4 +1,4 @@
-'''Modul zum extrahieren von Text aus einer .odt-Datei'''
+""" Modul zur Extrahierung von Text aus einer .odt-Datei """
 
 import subprocess
 import logging
