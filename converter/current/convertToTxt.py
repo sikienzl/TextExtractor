@@ -13,35 +13,58 @@ import os.path
 
 logFileName = 'logfile.log'
 
+def help():
+    return("arguments:\n" +
+           "-h, --help                                      show help message and exit\n" +
+           "-p [path to file]  --process [path to file]     to run the program")
 
-class Converter:
-
-    def __init__(self):
-        pass
-
-    def main():
-        text = None
-        logging.basicConfig(filename=logFileName, level=logging.INFO,
-                            format='%(asctime)s : %(levelname)s : %(message)s')
-        logging.info('Started text extract')
-        path = sys.argv[1]
-        if(os.path.isfile(path)):
-            filename, extension = path.split(".")
-            if extension == "doc":
-                text = docTxt.doc_txt(path)
-            if extension == "docx":
-                text = docxTxt.docx_txt(path)
-            if extension == "pdf":
-                text = pdfTxt.pdf_txt(path)
-            if extension == "rtf":
-                text = rtfTxt.rtf_txt(path)
-            if extension == "odt":
-                text = odtTxt.odt_txt(path)
-            logging.info('End text extract')
-            encodedText = text.decode('utf-8')
-            print(encodedText)
+def main():
+    argv = sys.argv[1:]
+    text = None
+    logging.basicConfig(filename=logFileName, level=logging.INFO,
+                        format='%(asctime)s : %(levelname)s : %(message)s')
+                        
+    if(len(sys.argv) == 1):  # if no argument
+        logging.info('No argument')
+        print("Please put a correct parameter: error \n" + help())
+    try:
+        opts, args = getopt.getopt(argv, "hp:", ['help', 'process='])
+    except getopt.GetoptError as e:
+        logging.debug(e)  # write into logfile
+        logging.info(sys.argv[1] + " is not an argument")  # write into logfile
+        print("Please put a correct parameter: error \n" + help())
+        sys.exit(2)
+    for o, a in opts:
+        if o in ("-h", "--help"):  # help
+            print(help())
+        elif o in ("-p", "--process"):  # help
+            process(sys.argv[2])
         else:
-            logging.error('File not exist')
-        
-    if __name__ == '__main__':
-        main()
+            logging.info('False argument')
+            print("Please put a correct parameter: error \n" + help())
+
+def process(path):
+    if(os.path.isfile(path)):
+        logging.info('Started text extract')
+        filename, extension = path.split(".")
+        if extension == "doc":
+            text = docTxt.doc_txt(path)
+        if extension == "docx":
+            text = docxTxt.docx_txt(path)
+        if extension == "pdf":
+            text = pdfTxt.pdf_txt(path)
+        if extension == "rtf":
+            text = rtfTxt.rtf_txt(path)
+        if extension == "odt":
+            text = odtTxt.odt_txt(path)
+        logging.info('End text extract')
+        encodedText = text.decode('utf-8')
+        print(encodedText)
+    else:
+        logging.error('File not exist')
+        print("Please put a correct parameter: error \n" + help())
+
+
+
+if __name__ == '__main__':
+    main()
