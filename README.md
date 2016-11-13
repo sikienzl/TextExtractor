@@ -79,6 +79,7 @@ odtTxt.py :heavy_check_mark: :heavy_check_mark:
 - Bild-Text-Erkennung?
 - eventuelle automatisierte Tests anfertigen?
 - Exceptions eventuell anpassen?
+- Hilfestellung in Konsole fehlt. 
 
 ## Installationskript
 ---------------------
