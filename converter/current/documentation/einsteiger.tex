@@ -176,6 +176,59 @@ rtfTxt.py       & Modul für die Dateiendung rtf        \\ \hline
 \newpage
 \subsection{Erste Schritte}
 \label{sec:first-steps}
+\subsubsection{Genereller Aufruf}
+\label{sec:first-steps-general}
+Im Allgemeinen wird das Modul wie folgt aufgerufen:
+%ersteSchritte001
+\begin{figure}[htbp]
+\includegraphics[width=1.1\textwidth]{ersteSchritte001}\par\vspace{0.25cm}
+%\caption{Aufruf der Hilfe mittels -h}
+\label{fig:ersteSchritteGeneral001}
+\end{figure}
+\newline
+Dabei sollte <PARAMETER> durch einen Parameter aus Tabelle 3 ersetzt werden. Beim Parameter -p bzw. - -process sollte dann zusätzlich <PFAD> (das hier in runden Klammern steht) durch den Pfad der Datei, aus der der Text extrahiert werden soll, ersetzt werden. 
+Außerdem ist zwingend darauf zu achten, dass das Modul mit python3 aufgerufen wird.
+\begin{table}[H]
+\begin{center}
+\label{params}
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+Parameter (kurz) & Parameter (lang) & Erklärung                                                                                                                              \\ \hline
+-h               & - -help           & Zeigt die Hilfe an                                                                                                                     \\ \hline
+-p               & - -process        & Führt die Textextrahierung durch.  \\ \hline
+\end{tabular}
+\caption{Parameterübersicht}
+\end{center}
+\end{table}
+
+Beispielaufrufe finden Sie weiter unten in diesem Kapitel. 
+\subsubsection{Extrahieren von Text}
+\label{sec:first-steps-extraction}
+
+\subsubsection{Hilfe aufrufen}
+\label{sec:first-steps-help}
+Zum Aufrufen der Hilfe einfach wie im folgenden Bild den Parameter -h bzw. - -help eingeben.
+\newline
+\begin{figure}[htbp]
+\includegraphics[width=1.1\textwidth]{ersteSchritte1}\par\vspace{0.25cm}
+%\caption{Aufruf der Hilfe mittels -h}
+\label{fig:ersteSchritte1}
+\end{figure}
+\begin{center}
+oder
+\end{center}
+\begin{figure}[htbp]
+\includegraphics[width=1.1\textwidth]{ersteSchritte2}\par\vspace{0.5cm}
+%\caption{Aufruf der Hilfe mittels - -help}
+\label{fig:ersteSchritte2}
+\end{figure}\newpage
+Die Ausgabe sollte wie folgt aussehen:
+\begin{figure}[htbp]
+\includegraphics[width=1.1\textwidth]{ersteSchritte3}\par\vspace{0.5cm}
+%\caption{Aufruf der Hilfe mittels - -help}
+\label{fig:ersteSchritte3}
+\end{figure}
 \newpage
 \section{Technischer Hintergrund}
 \label{sec:technical-background}

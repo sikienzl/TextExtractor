@@ -7,7 +7,10 @@
 \contentsline {subsection}{\numberline {2.2}Bestandteile Installationspaket}{9}
 \contentsline {subsection}{\numberline {2.3}Modulbestandteile}{9}
 \contentsline {subsection}{\numberline {2.4}Erste Schritte}{10}
-\contentsline {section}{\numberline {3}Technischer Hintergrund}{11}
-\contentsline {subsection}{\numberline {3.1}Aufbau}{11}
-\contentsline {subsection}{\numberline {3.2}Verwendete Fremdsoftware}{11}
-\contentsline {section}{\numberline {4}Kontaktdaten}{12}
+\contentsline {subsubsection}{\numberline {2.4.1}Genereller Aufruf}{10}
+\contentsline {subsubsection}{\numberline {2.4.2}Extrahieren von Text}{10}
+\contentsline {subsubsection}{\numberline {2.4.3}Hilfe aufrufen}{10}
+\contentsline {section}{\numberline {3}Technischer Hintergrund}{12}
+\contentsline {subsection}{\numberline {3.1}Aufbau}{12}
+\contentsline {subsection}{\numberline {3.2}Verwendete Fremdsoftware}{12}
+\contentsline {section}{\numberline {4}Kontaktdaten}{13}
