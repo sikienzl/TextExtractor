@@ -89,6 +89,7 @@ odtTxt.py :heavy_check_mark: :heavy_check_mark:
 - Prüfung auf python-docx2txt fehlt, da die Installation über ```pip3 install doc2txt``` und ```easy_install3 doc2txt``` erfolgt :heavy_check_mark:
 - Kommentare fehlen
 - an einigen Stellen fehlt eine Fehlerbehandlung
+- convertToTxt.py fehlt noch die Abprüfung wenn ein falscher Parameter bzw. etwas falsches eingegeben wurde.                    
 
 ### Funktionstest
 -----------------
