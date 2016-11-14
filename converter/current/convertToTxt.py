@@ -13,11 +13,6 @@ import os.path
 
 logFileName = 'logfile.log'
 
-def help():
-    return("arguments:\n" +
-           "-h, --help                                      show help message and exit\n" +
-           "-p [path to file]  --process [path to file]     to run the program")
-
 def main():
     argv = sys.argv[1:]
     text = None
@@ -30,10 +25,18 @@ def main():
     try:
         opts, args = getopt.getopt(argv, "hp:", ['help', 'process='])
     except getopt.GetoptError as e:
-        logging.debug(e)  # write into logfile
+        logging.error(e)  # write into logfile
         logging.info(sys.argv[1] + " is not an argument")  # write into logfile
         print("Please put a correct parameter: error \n" + help())
         sys.exit(2)
+    except:
+        logging.error("Unexpected error")
+        print("Unexpected error")
+
+    if len(args) is not 0:
+        logging.info(sys.argv[1] + " is not an argument")
+        print("Please put a correct parameter: error \n" + help())
+    
     for o, a in opts:
         if o in ("-h", "--help"):  # help
             print(help())
@@ -62,7 +65,13 @@ def process(path):
         print(encodedText)
     else:
         logging.error('File not exist')
-        print("Please put a correct parameter: error \n" + help())
+        print("File not exist: error \n" + help())
+
+
+def help():
+    return("arguments:\n" +
+           "-h, --help                                      show help message and exit\n" +
+           "-p [path to file]  --process [path to file]     to run the program")
 
 
 
