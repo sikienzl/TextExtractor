@@ -5,6 +5,7 @@
 \usepackage[ngerman]{babel}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{listings}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage[automark]{scrpage2}
 \usepackage[normalem]{ulem}
@@ -181,12 +182,12 @@ rtfTxt.py       & Modul für die Dateiendung rtf        \\ \hline
 Im Allgemeinen wird das Modul wie folgt aufgerufen:
 %ersteSchritte001
 \begin{figure}[htbp]
-\includegraphics[width=1.1\textwidth]{ersteSchritte001}\par\vspace{0.25cm}
+\includegraphics[width=1.0\textwidth]{ersteSchritte001}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
 \label{fig:ersteSchritteGeneral001}
 \end{figure}
 \newline
-Dabei sollte <PARAMETER> durch einen Parameter aus Tabelle 3 ersetzt werden. Beim Parameter -p bzw. - -process sollte dann zusätzlich <PFAD> (das hier in runden Klammern steht) durch den Pfad der Datei, aus der der Text extrahiert werden soll, ersetzt werden. 
+Dabei sollte <PARAMETER> durch einen Parameter aus Tabelle 3 ersetzt werden. Beim Parameter -p bzw. -{}-process sollte dann zusätzlich <PFAD> (das hier in runden Klammern steht) durch den Pfad der Datei, aus der der Text extrahiert werden soll, ersetzt werden. 
 Außerdem ist zwingend darauf zu achten, dass das Modul mit python3 aufgerufen wird.
 \begin{table}[H]
 \begin{center}
@@ -195,23 +196,45 @@ Außerdem ist zwingend darauf zu achten, dass das Modul mit python3 aufgerufen w
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Parameter (kurz) & Parameter (lang) & Erklärung                                                                                                                              \\ \hline
--h               & - -help           & Zeigt die Hilfe an                                                                                                                     \\ \hline
--p               & - -process        & Führt die Textextrahierung durch.  \\ \hline
+-h               & -{}-help           & Zeigt die Hilfe an                                                                                                                     \\ \hline
+-p               & -{}-process        & Führt die Textextrahierung durch.  \\ \hline
 \end{tabular}
 \caption{Parameterübersicht}
 \end{center}
 \end{table}
 
 Beispielaufrufe finden Sie weiter unten in diesem Kapitel. 
+\newpage
 \subsubsection{Extrahieren von Text}
 \label{sec:first-steps-extraction}
-
+Zum Extrahieren von Text tippen Sie einfach	
+python3 convertToTxt.py -p <PFAD ZUR GEWÜNSCHTEN DATEI> oder python3 convertToTxt.py -{}-process <PFAD ZUR GEWÜNSCHTEN DATEI>.
+Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wird:
+\begin{figure}[htbp]
+\includegraphics[width=1.0\textwidth]{ersteSchritteExtract001}\par\vspace{0.25cm}
+%\caption{Aufruf der Hilfe mittels -h}
+\label{fig:ersteSchritteExtract001}
+\end{figure}
+\begin{center}
+oder
+\end{center}
+\begin{figure}[htbp]
+\includegraphics[width=1.0\textwidth]{ersteSchritteExtract002}\par\vspace{0.25cm}
+%\caption{Aufruf der Hilfe mittels -h}
+\label{fig:ersteSchritteExtract002}
+\end{figure}
+\begin{figure}[htbp]
+\includegraphics[width=1.0\textwidth]{ersteSchritteExtract003}\par\vspace{0.25cm}
+\caption{Beispielausgabe von docx}
+\label{fig:ersteSchritteExtract003}
+\end{figure}
+\newpage
 \subsubsection{Hilfe aufrufen}
 \label{sec:first-steps-help}
-Zum Aufrufen der Hilfe einfach wie im folgenden Bild den Parameter -h bzw. - -help eingeben.
+Zum Aufrufen der Hilfe einfach wie im folgenden Bild den Parameter -h bzw. -{}-help eingeben.
 \newline
 \begin{figure}[htbp]
-\includegraphics[width=1.1\textwidth]{ersteSchritte1}\par\vspace{0.25cm}
+\includegraphics[width=1.0\textwidth]{ersteSchritte1}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
 \label{fig:ersteSchritte1}
 \end{figure}
@@ -219,13 +242,13 @@ Zum Aufrufen der Hilfe einfach wie im folgenden Bild den Parameter -h bzw. - -he
 oder
 \end{center}
 \begin{figure}[htbp]
-\includegraphics[width=1.1\textwidth]{ersteSchritte2}\par\vspace{0.5cm}
+\includegraphics[width=1.0\textwidth]{ersteSchritte2}\par\vspace{0.5cm}
 %\caption{Aufruf der Hilfe mittels - -help}
 \label{fig:ersteSchritte2}
-\end{figure}\newpage
+\end{figure}
 Die Ausgabe sollte wie folgt aussehen:
 \begin{figure}[htbp]
-\includegraphics[width=1.1\textwidth]{ersteSchritte3}\par\vspace{0.5cm}
+\includegraphics[width=1.0\textwidth]{ersteSchritte3}\par\vspace{0.5cm}
 %\caption{Aufruf der Hilfe mittels - -help}
 \label{fig:ersteSchritte3}
 \end{figure}
