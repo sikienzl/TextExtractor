@@ -8,9 +8,10 @@
 \contentsline {subsection}{\numberline {2.3}Modulbestandteile}{9}
 \contentsline {subsection}{\numberline {2.4}Erste Schritte}{10}
 \contentsline {subsubsection}{\numberline {2.4.1}Genereller Aufruf}{10}
-\contentsline {subsubsection}{\numberline {2.4.2}Extrahieren von Text}{11}
-\contentsline {subsubsection}{\numberline {2.4.3}Hilfe aufrufen}{12}
-\contentsline {section}{\numberline {3}Technischer Hintergrund}{13}
-\contentsline {subsection}{\numberline {3.1}Aufbau}{13}
-\contentsline {subsection}{\numberline {3.2}Verwendete Fremdsoftware}{13}
-\contentsline {section}{\numberline {4}Kontaktdaten}{14}
+\contentsline {subsubsection}{\numberline {2.4.2}Extrahieren von Text auf Konsole}{11}
+\contentsline {subsubsection}{\numberline {2.4.3}Extrahieren von Text in eine Datei}{12}
+\contentsline {subsubsection}{\numberline {2.4.4}Hilfe aufrufen}{13}
+\contentsline {section}{\numberline {3}Technischer Hintergrund}{14}
+\contentsline {subsection}{\numberline {3.1}Aufbau}{14}
+\contentsline {subsection}{\numberline {3.2}Verwendete Fremdsoftware}{14}
+\contentsline {section}{\numberline {4}Kontaktdaten}{15}
