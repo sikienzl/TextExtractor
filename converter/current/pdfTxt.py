@@ -7,8 +7,9 @@ def pdf_txt(filename):
     try:
         process = subprocess.Popen(
             ["pdftotext", filename, '-'], stdout=subprocess.PIPE)
-        process.wait()
-        return process.stdout.read()
+        text = process.stdout.read()
+        process.stdout.close()
+        return text
 
     except:
         logging.error("filed to process " + filename)
