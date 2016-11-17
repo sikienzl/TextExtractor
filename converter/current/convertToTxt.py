@@ -23,7 +23,7 @@ def main():
         logging.info('No argument')
         print("Please put a correct parameter: error \n" + help())
     try:
-        opts, args = getopt.getopt(argv, "hp:", ['help', 'process='])
+        opts, args = getopt.getopt(argv, "hp:o:", ['help', 'process=', 'output='])
     except getopt.GetoptError as e:
         logging.error(e)  # write into logfile
         logging.info(sys.argv[1] + " is not an argument")  # write into logfile
@@ -41,7 +41,10 @@ def main():
         if o in ("-h", "--help"):  # help
             print(help())
         elif o in ("-p", "--process"):  # help
-            process(sys.argv[2])
+            text = process(sys.argv[2])
+            print(text)
+        elif o in ("-o", "--output"):
+            file(text)
         else:
             logging.info('False argument')
             print("Please put a correct parameter: error \n" + help())
@@ -62,11 +65,17 @@ def process(path):
             text = odtTxt.odt_txt(path)
         logging.info('End text extract')
         encodedText = text.decode('utf-8')
-        print(encodedText)
+        return encodedText
     else:
         logging.error('File not exist')
         print("File not exist: error \n" + help())
 
+def file(text):
+    if text != None:
+        print("hallo WELT")
+    else:
+        logging.error('Correct use: convertToTxt.py -p <PATH> -o <OUTPUTPATH>')
+        print("Correct use: convertToTxt.py -p <PATH> -o <OUTPUTPATH>")
 
 def help():
     return("arguments:\n" +
