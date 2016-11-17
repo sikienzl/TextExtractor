@@ -41,7 +41,8 @@ def main():
         if o in ("-h", "--help"):  # help
             print(help())
         elif o in ("-p", "--process"):  # help
-            text = process(sys.argv[2])
+            text = process(a)
+            #text = process(sys.argv[2])
             print(text)
         elif o in ("-o", "--output"):
             file(text)
@@ -69,6 +70,7 @@ def process(path):
     else:
         logging.error('File not exist')
         print("File not exist: error \n" + help())
+        sys.exit(2)
 
 def file(text):
     if text != None:
