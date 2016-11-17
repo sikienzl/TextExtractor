@@ -23,7 +23,7 @@ def main():
         logging.info('No argument')
         print("Please put a correct parameter: error \n" + help())
     try:
-        opts, args = getopt.getopt(argv, "hp:o:", ['help', 'process=', 'output='])
+        opts, args = getopt.getopt(argv, "hvp:o:", ['help', 'process=', 'output='])
     except getopt.GetoptError as e:
         logging.error(e)  # write into logfile
         logging.info(sys.argv[1] + " is not an argument")  # write into logfile
@@ -37,18 +37,22 @@ def main():
         logging.info(sys.argv[1] + " is not an argument")
         print("Please put a correct parameter: error \n" + help())
     
+    verbose = False    
+    text = None
     for o, a in opts:
-        if o in ("-h", "--help"):  # help
+        if o == "-v":
+            verbose = True
+        elif o in ("-h", "--help"):  # help
             print(help())
         elif o in ("-p", "--process"):  # help
             text = process(a)
-            #text = process(sys.argv[2])
-            print(text)
         elif o in ("-o", "--output"):
-            file(text)
+            file(text, a)
         else:
             logging.info('False argument')
             print("Please put a correct parameter: error \n" + help())
+    if verbose == True:
+       print(text)
 
 def process(path):
     if(os.path.isfile(path)):
@@ -72,9 +76,11 @@ def process(path):
         print("File not exist: error \n" + help())
         sys.exit(2)
 
-def file(text):
-    if text != None:
-        print("hallo WELT")
+def file(text, a):
+    if text != None or a != None:
+        text_file=open(a,"w+")
+        text_file.write(text)
+        text_file.close()
     else:
         logging.error('Correct use: convertToTxt.py -p <PATH> -o <OUTPUTPATH>')
         print("Correct use: convertToTxt.py -p <PATH> -o <OUTPUTPATH>")
