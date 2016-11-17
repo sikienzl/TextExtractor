@@ -34,7 +34,6 @@ def main():
         print("Please put a correct parameter: error \n" + help())
     
     verbose = False    
-    text = None
     for o, a in opts:
         if o == "-v":
             verbose = True
@@ -48,7 +47,7 @@ def main():
             logging.info('False argument')
             print("Please put a correct parameter: error \n" + help())
     if verbose == True:
-       print(text)
+        print(text)
 
 def help():
     return("arguments:\n" +

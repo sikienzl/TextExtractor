@@ -34,7 +34,7 @@ def process(path):
         sys.exit(2)
 
 def file(text, a):
-    if text != None or a != None:
+    if text != None and a != None:
         text_file=open(a,"w+")
         text_file.write(text)
         text_file.close()
