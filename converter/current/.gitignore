@@ -1,2 +1,5 @@
 __pycache__/
 logfile.log
+.convertToTxt.py.swp
+convertToTxt.py.old
+endungen/30_riether.pdf
