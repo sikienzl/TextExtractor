@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.11.14)  18 NOV 2016 07:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.11.14)  18 NOV 2016 08:56
 entering extended mode
 **./einsteiger.tex
 (einsteiger.tex
@@ -441,32 +441,61 @@ File: ersteSchritteExtract003.png Graphic file (type png)
 Package pdftex.def Info: ersteSchritteExtract003.png used on input line 231.
 (pdftex.def)             Requested size: 448.13095pt x 71.74443pt.
  [11 <./ersteSchritteExtract001.png> <./ersteSchritteExtract002.png> <./ersteSc
-hritteExtract003.png>] [12]
-<ersteSchritte1.png, id=70, 643.6547pt x 49.68562pt>
+hritteExtract003.png>]
+<ersteSchritteExtractIntoFileWithoutConsole001.png, id=67, 584.1825pt x 22.5843
+8pt>
+File: ersteSchritteExtractIntoFileWithoutConsole001.png Graphic file (type png)
+
+ <use ersteSchritteExtractIntoFileWithoutConsole001.png>
+Package pdftex.def Info: ersteSchritteExtractIntoFileWithoutConsole001.png used
+ on input line 240.
+(pdftex.def)             Requested size: 448.13095pt x 17.32521pt.
+
+<ersteSchritteExtractIntoFileWithoutConsole002.png, id=68, 674.52pt x 15.05624p
+t>
+File: ersteSchritteExtractIntoFileWithoutConsole002.png Graphic file (type png)
+
+ <use ersteSchritteExtractIntoFileWithoutConsole002.png>
+Package pdftex.def Info: ersteSchritteExtractIntoFileWithoutConsole002.png used
+ on input line 248.
+(pdftex.def)             Requested size: 448.13095pt x 10.00307pt.
+
+<ersteSchritteExtractIntoFileWithoutConsole003.png, id=69, 315.42844pt x 77.539
+69pt>
+File: ersteSchritteExtractIntoFileWithoutConsole003.png Graphic file (type png)
+
+ <use ersteSchritteExtractIntoFileWithoutConsole003.png>
+Package pdftex.def Info: ersteSchritteExtractIntoFileWithoutConsole003.png used
+ on input line 256.
+(pdftex.def)             Requested size: 313.69029pt x 77.11708pt.
+ [12 <./ersteSchritteExtractIntoFileWithoutConsole001.png> <./ersteSchritteExtr
+actIntoFileWithoutConsole002.png> <./ersteSchritteExtractIntoFileWithoutConsole
+003.png>]
+<ersteSchritte1.png, id=76, 643.6547pt x 49.68562pt>
 File: ersteSchritte1.png Graphic file (type png)
  <use ersteSchritte1.png>
-Package pdftex.def Info: ersteSchritte1.png used on input line 244.
+Package pdftex.def Info: ersteSchritte1.png used on input line 267.
 (pdftex.def)             Requested size: 448.13095pt x 34.59395pt.
 
-<ersteSchritte2.png, id=71, 537.50812pt x 49.68562pt>
+<ersteSchritte2.png, id=77, 537.50812pt x 49.68562pt>
 File: ersteSchritte2.png Graphic file (type png)
  <use ersteSchritte2.png>
-Package pdftex.def Info: ersteSchritte2.png used on input line 252.
+Package pdftex.def Info: ersteSchritte2.png used on input line 275.
 (pdftex.def)             Requested size: 448.13095pt x 41.42404pt.
 
-<ersteSchritte3.png, id=72, 502.12593pt x 70.01157pt>
+<ersteSchritte3.png, id=78, 502.12593pt x 70.01157pt>
 File: ersteSchritte3.png Graphic file (type png)
  <use ersteSchritte3.png>
-Package pdftex.def Info: ersteSchritte3.png used on input line 258.
+Package pdftex.def Info: ersteSchritte3.png used on input line 281.
 (pdftex.def)             Requested size: 448.13095pt x 62.48634pt.
 
 [13 <./ersteSchritte1.png> <./ersteSchritte2.png> <./ersteSchritte3.png>]
 [14] [15] (einsteiger.aux) ) 
 Here is how much of TeX's memory you used:
- 6889 strings out of 493352
- 106451 string characters out of 3128575
- 264264 words of memory out of 3000000
- 10314 multiletter control sequences out of 15000+200000
+ 6907 strings out of 493352
+ 107404 string characters out of 3128575
+ 264299 words of memory out of 3000000
+ 10329 multiletter control sequences out of 15000+200000
  15405 words of font info for 36 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,10n,51p,8839b,551s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -481,9 +510,9 @@ r\jknappen\ec\dpi600\ecti1728.pk> <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\
 fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1200.pk> <C:\Users\siegfried\AppData\Loc
 al\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1728.pk><C:/Users/siegfrie
 d/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on einsteiger.pdf (15 pages, 374252 bytes).
+Output written on einsteiger.pdf (15 pages, 412538 bytes).
 PDF statistics:
- 348 PDF objects out of 1000 (max. 8388607)
+ 355 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
