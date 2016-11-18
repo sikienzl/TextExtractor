@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.11.14)  15 NOV 2016 07:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.11.14)  18 NOV 2016 07:40
 entering extended mode
 **./einsteiger.tex
 (einsteiger.tex
@@ -412,47 +412,52 @@ Package pdftex.def Info: schritt6.png used on input line 136.
 File: ersteSchritte001.png Graphic file (type png)
 
 <use ersteSchritte001.png>
-Package pdftex.def Info: ersteSchritte001.png used on input line 185.
+Package pdftex.def Info: ersteSchritte001.png used on input line 186.
 (pdftex.def)             Requested size: 448.13095pt x 20.92467pt.
- [10 <./ersteSchritte001.png>]
-<ersteSchritteExtract001.png, id=58, 530.73282pt x 45.16875pt>
+
+Overfull \hbox (13.13635pt too wide) in paragraph at lines 196--206
+ [] 
+ []
+
+[10 <./ersteSchritte001.png>]
+<ersteSchritteExtract001.png, id=58, 576.65437pt x 21.07875pt>
 File: ersteSchritteExtract001.png Graphic file (type png)
 
 <use ersteSchritteExtract001.png>
-Package pdftex.def Info: ersteSchritteExtract001.png used on input line 214.
-(pdftex.def)             Requested size: 448.13095pt x 38.13928pt.
+Package pdftex.def Info: ersteSchritteExtract001.png used on input line 218.
+(pdftex.def)             Requested size: 448.13095pt x 16.38152pt.
 
-<ersteSchritteExtract002.png, id=59, 535.2497pt x 31.61812pt>
+<ersteSchritteExtract002.png, id=59, 616.55344pt x 30.1125pt>
 File: ersteSchritteExtract002.png Graphic file (type png)
 
 <use ersteSchritteExtract002.png>
-Package pdftex.def Info: ersteSchritteExtract002.png used on input line 222.
-(pdftex.def)             Requested size: 448.13095pt x 26.47314pt.
+Package pdftex.def Info: ersteSchritteExtract002.png used on input line 226.
+(pdftex.def)             Requested size: 448.13095pt x 21.88727pt.
 
-<ersteSchritteExtract003.png, id=60, 596.98032pt x 103.13531pt>
+<ersteSchritteExtract003.png, id=60, 611.28375pt x 97.86563pt>
 File: ersteSchritteExtract003.png Graphic file (type png)
 
 <use ersteSchritteExtract003.png>
-Package pdftex.def Info: ersteSchritteExtract003.png used on input line 227.
-(pdftex.def)             Requested size: 448.13095pt x 77.42052pt.
+Package pdftex.def Info: ersteSchritteExtract003.png used on input line 231.
+(pdftex.def)             Requested size: 448.13095pt x 71.74443pt.
  [11 <./ersteSchritteExtract001.png> <./ersteSchritteExtract002.png> <./ersteSc
 hritteExtract003.png>] [12]
 <ersteSchritte1.png, id=70, 643.6547pt x 49.68562pt>
 File: ersteSchritte1.png Graphic file (type png)
  <use ersteSchritte1.png>
-Package pdftex.def Info: ersteSchritte1.png used on input line 240.
+Package pdftex.def Info: ersteSchritte1.png used on input line 244.
 (pdftex.def)             Requested size: 448.13095pt x 34.59395pt.
 
 <ersteSchritte2.png, id=71, 537.50812pt x 49.68562pt>
 File: ersteSchritte2.png Graphic file (type png)
  <use ersteSchritte2.png>
-Package pdftex.def Info: ersteSchritte2.png used on input line 248.
+Package pdftex.def Info: ersteSchritte2.png used on input line 252.
 (pdftex.def)             Requested size: 448.13095pt x 41.42404pt.
 
 <ersteSchritte3.png, id=72, 502.12593pt x 70.01157pt>
 File: ersteSchritte3.png Graphic file (type png)
  <use ersteSchritte3.png>
-Package pdftex.def Info: ersteSchritte3.png used on input line 254.
+Package pdftex.def Info: ersteSchritte3.png used on input line 258.
 (pdftex.def)             Requested size: 448.13095pt x 62.48634pt.
 
 [13 <./ersteSchritte1.png> <./ersteSchritte2.png> <./ersteSchritte3.png>]
@@ -476,9 +481,9 @@ r\jknappen\ec\dpi600\ecti1728.pk> <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\
 fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1200.pk> <C:\Users\siegfried\AppData\Loc
 al\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1728.pk><C:/Users/siegfrie
 d/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on einsteiger.pdf (15 pages, 379430 bytes).
+Output written on einsteiger.pdf (15 pages, 374252 bytes).
 PDF statistics:
- 347 PDF objects out of 1000 (max. 8388607)
+ 348 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -165,7 +165,8 @@ moduls.tar & Tar-Datei, die die Python-Module enthält                          
 \hline
 \rowcolor[HTML]{9B9B9B} 
 Datei           & Verwendung                           \\ \hline
-convertToTxt.py & Hauptdatei zur Extrahierung von Text \\ \hline
+convertToTxt.py & Datei die für das Extrahieren aufgerufen wird \\ \hline
+extractTxt.py   & Hauptdatei für die Extrahierung      \\ \hline
 docTxt.py       & Modul für die Dateiendung doc        \\ \hline
 docxTxt.py      & Modul für die Dateiendung docx       \\ \hline
 odtTxt.py       & Modul für die Dateiendung odt        \\ \hline
@@ -198,6 +199,9 @@ Außerdem ist zwingend darauf zu achten, dass das Modul mit python3 aufgerufen w
 Parameter (kurz) & Parameter (lang) & Erklärung                                                                                                                              \\ \hline
 -h               & -{}-help           & Zeigt die Hilfe an                                                                                                                     \\ \hline
 -p               & -{}-process        & Führt die Textextrahierung durch.  \\ \hline
+-v				 & ------------------ & Verbose-Mode: Gibt den Text auf Konsole aus. \\ \hline
+-o               & -{}-output         & Parameter für die Ausgabedatei.\\
+				 &					  &	Nur anwendbar mit Argument -p bzw. -{}-process \\ \hline
 \end{tabular}
 \caption{Parameterübersicht}
 \end{center}
@@ -208,7 +212,7 @@ Beispielaufrufe finden Sie weiter unten in diesem Kapitel.
 \subsubsection{Extrahieren von Text auf Konsole}
 \label{sec:first-steps-extraction-console}
 Zum Extrahieren von Text tippen Sie einfach	
-python3 convertToTxt.py -p <PFAD ZUR GEWÜNSCHTEN DATEI> oder python3 convertToTxt.py -{}-process <PFAD ZUR GEWÜNSCHTEN DATEI>.
+python3 convertToTxt.py -p <PFAD ZUR GEWÜNSCHTEN DATEI> -v oder python3 convertToTxt.py -{}-process <PFAD ZUR GEWÜNSCHTEN DATEI> -v.
 Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wird:
 \begin{figure}[htbp]
 \includegraphics[width=1.0\textwidth]{ersteSchritteExtract001}\par\vspace{0.25cm}
