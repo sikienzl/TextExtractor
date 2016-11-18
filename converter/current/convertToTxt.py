@@ -47,13 +47,17 @@ def main():
             logging.info('False argument')
             print("Please put a correct parameter: error \n" + help())
     if verbose == True:
-        print(text)
+        if text != None:
+            print(text)
+        else:
+            print(help())
 
 def help():
     return("arguments:\n" +
-           "-h, --help                                               show help message and exit\n" +
+           "-h,                      --help                          show help message and exit\n" +
            "-p [path to file]        --process [path to file]        to run the program\n" +
-           "-o [path to output-file] --output  [path to output-file] to extract text into file (works only with the argument -p)\n" +
+           "-o [path to output-file] --output  [path to output-file] to extract text into file \n" +
+           "                                                         (works only with the argument -p)\n" +
            "-v                                                       verbose-Mode")
 
 if __name__ == '__main__':
