@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.11.14)  18 NOV 2016 14:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.11.14)  18 NOV 2016 17:51
 entering extended mode
 **./einsteiger.tex
 (einsteiger.tex
@@ -537,31 +537,36 @@ Overfull \hbox (44.81583pt too wide) in paragraph at lines 352--352
  []
 
 [14 <./ersteSchritteHilfe1.png> <./ersteSchritteHilfe2.png> <./ersteSchritteHil
-fe3.png>] [15] [16] (einsteiger.aux) ) 
+fe3.png>]
+Overfull \hbox (31.55255pt too wide) in paragraph at lines 365--375
+ [][] 
+ []
+
+[15] [16] (einsteiger.aux) ) 
 Here is how much of TeX's memory you used:
- 7360 strings out of 493352
- 112994 string characters out of 3128575
- 295570 words of memory out of 3000000
- 10769 multiletter control sequences out of 15000+200000
+ 7362 strings out of 493352
+ 113066 string characters out of 3128575
+ 295594 words of memory out of 3000000
+ 10771 multiletter control sequences out of 15000+200000
  15718 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,10n,51p,8839b,1145s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\siegfried\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk> <C:\Users\siegfried\AppDat
-a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk> <C:\Users\si
-egfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1200.pk
-> <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
-00\ecrm1200.pk> <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
-nappen\ec\dpi600\ecsx1728.pk> <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\font
-s\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\siegfried\AppData\Local\M
-iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1728.pk> <C:\Users\siegfried\A
-ppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1200.pk> <C:\Use
-rs\siegfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc17
-28.pk><C:/Users/siegfried/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb>
-Output written on einsteiger.pdf (16 pages, 352892 bytes).
+ <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk> <C:\Users\siegfried\AppData\Local\Mi
+KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk> <C:\Users\siegfried\Ap
+pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1200.pk> <C:\User
+s\siegfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm120
+0.pk> <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
+dpi600\ecsx1728.pk> <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\
+fonts\pk\ljfour\jknappen\ec\dpi600\ecti1728.pk> <C:\Users\siegfried\AppData\Loc
+al\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1200.pk> <C:\Users\siegfri
+ed\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1728.pk><C:/
+Users/siegfried/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb>
+Output written on einsteiger.pdf (16 pages, 354902 bytes).
 PDF statistics:
- 399 PDF objects out of 1000 (max. 8388607)
+ 401 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

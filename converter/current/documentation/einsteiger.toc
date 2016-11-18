@@ -13,6 +13,7 @@
 \contentsline {subsubsection}{\numberline {2.4.4}Extrahieren von Text in eine Datei mit Konsolenausgabe}{13}
 \contentsline {subsubsection}{\numberline {2.4.5}Hilfe aufrufen}{14}
 \contentsline {section}{\numberline {3}Technischer Hintergrund}{15}
-\contentsline {subsection}{\numberline {3.1}Aufbau}{15}
-\contentsline {subsection}{\numberline {3.2}Verwendete Fremdsoftware}{15}
+\contentsline {subsection}{\numberline {3.1}Verwendete Fremdsoftware}{15}
+\contentsline {subsection}{\numberline {3.2}Aufbau}{15}
+\contentsline {subsubsection}{\numberline {3.2.1}convertToTxt.py}{15}
 \contentsline {section}{\numberline {4}Kontaktdaten}{16}

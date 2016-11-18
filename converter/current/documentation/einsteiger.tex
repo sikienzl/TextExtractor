@@ -356,10 +356,32 @@ Die Ausgabe sollte wie folgt aussehen:
 \newpage
 \section{Technischer Hintergrund}
 \label{sec:technical-background}
+\subsection{Verwendete Fremdsoftware}
+\label{sec:technical-background-additional-software}
+\begin{table}[H]
+\centering
+
+\label{additional-software-table}
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+Datiename  & verwendete Zusatzsoftware & {\color[HTML]{000000} Entwicklerwebseite}     \\ \hline
+docTxt.py  & catdoc                    & http://freecode.com/projects/catdoc           \\ \hline
+docxTxt.py & Python-Modul docx2txt     & http://docx2txt.sourceforge.net/              \\ \hline
+pdfTxt.py  & pdftotext                 & https://poppler.freedesktop.org/              \\ \hline
+odtTxt.py  & odt2txt                   & https://github.com/dstosberg/odt2txt          \\ \hline
+rtfTxt.py  & unrtf                     & https://www.gnu.org/software/unrtf/unrtf.html \\ \hline
+\end{tabular}
+\caption{Auflistung der verwendeten Software}
+\end{table}
 \subsection{Aufbau}
 \label{sec:technical-background-aufbau}
-\subsection{Verwendete Fremdsoftware}
-\label{sec:technical-background-fremdsoftware}
+Wie schon aus der Tabelle in Kapitel \ref{modulbestandteil} zu sehen ist, besteht das Projekt aus einer Hauptdatei convertToTxt.py die aufgerufen wird, einer Hilfsdatei extractTxt.py in die die Programmlogik ausgelagert wurde und den einzelnen Modulen.
+Im weiteren werden die einzelnen Dateien technisch erläutert.
+\subsubsection{convertToTxt.py}
+\label{sec:technical-background-convertToTxt}
+Die convertToTxt.py nimmt alle Anfragen entgegen und beinhaltet die einzelnen Argumente sowie die Hilfe-Funktion.
+Die Verarbeitung der Argumente und Optionen wurden mittels dem Modul getopt realisert.
 \newpage
 \section{Kontaktdaten}
 \label{sec:kontaktdaten}
