@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.11.14)  18 NOV 2016 09:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.11.14)  18 NOV 2016 12:58
 entering extended mode
 **./einsteiger.tex
 (einsteiger.tex
@@ -420,19 +420,19 @@ Overfull \hbox (13.13635pt too wide) in paragraph at lines 196--206
  []
 
 [10 <./ersteSchritte001.png>]
-<ersteSchritteExtract001.png, id=58, 576.65437pt x 21.07875pt>
+<ersteSchritteExtract001.png, id=58, 350.81062pt x 20.32594pt>
 File: ersteSchritteExtract001.png Graphic file (type png)
 
 <use ersteSchritteExtract001.png>
 Package pdftex.def Info: ersteSchritteExtract001.png used on input line 218.
-(pdftex.def)             Requested size: 448.13095pt x 16.38152pt.
+(pdftex.def)             Requested size: 448.13095pt x 25.96654pt.
 
-<ersteSchritteExtract002.png, id=59, 616.55344pt x 30.1125pt>
+<ersteSchritteExtract002.png, id=59, 305.64188pt x 26.34843pt>
 File: ersteSchritteExtract002.png Graphic file (type png)
 
 <use ersteSchritteExtract002.png>
 Package pdftex.def Info: ersteSchritteExtract002.png used on input line 226.
-(pdftex.def)             Requested size: 448.13095pt x 21.88727pt.
+(pdftex.def)             Requested size: 448.13095pt x 38.6336pt.
 
 <ersteSchritteExtract003.png, id=60, 611.28375pt x 97.86563pt>
 File: ersteSchritteExtract003.png Graphic file (type png)
@@ -442,23 +442,23 @@ Package pdftex.def Info: ersteSchritteExtract003.png used on input line 231.
 (pdftex.def)             Requested size: 448.13095pt x 71.74443pt.
  [11 <./ersteSchritteExtract001.png> <./ersteSchritteExtract002.png> <./ersteSc
 hritteExtract003.png>]
-<ersteSchritteExtractIntoFileWithoutConsole001.png, id=67, 584.1825pt x 22.5843
-8pt>
+<ersteSchritteExtractIntoFileWithoutConsole001.png, id=67, 353.06906pt x 21.831
+56pt>
 File: ersteSchritteExtractIntoFileWithoutConsole001.png Graphic file (type png)
 
  <use ersteSchritteExtractIntoFileWithoutConsole001.png>
 Package pdftex.def Info: ersteSchritteExtractIntoFileWithoutConsole001.png used
  on input line 240.
-(pdftex.def)             Requested size: 448.13095pt x 17.32521pt.
+(pdftex.def)             Requested size: 448.13095pt x 27.70976pt.
 
-<ersteSchritteExtractIntoFileWithoutConsole002.png, id=68, 674.52pt x 15.05624p
-t>
+<ersteSchritteExtractIntoFileWithoutConsole002.png, id=68, 441.14813pt x 14.303
+44pt>
 File: ersteSchritteExtractIntoFileWithoutConsole002.png Graphic file (type png)
 
  <use ersteSchritteExtractIntoFileWithoutConsole002.png>
 Package pdftex.def Info: ersteSchritteExtractIntoFileWithoutConsole002.png used
  on input line 248.
-(pdftex.def)             Requested size: 448.13095pt x 10.00307pt.
+(pdftex.def)             Requested size: 448.13095pt x 14.53036pt.
 
 <ersteSchritteExtractIntoFileWithoutConsole003.png, id=69, 315.42844pt x 77.539
 69pt>
@@ -471,21 +471,21 @@ Package pdftex.def Info: ersteSchritteExtractIntoFileWithoutConsole003.png used
  [12 <./ersteSchritteExtractIntoFileWithoutConsole001.png> <./ersteSchritteExtr
 actIntoFileWithoutConsole002.png> <./ersteSchritteExtractIntoFileWithoutConsole
 003.png>]
-<ersteSchritteExtractIntoFileWithConsole001.png, id=76, 604.50844pt x 15.80907p
+<ersteSchritteExtractIntoFileWithConsole001.png, id=76, 378.66469pt x 15.80907p
 t>
 File: ersteSchritteExtractIntoFileWithConsole001.png Graphic file (type png)
  <use ersteSchritteExtractIntoFileWithConsole001.png>
 Package pdftex.def Info: ersteSchritteExtractIntoFileWithConsole001.png used on
  input line 265.
-(pdftex.def)             Requested size: 448.13095pt x 11.71948pt.
+(pdftex.def)             Requested size: 448.13095pt x 18.7095pt.
 
-<ersteSchritteExtractIntoFileWithConsole002.png, id=77, 682.04813pt x 15.05624p
+<ersteSchritteExtractIntoFileWithConsole002.png, id=77, 456.20438pt x 20.32594p
 t>
 File: ersteSchritteExtractIntoFileWithConsole002.png Graphic file (type png)
  <use ersteSchritteExtractIntoFileWithConsole002.png>
 Package pdftex.def Info: ersteSchritteExtractIntoFileWithConsole002.png used on
  input line 273.
-(pdftex.def)             Requested size: 448.13095pt x 9.89256pt.
+(pdftex.def)             Requested size: 448.13095pt x 19.96672pt.
 File: ersteSchritteExtractIntoFileWithoutConsole003.png Graphic file (type png)
 
 
@@ -514,31 +514,27 @@ File: ersteSchritte3.png Graphic file (type png)
 Package pdftex.def Info: ersteSchritte3.png used on input line 305.
 (pdftex.def)             Requested size: 448.13095pt x 62.48634pt.
  [14 <./ersteSchritte1.png> <./ersteSchritte2.png> <./ersteSchritte3.png>] [15]
- [16] (einsteiger.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ [16] (einsteiger.aux) ) 
 Here is how much of TeX's memory you used:
  6920 strings out of 493352
  108036 string characters out of 3128575
- 264325 words of memory out of 3000000
+ 264338 words of memory out of 3000000
  10340 multiletter control sequences out of 15000+200000
  15405 words of font info for 36 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,10n,51p,8839b,551s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi
-600\ecsx1440.pk> <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
-knappen\ec\dpi600\ecsx1200.pk> <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\fon
-ts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\siegfried\AppData\Local\
-MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1728.pk> <C:\Users\siegfried\
-AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Us
-ers\siegfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1
-728.pk> <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
-c\dpi600\ecxc1200.pk> <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\eccc1728.pk><C:/Users/siegfried/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on einsteiger.pdf (16 pages, 422297 bytes).
+ <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecsx1440.pk> <C:\Users\siegfried\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1200.pk> <C:\Users\siegfried\AppDat
+a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\si
+egfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1728.pk
+> <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
+00\ecrm1440.pk> <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
+nappen\ec\dpi600\ecti1728.pk> <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\font
+s\pk\ljfour\jknappen\ec\dpi600\ecxc1200.pk> <C:\Users\siegfried\AppData\Local\M
+iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1728.pk><C:/Users/siegfried/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on einsteiger.pdf (16 pages, 399760 bytes).
 PDF statistics:
  364 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
