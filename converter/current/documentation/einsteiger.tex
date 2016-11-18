@@ -9,11 +9,26 @@
 \usepackage[table,xcdraw]{xcolor}
 \usepackage[automark]{scrpage2}
 \usepackage[normalem]{ulem}
+\usepackage{listings}
 \useunder{\uline}{\ul}{}
 \pagestyle{scrheadings}
 \clearscrheadfoot
 \ifoot[]{\author}
 \ofoot[]{\pagemark}
+\lstset{basicstyle=\ttfamily,
+showstringspaces=false,
+commentstyle=\color{red},
+keywordstyle=\color{blue},
+breaklines=true,
+literate=%
+{Ö}{{\"O}}1
+{Ä}{{\"A}}1
+{Ü}{{\"U}}1
+{ß}{{\ss}}2
+{ü}{{\"u}}1
+{ä}{{\"a}}1
+{ö}{{\"o}}1
+}
 
 %\title{Modul zum Import verschiedener Dateiformate}
 %\author{Mark Unger und Siegfried Kienzle}
@@ -189,7 +204,7 @@ Im Allgemeinen wird das Modul wie folgt aufgerufen:
 \label{fig:ersteSchritteGeneral001}
 \end{figure}
 \newline
-Dabei sollte <PARAMETER> durch einen Parameter aus Tabelle 3 ersetzt werden. Beim Parameter -p bzw. -{}-process sollte dann zusätzlich <PFAD> (das hier in runden Klammern steht) durch den Pfad der Datei, aus der der Text extrahiert werden soll, ersetzt werden. 
+Dabei sollte <PARAMETER> durch Parameter aus Tabelle 3 ersetzt werden. Bei  den Parametern -p bzw. -{}-process sowie bei -o bzw. -{}-output sollte dann zusätzlich <PFAD> (das hier in runden Klammern steht) durch den Pfad der Datei, aus der der Text extrahiert werden soll, ersetzt werden. 
 Außerdem ist zwingend darauf zu achten, dass das Modul mit python3 aufgerufen wird.
 \begin{table}[H]
 \begin{center}
@@ -213,7 +228,15 @@ Beispielaufrufe finden Sie weiter unten in diesem Kapitel.
 \subsubsection{Extrahieren von Text auf Konsole}
 \label{sec:first-steps-extraction-console}
 Zum Extrahieren von Text tippen Sie einfach	
-python3 convertToTxt.py -p <PFAD ZUR GEWÜNSCHTEN DATEI> -v oder python3 convertToTxt.py -{}-process <PFAD ZUR GEWÜNSCHTEN DATEI> -v.
+
+\begin{lstlisting}[language=bash]
+python3 convertToTxt.py -p <DATEIPFAD> -v 
+\end{lstlisting}\begin{center}
+oder 
+\end{center}
+\begin{lstlisting}[language=bash]
+python3 convertToTxt.py --process <DATEIPFAD> -v
+\end{lstlisting}
 Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wird:
 \begin{figure}[htbp]
 \includegraphics[width=1.0\textwidth]{ersteSchritteExtract001}\par\vspace{0.25cm}
@@ -236,7 +259,17 @@ oder
 \newpage
 \subsubsection{Extrahieren von Text in eine Datei ohne Konsolenausgabe}
 \label{sec:first-steps-extraction-file-without}
-Zum Extrahieren von Text in eine Datei, ohne dabei den Text auf die Konsole auszugeben, tippen Sie einfach python3 convertToTxt.py -p <PFAD ZUR GEWÜNSCHTEN DATEI> -o <AUSGABEDATEI> oder python3 convertToTxt.py -{}-process <PFAD ZUR GEWÜNSCHTEN DATEI> -{}-output <AUSGABEDATEI>. Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wird:
+Zum Extrahieren von Text in eine Datei, ohne dabei den Text auf die Konsole auszugeben, tippen Sie einfach 
+\begin{lstlisting}[language=bash]
+python3 convertToTxt.py -p <DATEIPFAD> -o <AUSGABEDATEI>
+\end{lstlisting}
+\begin{center}
+oder
+\end{center}
+\begin{lstlisting}[language=bash]
+python3 convertToTxt.py --process <DATEIPFAD> --output <AUSGABEDATEI>
+\end{lstlisting} 
+Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wird:
 \begin{figure}[htbp]
 \includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithoutConsole001}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
@@ -261,7 +294,17 @@ oder
 \newpage
 \subsubsection{Extrahieren von Text in eine Datei mit Konsolenausgabe}
 \label{sec:first-steps-extraction-file-with}
-Zum Extrahieren von Text in eine Datei mit Konsolenausgabe, tippen Sie einfach python3 convertToTxt.py -p <PFAD ZUR GEWÜNSCHTEN DATEI> -o <AUSGABEDATEI> -v oder python3 convertToTxt.py -{}-process <PFAD ZUR GEWÜNSCHTEN DATEI> -{}-output <AUSGABEDATEI> -v. Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wird:
+Zum Extrahieren von Text in eine Datei mit Konsolenausgabe, tippen Sie einfach 
+\begin{lstlisting}[language=bash]
+python3 convertToTxt.py -p <DATEIPFAD> -o <AUSGABEDATEI> -v
+\end{lstlisting}
+\begin{center}
+oder
+\end{center}
+\begin{lstlisting}[language=bash] 
+python3 convertToTxt.py --process <DATEIPFAD> --output <AUSGABEDATEI> -v
+\end{lstlisting}
+ Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wird:
 \begin{figure}[htbp]
 \includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithConsole001}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}

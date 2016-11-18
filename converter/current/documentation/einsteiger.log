@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.11.14)  18 NOV 2016 13:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.11.14)  18 NOV 2016 14:29
 entering extended mode
 **./einsteiger.tex
 (einsteiger.tex
@@ -301,18 +301,18 @@ Package: ulem 2012/05/18
 ) (einsteiger.aux)
 \openout1 = `einsteiger.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
 
 ("C:\Users\siegfried\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\ucsencs.de
 f"
@@ -337,7 +337,7 @@ f.mkii"
  <HTWG.jpg, id=1, 227.6505pt x 70.1019pt>
 File: HTWG.jpg Graphic file (type jpg)
  <use HTWG.jpg>
-Package pdftex.def Info: HTWG.jpg used on input line 28.
+Package pdftex.def Info: HTWG.jpg used on input line 43.
 (pdftex.def)             Requested size: 224.06548pt x 68.99995pt.
 
 ("C:\Users\siegfried\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-0.def"
@@ -346,65 +346,65 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 
 {C:/Users/siegfried/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./HTWG.
 jpg>]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 45.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 60.
 
 ("C:\Users\siegfried\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmss.fd
 "
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 51.
+(Font)              <12> on input line 66.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 51.
+(Font)              <8> on input line 66.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 51.
+(Font)              <6> on input line 66.
  [2] (einsteiger.toc)
 \tf@toc=\write3
 \openout3 = `einsteiger.toc'.
 
  [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 63.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 78.
 
 ("C:\Users\siegfried\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd
 "
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 63.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 78.
  [4] <schritt1.png, id=24, 540.51938pt x 85.82062pt>
 File: schritt1.png Graphic file (type png)
  <use schritt1.png>
-Package pdftex.def Info: schritt1.png used on input line 89.
+Package pdftex.def Info: schritt1.png used on input line 104.
 (pdftex.def)             Requested size: 448.13095pt x 71.15381pt.
 
 [5 <./schritt1.png>] <schritt2.png, id=30, 577.15625pt x 380.42125pt>
 File: schritt2.png Graphic file (type png)
 
 <use schritt2.png>
-Package pdftex.def Info: schritt2.png used on input line 103.
+Package pdftex.def Info: schritt2.png used on input line 118.
 (pdftex.def)             Requested size: 268.8813pt x 177.23653pt.
  <schritt3.png, id=31, 395.97937pt x 283.81032pt>
 File: schritt3.png Graphic file (type png)
 
 <use schritt3.png>
-Package pdftex.def Info: schritt3.png used on input line 109.
+Package pdftex.def Info: schritt3.png used on input line 124.
 (pdftex.def)             Requested size: 268.8813pt x 192.71996pt.
  [6 <./schritt2.png> <./schritt3.png>]
 <schritt4.png, id=37, 690.58pt x 417.56pt>
 File: schritt4.png Graphic file (type png)
  <use schritt4.png>
-Package pdftex.def Info: schritt4.png used on input line 119.
+Package pdftex.def Info: schritt4.png used on input line 134.
 (pdftex.def)             Requested size: 448.13095pt x 270.96477pt.
 
 <schritt5.png, id=38, 801.99625pt x 451.6875pt>
 File: schritt5.png Graphic file (type png)
  <use schritt5.png>
-Package pdftex.def Info: schritt5.png used on input line 127.
+Package pdftex.def Info: schritt5.png used on input line 142.
 (pdftex.def)             Requested size: 358.50612pt x 201.91351pt.
  [7 <./schritt4.png>] <schritt6.png, id=44, 596.2275pt x 263.98625pt>
 File: schritt6.png Graphic file (type png)
  <use schritt6.png>
-Package pdftex.def Info: schritt6.png used on input line 136.
+Package pdftex.def Info: schritt6.png used on input line 151.
 (pdftex.def)             Requested size: 358.50612pt x 158.73132pt.
 
 [8 <./schritt5.png> <./schritt6.png>] [9]
@@ -412,141 +412,156 @@ Package pdftex.def Info: schritt6.png used on input line 136.
 File: ersteSchritte001.png Graphic file (type png)
 
 <use ersteSchritte001.png>
-Package pdftex.def Info: ersteSchritte001.png used on input line 187.
+Package pdftex.def Info: ersteSchritte001.png used on input line 202.
 (pdftex.def)             Requested size: 313.69029pt x 26.93866pt.
 
-Overfull \hbox (13.13635pt too wide) in paragraph at lines 197--207
+Overfull \hbox (13.13635pt too wide) in paragraph at lines 212--222
  [] 
  []
 
 [10 <./ersteSchritte001.png>]
-<ersteSchritteExtract001.png, id=58, 350.81062pt x 20.32594pt>
+("C:\Users\siegfried\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstla
+ng1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+("C:\Users\siegfried\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstla
+ng1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 232.
+
+
+("C:\Users\siegfried\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd
+"
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) <ersteSchritteExtract001.png, id=58, 350.81062pt x 20.32594pt>
 File: ersteSchritteExtract001.png Graphic file (type png)
 
 <use ersteSchritteExtract001.png>
-Package pdftex.def Info: ersteSchritteExtract001.png used on input line 219.
+Package pdftex.def Info: ersteSchritteExtract001.png used on input line 242.
 (pdftex.def)             Requested size: 448.13095pt x 25.96654pt.
 
 <ersteSchritteExtract002.png, id=59, 305.64188pt x 26.34843pt>
 File: ersteSchritteExtract002.png Graphic file (type png)
 
 <use ersteSchritteExtract002.png>
-Package pdftex.def Info: ersteSchritteExtract002.png used on input line 227.
+Package pdftex.def Info: ersteSchritteExtract002.png used on input line 250.
 (pdftex.def)             Requested size: 448.13095pt x 38.6336pt.
 
 <ersteSchritteExtract003.png, id=60, 440.39531pt x 60.97781pt>
 File: ersteSchritteExtract003.png Graphic file (type png)
 
 <use ersteSchritteExtract003.png>
-Package pdftex.def Info: ersteSchritteExtract003.png used on input line 232.
+Package pdftex.def Info: ersteSchritteExtract003.png used on input line 255.
 (pdftex.def)             Requested size: 448.13095pt x 62.05138pt.
  [11 <./ersteSchritteExtract001.png> <./ersteSchritteExtract002.png> <./ersteSc
 hritteExtract003.png>]
-<ersteSchritteExtractIntoFileWithoutConsole001.png, id=67, 353.06906pt x 21.831
+<ersteSchritteExtractIntoFileWithoutConsole001.png, id=68, 353.06906pt x 21.831
 56pt>
 File: ersteSchritteExtractIntoFileWithoutConsole001.png Graphic file (type png)
 
  <use ersteSchritteExtractIntoFileWithoutConsole001.png>
 Package pdftex.def Info: ersteSchritteExtractIntoFileWithoutConsole001.png used
- on input line 241.
+ on input line 274.
 (pdftex.def)             Requested size: 448.13095pt x 27.70976pt.
 
-<ersteSchritteExtractIntoFileWithoutConsole002.png, id=68, 441.14813pt x 14.303
+<ersteSchritteExtractIntoFileWithoutConsole002.png, id=69, 441.14813pt x 14.303
 44pt>
 File: ersteSchritteExtractIntoFileWithoutConsole002.png Graphic file (type png)
 
  <use ersteSchritteExtractIntoFileWithoutConsole002.png>
 Package pdftex.def Info: ersteSchritteExtractIntoFileWithoutConsole002.png used
- on input line 249.
+ on input line 282.
 (pdftex.def)             Requested size: 448.13095pt x 14.53036pt.
 
-<ersteSchritteExtractIntoFileWithoutConsole003.png, id=69, 54.9553pt x 12.045pt
+<ersteSchritteExtractIntoFileWithoutConsole003.png, id=70, 54.9553pt x 12.045pt
 >
 File: ersteSchritteExtractIntoFileWithoutConsole003.png Graphic file (type png)
 
  <use ersteSchritteExtractIntoFileWithoutConsole003.png>
 Package pdftex.def Info: ersteSchritteExtractIntoFileWithoutConsole003.png used
- on input line 257.
+ on input line 290.
 (pdftex.def)             Requested size: 89.62482pt x 19.64435pt.
  [12 <./ersteSchritteExtractIntoFileWithoutConsole001.png> <./ersteSchritteExtr
 actIntoFileWithoutConsole002.png> <./ersteSchritteExtractIntoFileWithoutConsole
 003.png>]
-<ersteSchritteExtractIntoFileWithConsole001.png, id=76, 378.66469pt x 15.80907p
+<ersteSchritteExtractIntoFileWithConsole001.png, id=77, 378.66469pt x 15.80907p
 t>
 File: ersteSchritteExtractIntoFileWithConsole001.png Graphic file (type png)
  <use ersteSchritteExtractIntoFileWithConsole001.png>
 Package pdftex.def Info: ersteSchritteExtractIntoFileWithConsole001.png used on
- input line 266.
+ input line 309.
 (pdftex.def)             Requested size: 448.13095pt x 18.7095pt.
 
-<ersteSchritteExtractIntoFileWithConsole002.png, id=77, 456.20438pt x 20.32594p
+<ersteSchritteExtractIntoFileWithConsole002.png, id=78, 456.20438pt x 20.32594p
 t>
 File: ersteSchritteExtractIntoFileWithConsole002.png Graphic file (type png)
  <use ersteSchritteExtractIntoFileWithConsole002.png>
 Package pdftex.def Info: ersteSchritteExtractIntoFileWithConsole002.png used on
- input line 274.
+ input line 317.
 (pdftex.def)             Requested size: 448.13095pt x 19.96672pt.
 
-<ersteSchritteExtractIntoFileWithConsole003.png, id=78, 440.39531pt x 60.97781p
+<ersteSchritteExtractIntoFileWithConsole003.png, id=79, 440.39531pt x 60.97781p
 t>
 File: ersteSchritteExtractIntoFileWithConsole003.png Graphic file (type png)
  <use ersteSchritteExtractIntoFileWithConsole003.png>
 Package pdftex.def Info: ersteSchritteExtractIntoFileWithConsole003.png used on
- input line 282.
+ input line 325.
 (pdftex.def)             Requested size: 448.13095pt x 62.05138pt.
  [13 <./ersteSchritteExtractIntoFileWithConsole001.png> <./ersteSchritteExtract
 IntoFileWithConsole002.png> <./ersteSchritteExtractIntoFileWithConsole003.png>]
 
-<ersteSchritteHilfe1.png, id=86, 174.6525pt x 36.88782pt>
+<ersteSchritteHilfe1.png, id=87, 174.6525pt x 36.88782pt>
 File: ersteSchritteHilfe1.png Graphic file (type png)
 
 <use ersteSchritteHilfe1.png>
-Package pdftex.def Info: ersteSchritteHilfe1.png used on input line 293.
+Package pdftex.def Info: ersteSchritteHilfe1.png used on input line 336.
 (pdftex.def)             Requested size: 179.24963pt x 37.86089pt.
 
-<ersteSchritteHilfe2.png, id=87, 194.22563pt x 27.10126pt>
+<ersteSchritteHilfe2.png, id=88, 194.22563pt x 27.10126pt>
 File: ersteSchritteHilfe2.png Graphic file (type png)
 
 <use ersteSchritteHilfe2.png>
-Package pdftex.def Info: ersteSchritteHilfe2.png used on input line 302.
+Package pdftex.def Info: ersteSchritteHilfe2.png used on input line 345.
 (pdftex.def)             Requested size: 224.06548pt x 31.26584pt.
 
-<ersteSchritteHilfe3.png, id=88, 547.2947pt x 75.28125pt>
+<ersteSchritteHilfe3.png, id=89, 547.2947pt x 75.28125pt>
 File: ersteSchritteHilfe3.png Graphic file (type png)
 
 <use ersteSchritteHilfe3.png>
-Package pdftex.def Info: ersteSchritteHilfe3.png used on input line 309.
+Package pdftex.def Info: ersteSchritteHilfe3.png used on input line 352.
 (pdftex.def)             Requested size: 492.94678pt x 67.80647pt.
 
-Overfull \hbox (44.81583pt too wide) in paragraph at lines 309--309
+Overfull \hbox (44.81583pt too wide) in paragraph at lines 352--352
  [][] 
  []
 
 [14 <./ersteSchritteHilfe1.png> <./ersteSchritteHilfe2.png> <./ersteSchritteHil
 fe3.png>] [15] [16] (einsteiger.aux) ) 
 Here is how much of TeX's memory you used:
- 6925 strings out of 493352
- 108370 string characters out of 3128575
- 264338 words of memory out of 3000000
- 10344 multiletter control sequences out of 15000+200000
- 15405 words of font info for 36 fonts, out of 3000000 for 9000
+ 7360 strings out of 493352
+ 112994 string characters out of 3128575
+ 295570 words of memory out of 3000000
+ 10769 multiletter control sequences out of 15000+200000
+ 15718 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,10n,51p,8839b,551s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,10n,51p,8839b,1145s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\siegfried\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk> <C:\Users\siegfried\AppDat
-a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1200.pk> <C:\Users\si
-egfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk> <C:\Users\siegfried\AppDat
+a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk> <C:\Users\si
+egfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1200.pk
 > <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
-00\ecsx1728.pk> <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
-nappen\ec\dpi600\ecrm1440.pk> <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\font
-s\pk\ljfour\jknappen\ec\dpi600\ecti1728.pk> <C:\Users\siegfried\AppData\Local\M
-iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1200.pk> <C:\Users\siegfried\A
-ppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1728.pk><C:/User
-s/siegfried/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb>
-Output written on einsteiger.pdf (16 pages, 342781 bytes).
+00\ecrm1200.pk> <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
+nappen\ec\dpi600\ecsx1728.pk> <C:\Users\siegfried\AppData\Local\MiKTeX\2.9\font
+s\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\siegfried\AppData\Local\M
+iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1728.pk> <C:\Users\siegfried\A
+ppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1200.pk> <C:\Use
+rs\siegfried\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc17
+28.pk><C:/Users/siegfried/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb>
+Output written on einsteiger.pdf (16 pages, 352891 bytes).
 PDF statistics:
- 366 PDF objects out of 1000 (max. 8388607)
+ 399 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
