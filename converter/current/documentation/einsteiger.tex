@@ -239,7 +239,8 @@ python3 convertToTxt.py --process <DATEIPFAD> -v
 \end{lstlisting}
 Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wird:
 \begin{figure}[htbp]
-\includegraphics[width=1.0\textwidth]{ersteSchritteExtract001}\par\vspace{0.25cm}
+\centering
+\includegraphics[width=0.7\textwidth]{ersteSchritteExtract001}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
 \label{fig:ersteSchritteExtract001}
 \end{figure}
@@ -247,7 +248,8 @@ Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wir
 oder
 \end{center}
 \begin{figure}[htbp]
-\includegraphics[width=1.0\textwidth]{ersteSchritteExtract002}\par\vspace{0.25cm}
+\centering
+\includegraphics[width=0.7\textwidth]{ersteSchritteExtract002}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
 \label{fig:ersteSchritteExtract002}
 \end{figure}
@@ -269,6 +271,7 @@ oder
 \begin{lstlisting}[language=bash]
 python3 convertToTxt.py --process <DATEIPFAD> --output <AUSGABEDATEI>
 \end{lstlisting} 
+Es ist zu beachten, dass wenn die angegebene Ausgabedatei bereits existiert, der Inhalt durch den Text der im Moment extrahiert wird, überschrieben wird. 
 Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wird:
 \begin{figure}[htbp]
 \includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithoutConsole001}\par\vspace{0.25cm}
@@ -288,7 +291,7 @@ oder
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.2\textwidth]{ersteSchritteExtractIntoFileWithoutConsole003}\par\vspace{0.25cm}
-\caption{Beispielausgabe von ls, nachdem die Datei erstellt wurde}
+\caption{Beispielausgabe des Befehls ls, nachdem die Datei erstellt wurde}
 \label{fig:ersteSchritteExtractIntoFileWithoutConsole003}
 \end{figure}
 \newpage
@@ -304,6 +307,7 @@ oder
 \begin{lstlisting}[language=bash] 
 python3 convertToTxt.py --process <DATEIPFAD> --output <AUSGABEDATEI> -v
 \end{lstlisting}
+Es ist zu beachten, dass wenn die angegebene Ausgabedatei bereits existiert, der Inhalt durch den Text der im Moment extrahiert wird, überschrieben wird.
  Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wird:
 \begin{figure}[htbp]
 \includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithConsole001}\par\vspace{0.25cm}
@@ -342,7 +346,7 @@ oder
 \end{center}
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.5\textwidth]{ersteSchritteHilfe2}\par\vspace{0.25cm}
+\includegraphics[width=0.4\textwidth]{ersteSchritteHilfe2}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels - -help}
 \label{fig:ersteSchritte2}
 \end{figure}
@@ -382,6 +386,15 @@ Im weiteren werden die einzelnen Dateien technisch erläutert.
 \label{sec:technical-background-convertToTxt}
 Die convertToTxt.py nimmt alle Anfragen entgegen und beinhaltet die einzelnen Argumente sowie die Hilfe-Funktion.
 Die Verarbeitung der Argumente und Optionen wurden mittels dem Modul getopt realisert.
+\subsubsection{extractTxt.py}
+\label{sec:technical-background-extractTxt}
+Die Datei extractTxt.py enthält die eigentliche Logik des Extrahierungs-Skriptes. Sie enthält die Funktionen process(path) und file(text, a).
+Die process(path)-Funktion nimmt den Pfad aus der zu extrahierenden Datei über den parameter path entgegen und über den Pfad dem entsprechenden Modul, indem es sich die Dateiendung betrachtet. 
+Der heraus zu extrahierende Text, der von einzelnen Modulen zurückgegeben wird, wird mit UTF-8 dekodiert und so dann endgültig zurückgegeben. 
+file(text, a) speichert den herausextrahierenden Text in eine Datei. Dazu wird dem Parameter text der zu speichernde Text und dem Parameter a der Speicherort übergeben. 
+\subsubsection{Die Module}
+\label{sec:technical-background-module}
+Wie im Abschnitt \ref{additional-software-table} in der Tabelle zu sehen ist, gibt es fünf Module. Alle Module rufen, bis auf docxTxt.py, ein Konsolen-Programm mittels subprocess.Popen() auf. 
 \newpage
 \section{Kontaktdaten}
 \label{sec:kontaktdaten}
