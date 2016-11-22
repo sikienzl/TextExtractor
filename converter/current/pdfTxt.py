@@ -1,7 +1,7 @@
 """ Modul zur Extrahierung von Text aus einer .pdf-Datei """
 
 import subprocess
-
+import logging
 
 def pdf_txt(filename):
     try:

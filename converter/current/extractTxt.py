@@ -30,8 +30,8 @@ def process(path):
         return encodedText
     else:
         logging.error('File not exist')
-        print("File not exist: error \n" + help())
-        sys.exit(2)
+        print("File not exist: error \n") #+ help())
+        sys.exit(1)
 
 def file(text, a):
     if text != None and a != None:
@@ -41,3 +41,4 @@ def file(text, a):
     else:
         logging.error('Correct use: convertToTxt.py -p <PATH> -o <OUTPUTPATH>')
         print("Correct use: convertToTxt.py -p <PATH> -o <OUTPUTPATH>")
+        sys.exit(2)
