@@ -9,7 +9,8 @@ def odt_txt(filename):
     try:
         process = subprocess.Popen(
             ['odt2txt', filename], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        process.wait()
-        return process.stdout.read()
+        text = process.stdout.read()
+        process.stdout.close()
+        return text
     except:
         logging.error(stderr)
