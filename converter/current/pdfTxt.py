@@ -6,7 +6,7 @@ import logging
 def pdf_txt(filename):
     try:
         process = subprocess.Popen(
-            ["pdftotext", filename, '-'], stdout=subprocess.PIPE)
+            ["pdftotext", "-layout", "-enc", "UTF-8", filename, '-'], stdout=subprocess.PIPE)
         text = process.stdout.read()
         process.stdout.close()
         return text
