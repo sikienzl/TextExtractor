@@ -12,5 +12,6 @@ def doc_txt(filename):
         text = process.stdout.read()
         process.stdout.close()
         return text
-    except:
-        logging.error(stderr)
+    except Exception as e:
+        logging.error(e)
+        #logging.error(stderr)
