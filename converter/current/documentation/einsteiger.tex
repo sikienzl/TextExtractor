@@ -389,12 +389,14 @@ Die Verarbeitung der Argumente und Optionen wurden mittels dem Modul getopt real
 \subsubsection{extractTxt.py}
 \label{sec:technical-background-extractTxt}
 Die Datei extractTxt.py enthält die eigentliche Logik des Extrahierungs-Skriptes. Sie enthält die Funktionen process(path) und file(text, a).
-Die process(path)-Funktion nimmt den Pfad aus der zu extrahierenden Datei über den parameter path entgegen und über den Pfad dem entsprechenden Modul, indem es sich die Dateiendung betrachtet. 
+Die process(path)-Funktion nimmt den Pfad aus der zu extrahierenden Datei über den Parameter path entgegen und übergibt den Pfad dem entsprechenden Modul, indem es sich die Dateiendung betrachtet. 
 Der heraus zu extrahierende Text, der von einzelnen Modulen zurückgegeben wird, wird mit UTF-8 dekodiert und so dann endgültig zurückgegeben. 
-file(text, a) speichert den herausextrahierenden Text in eine Datei. Dazu wird dem Parameter text der zu speichernde Text und dem Parameter a der Speicherort übergeben. 
+file(text, a) speichert den heraus extrahierten Text in eine Datei. Dazu wird dem Parameter text der zu speichernde Text und dem Parameter a der Speicherort übergeben. 
 \subsubsection{Die Module}
 \label{sec:technical-background-module}
-Wie im Abschnitt \ref{additional-software-table} in der Tabelle zu sehen ist, gibt es fünf Module. Alle Module rufen, bis auf docxTxt.py, ein Konsolen-Programm mittels subprocess.Popen() auf. 
+Wie im Abschnitt \ref{additional-software-table} in der Tabelle zu sehen ist, gibt es fünf Module. Alle Module rufen, bis auf docxTxt.py, ein Konsolen-Programm mittels subprocess.Popen() auf.
+Es wird dazu das Modul subprocess importiert. In einer Liste, die dem subprocess.Popen() übergeben wird, steht das zu ausführende Programm und der Dateiname. Außerdem wird die Standardausgabe und die Ausgabe für die Fehler in eine Pipe umgeleitet, damit der zu extrahierte Text später weiterverarbeitet werden kann. Am Ende wird dann process.stdout.read() zurückgeliefert.
+Die Fehlerbehandlung wurde mittels try-except-Anweisung realisiert und es wird bei einer auftretenden Exception ins Logfile geschrieben. 
 \newpage
 \section{Kontaktdaten}
 \label{sec:kontaktdaten}
