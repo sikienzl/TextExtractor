@@ -9,7 +9,8 @@ def doc_txt(filename):
     try:
         process = subprocess.Popen(
             ['catdoc', '-w', filename], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        process.wait()
-        return process.stdout.read()
+        text = process.stdout.read()
+        process.stdout.close()
+        return text
     except:
         logging.error(stderr)
