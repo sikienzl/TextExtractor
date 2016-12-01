@@ -10,6 +10,7 @@
 sudo pip install -U nltk
 
 import nltk
+
 nltk.download()
 
 Dann auf "Download" und dann "punkt" eintippen. siehe:
