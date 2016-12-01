@@ -8,8 +8,11 @@
 -----------------------------
 
 ```sudo pip install -U nltk```
+
 ```import nltk```
+
 ```nltk.download()```
+
 Dann auf "Download" und dann "punkt" eintippen. siehe:
 http://stackoverflow.com/questions/4867197/failed-loading-english-pickle-with-nltk-data-load
 
