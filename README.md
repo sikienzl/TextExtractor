@@ -24,6 +24,11 @@ weitere Infos unter:
 
 http://www.nltk.org/data
 
+## Beispiel für Satztrennung
+----------------------------
+
+http://stackoverflow.com/questions/4576077/python-split-text-on-sentences
+
 ## Textextrahierung
 -------------------
 ### Vorgehensweise
