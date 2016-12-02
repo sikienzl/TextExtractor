@@ -18,7 +18,7 @@ http://stackoverflow.com/questions/4867197/failed-loading-english-pickle-with-nl
 
 Nun noch das gewünschte Buch in das Verzeichnis "/usr/share/nltk_data" downloaden:
 
-'''sudo /usr/bin/python3 -m nltk.downloader -d /usr/share/nltk_data punkt'''
+```sudo /usr/bin/python3 -m nltk.downloader -d /usr/share/nltk_data punkt```
 
 ## Textextrahierung
 -------------------
