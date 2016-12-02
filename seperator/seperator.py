@@ -21,18 +21,18 @@ def main():
             if o == "-v":
                 verbose = True
             elif o in ("-h", "--help"):
-                print("HILFE")
+                print(help())
             elif o in ("-i", "--input"):
                 string = seperator(a)
             elif o in ("-o", "--output"):
                 writeIntoFile(a, string)
             else:
-                print("HILFE")
+                print(help())
         if verbose == True:
             if string != None:
                 print(string)
             else:
-                print("HILFE")
+                print(help())
 
 def seperator(filename):
         tokenizer = nltk.data.load(PICKLE_FILE)
@@ -49,6 +49,12 @@ def writeIntoFile(filename2, string):
         with open(filename2, 'a') as out:
                 out.write(string)
 	
+def help():
+        return("arguments\n" +
+           "-h,                      --help                          show help message and exit\n" +
+           "-i [path to file]        --input  [path to file]         to run the program\n" +
+           "-o [path to outputfile]  --output [path to outputfile]   to extract text into file\n" +
+           "-v                                                       verbose-Mode")
 	
 if __name__ == '__main__' :
         main()
