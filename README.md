@@ -1,8 +1,34 @@
 # Teamprojekt
 -------------
-## Vorgehensweise
+## Satztrennung
+---------------
+### Vorgehensweise
+------------------
+#### benötigte Installationen
+-----------------------------
+
+sudo pip3 install -U nltk
+
+import nltk
+
+nltk.download()
+
+Dann auf "Download" und dann "punkt" eintippen. siehe:
+http://stackoverflow.com/questions/4867197/failed-loading-english-pickle-with-nltk-data-load
+
+Nun noch das gewünschte Buch in das Verzeichnis "/usr/share/nltk_data" downloaden:
+
+```sudo /usr/bin/python3 -m nltk.downloader -d /usr/share/nltk_data punkt```
+
+weitere Infos unter:
+
+http://www.nltk.org/data
+
+## Textextrahierung
+-------------------
+### Vorgehensweise
 ----------------------
-### Implementierungen
+#### Implementierungen
 ---------------------
 - Main-File "convertToTxt" implementiert
 - Modul "docTxt" implementiert
@@ -11,7 +37,7 @@
 - Modul "rtfTxt" implementiert
 - Modul "odtTxt" implementiert
 
-### benötigte Installationen
+#### benötigte Installationen
 ----------------------------
 - wird das Paket catdoc benötigt; Installation unter debian/ubuntu:
     ```apt-get install catdoc```
@@ -40,7 +66,7 @@
     
     ```easy_install3 docx2txt```
     
-### Problemlösungen
+#### Problemlösungen
 -------------------
 Beispiel-Fehler:
 
@@ -50,13 +76,13 @@ Lösung:
 
 --> dos2unix
 
-### TESTS
+#### TESTS
 ---------
 
-#### Funktionstest
+##### Funktionstest
 ----------------
 
-##### Pythonmodule:
+###### Pythonmodule:
 -------------------
 
 docTxt.py :heavy_check_mark: :heavy_check_mark: 
@@ -69,7 +95,7 @@ rtfTxt.py :heavy_check_mark: :heavy_check_mark:
 
 odtTxt.py :heavy_check_mark: :heavy_check_mark:
 
-### Überlegungen
+#### Überlegungen
 ---------------
 - Überlegung für das Modul "docxTxt":
   http://www.commandlinefu.com/commands/view/4311/extract-plain-text-from-ms-word-docx-files
@@ -81,10 +107,10 @@ odtTxt.py :heavy_check_mark: :heavy_check_mark:
 - Exceptions eventuell anpassen?
 
 
-## Installationskript
+### Installationskript
 ---------------------
 
-### TODO-Liste
+#### TODO-Liste
 --------------
 - Prüfung auf python-docx2txt fehlt, da die Installation über ```pip3 install doc2txt``` und ```easy_install3 doc2txt``` erfolgt :heavy_check_mark:
 - Kommentare fehlen
@@ -92,7 +118,7 @@ odtTxt.py :heavy_check_mark: :heavy_check_mark:
 - convertToTxt.py fehlt noch die Abprüfung wenn ein falscher Parameter bzw. etwas falsches eingegeben wurde.
 - Ausgabe umlenken in eine Datei. Vllt Option auf Konsole ausgeben beibehalten und aber dafür parameter einführen wo in *.txt-Datei schreibt.
 
-### Funktionstest
+#### Funktionstest
 -----------------
 
 inst.sh :heavy_check_mark: :heavy_check_mark:
