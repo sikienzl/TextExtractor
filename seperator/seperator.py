@@ -38,11 +38,11 @@ def seperator(filename):
         tokenizer = nltk.data.load(PICKLE_FILE)
         fp = open(filename)
         data = fp.read()
-        string = "\n-------\n"
+        tmpstr = "\n-------\n"
         #string = '\n'
-        print(tokenizer.tokenize(data))
-        string.join(tokenizer.tokenize(data))
-        print(string)
+        string = tmpstr.join(tokenizer.tokenize(data))
+        #string.join(tokenizer.tokenize(data))
+        #print(string)
         return string
         
 def writeIntoFile(filename2, string):
