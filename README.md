@@ -7,7 +7,7 @@
 #### benötigte Installationen
 -----------------------------
 
-sudo pip install -U nltk
+sudo pip3 install -U nltk
 
 import nltk
 
@@ -15,6 +15,10 @@ nltk.download()
 
 Dann auf "Download" und dann "punkt" eintippen. siehe:
 http://stackoverflow.com/questions/4867197/failed-loading-english-pickle-with-nltk-data-load
+
+Nun noch das gewünschte Buch in das Verzeichnis "/usr/share/nltk_data" downloaden:
+
+'''sudo /usr/bin/python3 -m nltk.downloader -d /usr/share/nltk_data punkt'''
 
 ## Textextrahierung
 -------------------
