@@ -20,6 +20,10 @@ Nun noch das gewünschte Buch in das Verzeichnis "/usr/share/nltk_data" download
 
 ```sudo /usr/bin/python3 -m nltk.downloader -d /usr/share/nltk_data punkt```
 
+weitere Infos unter:
+
+http://www.nltk.org/data
+
 ## Textextrahierung
 -------------------
 ### Vorgehensweise
