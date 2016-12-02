@@ -25,7 +25,7 @@ def main():
             elif o in ("-i", "--input"):
                 string = seperator(a)
             elif o in ("-o", "--output"):
-                writeIntoFile(a, text)
+                writeIntoFile(a, string)
             else:
                 print("HILFE")
         if verbose == True:
