@@ -1,25 +1,54 @@
 #!/usr/bin/python3
 
+import sys
+import getopt
 import nltk.data
 
 PICKLE_FILE = 'tokenizers/punkt/german.pickle'
 
 def main():
-	seperator("filename")
+        argv = sys.argv[1:]
+        string = None
+        if(len(sys.argv) == 1):
+            print("Please put a correct parameter!\n")
+        try:
+            opts, args = getopt.getopt(argv, "hvi:o:", ['help', 'input=', 'output='])
+        except getopt.GetoptError as e:
+            print("Please put a correct parameter!\n")
+	
+        verbose = False
+        for o, a in opts:
+            if o == "-v":
+                verbose = True
+            elif o in ("-h", "--help"):
+                print("HILFE")
+            elif o in ("-i", "--input"):
+                string = seperator(a)
+            elif o in ("-o", "--output"):
+                writeIntoFile(a, text)
+            else:
+                print("HILFE")
+        if verbose == True:
+            if string != None:
+                print(string)
+            else:
+                print("HILFE")
 
 def seperator(filename):
-	filename2 = "/home/siegfried/test.txt"
-	tokenizer = nltk.data.load(PICKLE_FILE)
-	fp = open(filename)
-	data = fp.read()
-	string = '\n'
-	string.join(tokenizer.tokenize(data))
-	writeIntoFile(filename2, string)	
-
+        tokenizer = nltk.data.load(PICKLE_FILE)
+        fp = open(filename)
+        data = fp.read()
+        string = "\n-------\n"
+        #string = '\n'
+        print(tokenizer.tokenize(data))
+        string.join(tokenizer.tokenize(data))
+        print(string)
+        return string
+        
 def writeIntoFile(filename2, string):
-	with open(filename2, 'a') as out:
-		out.write(string)
+        with open(filename2, 'a') as out:
+                out.write(string)
 	
 	
-def __name__ == "__main__":
-	main()
+if __name__ == '__main__' :
+        main()
