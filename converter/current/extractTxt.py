@@ -14,16 +14,16 @@ import os.path
 def process(path):
     if(os.path.isfile(path)):
         logging.info('Started text extract')
-        filename, extension = path.split(".")
-        if extension == "doc":
+        extension = path.split(".")
+        if extension[-1] == "doc":
             text = docTxt.doc_txt(path)
-        if extension == "docx":
+        if extension[-1] == "docx":
             text = docxTxt.docx_txt(path)
-        if extension == "pdf":
+        if extension[-1] == "pdf":
             text = pdfTxt.pdf_txt(path)
-        if extension == "rtf":
+        if extension[-1] == "rtf":
             text = rtfTxt.rtf_txt(path)
-        if extension == "odt":
+        if extension[-1] == "odt":
             text = odtTxt.odt_txt(path)
         logging.info('End text extract')
         encodedText = text.decode('utf-8')
