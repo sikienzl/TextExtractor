@@ -11,6 +11,7 @@ def main():
         string = None
         if(len(sys.argv) == 1):
             print("Please put a correct parameter!\n")
+            print(help())
         try:
             opts, args = getopt.getopt(argv, "hvi:o:", ['help', 'input=', 'output='])
         except getopt.GetoptError as e:
