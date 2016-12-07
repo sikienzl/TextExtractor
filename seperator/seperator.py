@@ -41,13 +41,15 @@ def seperator(filename):
         tmpstr = "\n-------\n"
         #string = '\n'
         string = tmpstr.join(tokenizer.tokenize(data))
-        #string.join(tokenizer.tokenize(data))
-        #print(string)
         return string
         
 def writeIntoFile(filename2, string):
-        with open(filename2, 'a') as out:
-                out.write(string)
+        try:
+            fh = open(filename2, 'w+')
+            fh.write(string)
+            fh.close()
+        except IOError:
+            print("fehler")
 	
 def help():
         return("arguments\n" +
