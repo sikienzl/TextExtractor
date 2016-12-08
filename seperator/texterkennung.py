@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 #https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance#Python
+import difflib
+
 def LD(s,t):
     s = ' ' + s
     t = ' ' + t
@@ -22,5 +24,8 @@ def LD(s,t):
 stringa = "Dies ist Seite 1"
 stringb = "Dies ist Seite 100"
 
+se = difflib.SequenceMatcher(lambda x: x == " ",stringa,stringb)
+d= se.ratio()*100
 
 print(LD(stringa,stringb))
+print(d)
