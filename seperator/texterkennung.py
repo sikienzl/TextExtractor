@@ -22,7 +22,7 @@ def LD(s,t):
     
     
 stringa = "Dies ist Seite 1"
-stringb = "Dies ist Seite 100"
+stringb = "Dies ist Seite 1000"
 
 se = difflib.SequenceMatcher(lambda x: x == " ",stringa,stringb)
 d= se.ratio()*100
