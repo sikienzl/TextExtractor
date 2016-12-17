@@ -9,7 +9,7 @@ def rtf_txt(filename):
             ["unrtf", "--text", filename], stdout=subprocess.PIPE)
         process.wait()
         text = process.stdout.read()
-        process.stdout.close()
+        #process.stdout.close()
         # the 'split' deletes the unnessasary head information from the
         # textfile
         rtfString = str(text, 'utf-8').split('-' * 17 + '\n', 1)[-1]
