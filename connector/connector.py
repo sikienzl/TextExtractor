@@ -7,6 +7,7 @@ config = configparser.ConfigParser()
 config.read('connect.cfg')
 
 try:
+   #CONNECTION-Settings
    conn = mariadb.connect(
      host=config['CONNECTION']['host'],
      user=config['CONNECTION']['user'],
@@ -15,10 +16,11 @@ try:
      charset=config['CONNECTION']['charset']
    )
    cursor = conn.cursor()
-   sql="select version()"
-   cursor.execute(sql)
-   data = cursor.fetchone()
-   print('Database Version is %s' % data)
+   sql="INSERT INTO DVD(dvd_id, titel) VALUES (%s, %s)"
+   cursor.execute(sql,('1', 'Das sind ja tolle Aussichten mit den Businessplänen'))
+   #write values hard into database
+   conn.commit()
+   #close all
    cursor.close()
    conn.close()
 except Exception as e:
