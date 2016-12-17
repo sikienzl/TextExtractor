@@ -1,6 +1,6 @@
 # Teamprojekt
 -------------
-## Verbindungsaufbau
+## Connector
 --------------------
 ### Beispiele
 -------------
