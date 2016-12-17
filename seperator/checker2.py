@@ -15,35 +15,21 @@ def checking():
         for line1 in file1:
                 str1 = line1.rstrip()
                 liste.append(str1)
-                #for i in liste:
-                    #print('i: \n'+i+'\n')
-                    #print('str1: \n'+str1+'\n')
-                    #unterschied = LD(str1, i)
-                    #print('unterschied: \n'+str(unterschied)+'\n')
-                #liste.append(str1)
-               # print(unterschied+'\n')
         tmp_liste = liste
         for i in liste:
             #print(i)
             for j in tmp_liste:
                 unterschied = LD(i, j)
-                if unterschied > 5 and count < len(tmp_liste):
+                if unterschied == 65 and count < len(tmp_liste):
+                #if unterschied > 64 and count < len(tmp_liste):
                    print(unterschied)
-                   print(j) 
+                   print(i) 
                    listeFinal.append(j) 
                    count = count + 1
                    continue
 
-
         file1.close()
         print(listeFinal) 
-                #for line2 in file2:
-		#	str2 = line2.rstrip()
-	#		if(str1 == str2):
-	#			print(str1 + " " + str2)
-	#			print("alles gut")
-
-	
 
 
 def LD(s,t):
