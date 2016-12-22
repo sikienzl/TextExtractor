@@ -8,37 +8,32 @@ INPUT_FILE = open("test.txt", "r")
 OUTPUT_FILE = open('example3.txt', 'wt')
 
 def checking():
-        output_liste = []
-        wiederholungen = {}
         liste_wiederholungen = []
         liste_zwischen = []
-        unterschied = 0
-        count = 0
-        count2 = 0
-        one_line = ''
-        ueberspringen=0
+        count_empty_list = 0
+        count_liste_zwischen = 0
         list_without_empty_lines = delete_empty_lines(INPUT_FILE)
         for one_line in list_without_empty_lines:
-            count += 1
+            count_empty_list += 1
             for a in reversed(liste_zwischen):
-                count2 += 1
+                count_liste_zwischen += 1
                 unterschied = difflib.SequenceMatcher(None, one_line,a)
                 prozent=unterschied.ratio()*100
-                if(prozent > 90):
+                if(prozent > MAX_PROCENT):
                     test = False
                     for i in liste_wiederholungen:
                         unterschied = difflib.SequenceMatcher(None, i,a)
                         prozent=unterschied.ratio()*100
-                        if(prozent > 90):
+                        if(prozent > MAX_PROCENT):
                             test = True
                             break
                     if(test == False):
                         liste_wiederholungen.append(a)
-                if(count2 > 200):
-                    count2 = 0
+                if(count_liste_zwischen > MAX_LINE_COUNT):
+                    count_liste_zwischen = 0
                     break
             liste_zwischen.append(one_line)
-            if(count > 200):
+            if(count_empty_list > MAX_LINE_COUNT):
                 break
         output_liste = extract_repeted_lines(list_without_empty_lines, liste_wiederholungen)
         for i in output_liste:
@@ -58,7 +53,7 @@ def extract_repeted_lines(list_without_empty_lines, liste_wiederholungen):
         for ii in liste_wiederholungen:
             unterschied = difflib.SequenceMatcher(None, i,ii)
             prozent=unterschied.ratio()*100
-            if(prozent > 90):
+            if(prozent > MAX_PROCENT):
                 test = True
         if(test == False):
             liste_final.append(i)
