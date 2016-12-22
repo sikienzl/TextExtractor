@@ -1,5 +1,11 @@
 # Teamprojekt
 -------------
+## Connector
+--------------------
+### Beispiele
+-------------
+https://lempstacker.com/tw/Using-PyMySQL-as-MariaDB-Driver-for-Python3/
+
 ## Satztrennung
 ---------------
 ### Vorgehensweise
