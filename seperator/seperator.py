@@ -2,9 +2,11 @@
 
 import sys
 import getopt
+#from nltk import data
 import nltk.data
 
-PICKLE_FILE = 'tokenizers/punkt/german.pickle'
+#PICKLE_FILE = 'tokenizers/punkt/german.pickle'
+PICKLE_FILE = 'business.pickle'
 
 def main():
         argv = sys.argv[1:]
