@@ -17,7 +17,7 @@ try:
    )
    cursor = conn.cursor()
    sql="INSERT INTO DVD(dvd_id, titel) VALUES (%s, %s)"
-   cursor.execute(sql,('1', 'Das sind ja tolle Aussichten mit den Businessplänen'))
+   cursor.execute(sql,('2', 'Verrückte Weihnachten'))
    #write values hard into database
    conn.commit()
    #close all
