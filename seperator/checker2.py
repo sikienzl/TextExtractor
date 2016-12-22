@@ -20,14 +20,14 @@ def checking():
                 unterschied = difflib.SequenceMatcher(None, one_line,a)
                 prozent=unterschied.ratio()*100
                 if(prozent > MAX_PROCENT):
-                    test = False
+                    is_repetition = False
                     for i in liste_wiederholungen:
                         unterschied = difflib.SequenceMatcher(None, i,a)
                         prozent=unterschied.ratio()*100
                         if(prozent > MAX_PROCENT):
-                            test = True
+                            is_repetition = True
                             break
-                    if(test == False):
+                    if(is_repetition == False):
                         liste_wiederholungen.append(a)
                 if(count_liste_zwischen > MAX_LINE_COUNT):
                     count_liste_zwischen = 0
@@ -46,16 +46,15 @@ def checking():
 
 
 def extract_repeted_lines(list_without_empty_lines, liste_wiederholungen):
-    print("test")
     liste_final = []
     for i in list_without_empty_lines:
-        test = False
+        is_repetition = False
         for ii in liste_wiederholungen:
             unterschied = difflib.SequenceMatcher(None, i,ii)
             prozent=unterschied.ratio()*100
             if(prozent > MAX_PROCENT):
-                test = True
-        if(test == False):
+                is_repetition = True
+        if(is_repetition == False):
             liste_final.append(i)
     return liste_final
 
