@@ -1,20 +1,51 @@
 #!/usr/bin/python3
 
+import sys
+import getopt
 import difflib
 
 MAX_PROCENT = 90
 MAX_LINE_COUNT = 200
-INPUT_FILE = open("test.txt", "r")
-OUTPUT_FILE = open('example3.txt', 'wt')
+#INPUT_FILE = open("test.txt", "r")
+#OUTPUT_FILE = open('example3.txt', 'wt')
 
 def main():
+        argv = sys.argv[1:]
+        liste = []
+        liste_wiederholungen = []
+        output_liste = []
+        if(len(sys.argv) == 1):
+            print("Please put a correct parameter!\n")
+            print(help())
+        try:
+            opts, args = getopt.getopt(argv, "hvi:o:", ['help', 'input=', 'output='])
+        except getopt.GetoptError as e:
+            print("Please put a correct parameter!\n")
+        verbose = False
+        for o, a in opts:
+            if o == "-v":
+                verbose = True
+            elif o in ("-h", "--help"):
+                print(help())
+            elif o in ("-i", "--input"):
+                liste = getListWithoutEmptyLines(a)
+                liste_wiederholungen = get_wiederholung_list(liste)
+                output_liste = extract_repeted_lines(liste, liste_wiederholungen)
+            elif o in ("-o", "--output"):
+                writeIntoFile(a, output_liste)
+        if verbose == True:
+            if liste != None:
+               for zeile in output_liste:
+                   print(zeile)
+            else:
+               print(help())
+
+def getListWithoutEmptyLines(file):
+    INPUT_FILE = open(file, "r")
+    list_without_empty_lines = []
     list_without_empty_lines = delete_empty_lines(INPUT_FILE)
-    liste_wiederholungen = get_wiederholung_list(list_without_empty_lines)
-    output_liste = extract_repeted_lines(list_without_empty_lines, liste_wiederholungen)
-    for i in output_liste:
-        OUTPUT_FILE.write(i+'\n')
     INPUT_FILE.close()
-    OUTPUT_FILE.close()
+    return list_without_empty_lines
 
 def extract_repeted_lines(list_without_empty_lines, liste_wiederholungen):
     liste_final = []
@@ -66,6 +97,19 @@ def get_wiederholung_list(list_without_empty_lines):
         if(count_empty_list > MAX_LINE_COUNT):
             break
     return liste_wiederholungen
+	
+def writeIntoFile(out_file, liste):
+        OUTPUT_FILE = open(out_file, "wt")
+        for i in liste:
+            OUTPUT_FILE.write(i+'\n')
+        OUTPUT_FILE.close()
+
+def help():
+    return("arguments\n" +
+       "-h,                     --help                        show help message and exit\n" +
+       "-i [path to file]       --input [path to file]        to run the program\n" +
+       "-o [path to outputfile] --output [path to outputfile] to extract text into file\n" +
+       "-v                                                    verbose-Mode")
 
 if __name__ == "__main__":
     main()
