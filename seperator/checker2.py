@@ -6,8 +6,7 @@ import difflib
 
 MAX_PROCENT = 90
 MAX_LINE_COUNT = 200
-#INPUT_FILE = open("test.txt", "r")
-#OUTPUT_FILE = open('example3.txt', 'wt')
+MAX_COUNT_REPETITION = 5
 
 def main():
         argv = sys.argv[1:]
@@ -30,9 +29,9 @@ def main():
             elif o in ("-i", "--input"):
                 liste = getListWithoutEmptyLines(a)
                 liste_wiederholungen = get_wiederholung_list(liste)
-                output_liste = extract_repeted_lines(liste, liste_wiederholungen)
+                output_liste = extract_repeated_lines(liste, liste_wiederholungen)
             elif o in ("-o", "--output"):
-                writeIntoFile(a, output_liste)
+                write_into_file(a, output_liste)
         if verbose == True:
             if liste != None:
                for zeile in output_liste:
@@ -47,7 +46,7 @@ def getListWithoutEmptyLines(file):
     INPUT_FILE.close()
     return list_without_empty_lines
 
-def extract_repeted_lines(list_without_empty_lines, liste_wiederholungen):
+def extract_repeated_lines(list_without_empty_lines, liste_wiederholungen):
     liste_final = []
     for i in list_without_empty_lines:
         is_repetition = False
@@ -72,33 +71,45 @@ def delete_empty_lines(input_file):
 def get_wiederholung_list(list_without_empty_lines):
     liste_zwischen = []
     liste_wiederholungen = []
+    dictionary_wiederholungen = {}
     count_liste_zwischen = 0
     count_empty_list = 0
+    
     for one_line in list_without_empty_lines:
         count_empty_list += 1
+        
         for a in reversed(liste_zwischen):
             count_liste_zwischen += 1
-            unterschied = difflib.SequenceMatcher(None, one_line,a)
-            prozent=unterschied.ratio()*100
+            unterschied = difflib.SequenceMatcher(None, one_line, a)
+            prozent = unterschied.ratio() * 100
+            
             if(prozent > MAX_PROCENT):
-                is_repetition = False
-                for i in liste_wiederholungen:
-                    unterschied = difflib.SequenceMatcher(None, i,a)
-                    prozent=unterschied.ratio()*100
+                # if the line on the whole document and the line in liste_zwischen are similar
+                is_repetition_inside_wiederholungen = False
+                # check if the line or a similar line is already inside dictionary_wiederholungen
+                for key,value in dictionary_wiederholungen.items():
+                    unterschied = difflib.SequenceMatcher(None, key,a)
+                    prozent = unterschied.ratio() * 100
                     if(prozent > MAX_PROCENT):
-                        is_repetition = True
+                        dictionary_wiederholungen[key] += 1 # key exist and is similar than increment
+                        if(dictionary_wiederholungen[key] == MAX_COUNT_REPETITION):
+                            liste_wiederholungen.append(a)
+                        is_repetition_inside_wiederholungen = True
                         break
-                if(is_repetition == False):
-                    liste_wiederholungen.append(a)
+                
+                if(is_repetition_inside_wiederholungen == False):
+                    dictionary_wiederholungen[a] = 0
+                    
             if(count_liste_zwischen > MAX_LINE_COUNT):
                 count_liste_zwischen = 0
                 break
         liste_zwischen.append(one_line)
+        
         if(count_empty_list > MAX_LINE_COUNT):
             break
     return liste_wiederholungen
-	
-def writeIntoFile(out_file, liste):
+
+def write_into_file(out_file, liste):
         OUTPUT_FILE = open(out_file, "wt")
         for i in liste:
             OUTPUT_FILE.write(i+'\n')
