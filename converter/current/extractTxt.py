@@ -26,7 +26,11 @@ def process(path):
         if extension[-1] == "odt":
             text = odtTxt.odt_txt(path)
         logging.info('End text extract')
-        encodedText = text.decode('utf-8')
+        if extension[-1] != "rtf":
+            encodedText = text.decode('utf-8')
+        else:
+            rtfString = text.decode("windows-1252")
+            encodedText = rtfString.split('-' * 17 + '\n',1)[-1]
         return encodedText
     else:
         logging.error('File not exist')
