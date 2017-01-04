@@ -41,6 +41,8 @@ def seperator(filename):
         tokenizer = nltk.data.load(PICKLE_FILE)
         fp = open(filename)
         data = fp.read()
+        tokenizerString = tokenizer.tokenize(data)
+        #print(tokenizerString)
         tmpstr = "\n-------\n"
         #string = '\n'
         string = tmpstr.join(tokenizer.tokenize(data))
