@@ -19,7 +19,7 @@ def main():
         logging.info('No argument')
         print("Please put a correct parameter: error \n" + help())
     try:
-        opts, args = getopt.getopt(argv, "hvp:o:", ['help', 'process=', 'output='])
+        opts, args = getopt.getopt(argv, "hvi:o:", ['help', 'input=', 'output='])
     except getopt.GetoptError as e:
         logging.error(e)  # write into logfile
         logging.info(sys.argv[1] + " is not an argument")  # write into logfile
@@ -39,7 +39,7 @@ def main():
             verbose = True
         elif o in ("-h", "--help"):  # help
             print(help())
-        elif o in ("-p", "--process"):  # help
+        elif o in ("-i", "--input"):  # help
             text = extractTxt.process(a)
         elif o in ("-o", "--output"):
             extractTxt.file(text, a)
@@ -55,7 +55,7 @@ def main():
 def help():
     return("arguments:\n" +
            "-h,                      --help                          show help message and exit\n" +
-           "-p [path to file]        --process [path to file]        to run the program\n" +
+           "-i [path to file]        --input [path to file]          to run the program\n" +
            "-o [path to output-file] --output  [path to output-file] to extract text into file \n" +
            "                                                         (works only with the argument -p)\n" +
            "-v                                                       verbose-Mode")
