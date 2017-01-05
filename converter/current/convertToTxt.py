@@ -9,17 +9,19 @@ import extractTxt
 
 logFileName = 'logfile.log'
 
+
 def main():
     argv = sys.argv[1:]
     text = None
     logging.basicConfig(filename=logFileName, level=logging.INFO,
                         format='%(asctime)s : %(levelname)s : %(message)s')
-                        
+
     if(len(sys.argv) == 1):  # if no argument
         logging.info('No argument')
         print("Please put a correct parameter: error \n" + help())
     try:
-        opts, args = getopt.getopt(argv, "hvi:o:", ['help', 'input=', 'output='])
+        opts, args = getopt.getopt(
+            argv, "hvi:o:", ['help', 'input=', 'output='])
     except getopt.GetoptError as e:
         logging.error(e)  # write into logfile
         logging.info(sys.argv[1] + " is not an argument")  # write into logfile
@@ -32,8 +34,8 @@ def main():
     if len(args) is not 0:
         logging.info(sys.argv[1] + " is not an argument")
         print("Please put a correct parameter: error \n" + help())
-    
-    verbose = False    
+
+    verbose = False
     for o, a in opts:
         if o == "-v":
             verbose = True
@@ -46,19 +48,25 @@ def main():
         else:
             logging.info('False argument')
             print("Please put a correct parameter: error \n" + help())
-    if verbose == True:
-        if text != None:
+    if verbose:
+        if text is not None:
             print(text)
         else:
             print(help())
 
+
 def help():
     return("arguments:\n" +
-           "-h,                      --help                          show help message and exit\n" +
-           "-i [path to file]        --input [path to file]          to run the program\n" +
-           "-o [path to output-file] --output  [path to output-file] to extract text into file \n" +
-           "                                                         (works only with the argument -i)\n" +
-           "-v                                                       verbose-Mode")
+           "-h,                      --help                          " +
+           "show help message and exit\n" +
+           "-i [path to file]        --input [path to file]          " +
+           "to run the program\n" +
+           "-o [path to output-file] --output  [path to output-file] " +
+           "to extract text into file \n" +
+           "                                                         " +
+           "(works only with the argument -i)\n" +
+           "-v                                                       " +
+           "verbose-Mode")
 
 if __name__ == '__main__':
     main()
