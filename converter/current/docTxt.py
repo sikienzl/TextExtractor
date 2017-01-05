@@ -8,10 +8,11 @@ def doc_txt(filename):
     stderr = None
     try:
         process = subprocess.Popen(
-            ['catdoc', '-w', filename], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            ['catdoc', '-w', filename],
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         text = process.stdout.read()
         process.stdout.close()
         return text
     except Exception as e:
         logging.error(e)
-        #logging.error(stderr)
+        # logging.error(stderr)
