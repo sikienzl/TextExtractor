@@ -63,10 +63,14 @@ def writeIntoFile(filename2, string):
 
 def help():
     return("arguments\n" +
-           "-h,                      --help                          show help message and exit\n" +
-           "-i [path to file]        --input  [path to file]         to run the program\n" +
-           "-o [path to outputfile]  --output [path to outputfile]   to extract text into file\n" +
-           "-v                                                       verbose-Mode")
+           "-h,                      --help                          " +
+           "show help message and exit\n" +
+           "-i [path to file]        --input  [path to file]         " +
+           "to run the program\n" +
+           "-o [path to outputfile]  --output [path to outputfile]   " +
+           "to extract text into file\n" +
+           "-v                                                       " +
+           "verbose-Mode")
 
 if __name__ == '__main__':
     main()
