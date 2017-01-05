@@ -11,6 +11,7 @@ import getopt
 import logging
 import os.path
 
+
 def process(path):
     if(os.path.isfile(path)):
         logging.info('Started text extract')
@@ -30,16 +31,17 @@ def process(path):
             encodedText = text.decode('utf-8')
         else:
             rtfString = text.decode("windows-1252")
-            encodedText = rtfString.split('-' * 17 + '\n',1)[-1]
+            encodedText = rtfString.split('-' * 17 + '\n', 1)[-1]
         return encodedText
     else:
         logging.error('File not exist')
-        print("File not exist: error \n") #+ help())
+        print("File not exist: error \n")  # + help())
         sys.exit(1)
 
+
 def file(text, a):
-    if text != None and a != None:
-        text_file=open(a,"w+")
+    if text is not None and a is not None:
+        text_file = open(a, "w+")
         text_file.write(text)
         text_file.close()
     else:
