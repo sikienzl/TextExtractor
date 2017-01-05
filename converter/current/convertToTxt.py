@@ -57,7 +57,7 @@ def help():
            "-h,                      --help                          show help message and exit\n" +
            "-i [path to file]        --input [path to file]          to run the program\n" +
            "-o [path to output-file] --output  [path to output-file] to extract text into file \n" +
-           "                                                         (works only with the argument -p)\n" +
+           "                                                         (works only with the argument -i)\n" +
            "-v                                                       verbose-Mode")
 
 if __name__ == '__main__':
