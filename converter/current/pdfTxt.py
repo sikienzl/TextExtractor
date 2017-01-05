@@ -15,4 +15,3 @@ def pdf_txt(filename):
 
     except Exception as e:
         logging.error(e)
-        # logging.error("filed to process " + filename)

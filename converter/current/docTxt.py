@@ -15,4 +15,3 @@ def doc_txt(filename):
         return text
     except Exception as e:
         logging.error(e)
-        # logging.error(stderr)
