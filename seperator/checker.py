@@ -106,8 +106,8 @@ def get_wiederholung_list(list_without_empty_lines):
                     prozent = unterschied.ratio() * 100
                     if(prozent > MAX_PROCENT):
                         dictionary_wiederholungen[
-                            key] += 1  """ key exist and
-                                       is similar than increment"""
+                            key] += 1  # key exist and
+                                       # is similar than increment
                         if(dictionary_wiederholungen[key] ==
                            MAX_COUNT_REPETITION):
                             liste_wiederholungen.append(a)

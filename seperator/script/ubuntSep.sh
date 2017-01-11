@@ -1,11 +1,11 @@
 #!/bin/sh
 pip3 install -U nltk
-/usr/bin/python3 -m nltk.downloader -d /usr/share/nltk_data punkt
+#/usr/bin/python3 -m nltk.downloader -d /usr/share/nltk_data punkt
 pathTar="files.tar"
 
 while true
    do
-	path=`dialog --inputbox "Wohin soll der Seperator installiert werden?" 0 0 3>&1 1>&2 2>&3`
+	path=`dialog --inputbox "Wohin sollen die Python-Scripte installiert werden?" 0 0 3>&1 1>&2 2>&3`
 	respose=$?
 	case $respose in
 	  0)
