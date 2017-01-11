@@ -156,10 +156,10 @@ Sie unter dem Punkt 2.3.
 \begin{tabular}{|l|l|}
 \hline
 \rowcolor[HTML]{9B9B9B} 
-Datei      & Beschreibung                                                      \\ \hline
-inst.sh    & Bash-Script für die Ausführung als Super-User (sudo) unter Ubuntu \\ \hline
-ubuntu.sh  & Bash-Script für die Installation unter Ubuntu                     \\ \hline
-moduls.tar & Tar-Datei, die die Python-Module enthält                          \\ \hline
+Datei        & Beschreibung                                                      \\ \hline
+inst.sh      & Bash-Script für die Ausführung als Super-User (sudo) unter Ubuntu \\ \hline
+ubuntSep.sh  & Bash-Script für die Installation unter Ubuntu                     \\ \hline
+files.tar    & Tar-Datei, die die Python-Module enthält                          \\ \hline
 \end{tabular}
 \caption{Bestandteile Installationspaket}
 \end{table}
@@ -171,14 +171,11 @@ moduls.tar & Tar-Datei, die die Python-Module enthält                          
 \begin{tabular}{|l|l|}
 \hline
 \rowcolor[HTML]{9B9B9B} 
-Datei           & Verwendung                           \\ \hline
-convertToTxt.py & Datei die für das Extrahieren aufgerufen wird \\ \hline
-extractTxt.py   & Hauptdatei für die Extrahierung      \\ \hline
-docTxt.py       & Modul für die Dateiendung doc        \\ \hline
-docxTxt.py      & Modul für die Dateiendung docx       \\ \hline
-odtTxt.py       & Modul für die Dateiendung odt        \\ \hline
-pdfTxt.py       & Modul für die Dateiendung pdf        \\ \hline
-rtfTxt.py       & Modul für die Dateiendung rtf        \\ \hline
+Datei                & Verwendung                                 \\ \hline
+checker.py           & Entfernt die Kopf- und Fu"sszeilen         \\ \hline
+seperator.py         & Trennt die Sätze                           \\ \hline
+trainy.py            & Erstellt Regelwerk zum Trennen von Sätzen  \\ \hline
+business.pickle      & Regelwerk zum Trennen von Sätzen           \\ \hline
 \end{tabular}
 \caption{Modulbestandteile}
 \end{table}
@@ -187,14 +184,8 @@ rtfTxt.py       & Modul für die Dateiendung rtf        \\ \hline
 \label{sec:first-steps}
 \subsubsection{Genereller Aufruf}
 \label{sec:first-steps-general}
-Im Allgemeinen wird das Modul wie folgt aufgerufen:
-%ersteSchritte001
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.7\textwidth]{ersteSchritte001}\par\vspace{0.25cm}
-%\caption{Aufruf der Hilfe mittels -h}
-\label{fig:ersteSchritteGeneral001}
-\end{figure}
+Es gibt drei Skripte. Die checker.py entfernt mit den entsprechenden Parameter aus Tabelle 
+
 \newline
 Dabei sollte <PARAMETER> durch Parameter aus Tabelle 3 ersetzt werden. Bei  den Parametern -p bzw. -{}-process sowie bei -o bzw. -{}-output sollte dann zusätzlich <PFAD> (das hier in runden Klammern steht) durch den Pfad der Datei, aus der der Text extrahiert werden soll, ersetzt werden. 
 Außerdem ist zwingend darauf zu achten, dass das Modul mit python3 aufgerufen wird.

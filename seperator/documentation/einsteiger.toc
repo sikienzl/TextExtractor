@@ -1,0 +1,21 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Modul}{4}
+\contentsline {subsection}{\numberline {1.1}\IeC {\"U}ber die Software}{4}
+\contentsline {subsection}{\numberline {1.2}\IeC {\"U}ber das Handbuch}{4}
+\contentsline {section}{\numberline {2}Grundlagen}{5}
+\contentsline {subsection}{\numberline {2.1}Installation}{5}
+\contentsline {subsection}{\numberline {2.2}Bestandteile Installationspaket}{9}
+\contentsline {subsection}{\numberline {2.3}Modulbestandteile}{9}
+\contentsline {subsection}{\numberline {2.4}Erste Schritte}{10}
+\contentsline {subsubsection}{\numberline {2.4.1}Genereller Aufruf}{10}
+\contentsline {subsubsection}{\numberline {2.4.2}Extrahieren von Text auf Konsole}{11}
+\contentsline {subsubsection}{\numberline {2.4.3}Extrahieren von Text in eine Datei ohne Konsolenausgabe}{12}
+\contentsline {subsubsection}{\numberline {2.4.4}Extrahieren von Text in eine Datei mit Konsolenausgabe}{13}
+\contentsline {subsubsection}{\numberline {2.4.5}Hilfe aufrufen}{14}
+\contentsline {section}{\numberline {3}Technischer Hintergrund}{15}
+\contentsline {subsection}{\numberline {3.1}Verwendete Fremdsoftware}{15}
+\contentsline {subsection}{\numberline {3.2}Aufbau}{15}
+\contentsline {subsubsection}{\numberline {3.2.1}convertToTxt.py}{15}
+\contentsline {subsubsection}{\numberline {3.2.2}extractTxt.py}{15}
+\contentsline {subsubsection}{\numberline {3.2.3}Die Module}{15}
+\contentsline {section}{\numberline {4}Kontaktdaten}{17}
