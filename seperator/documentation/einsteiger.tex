@@ -184,25 +184,58 @@ business.pickle      & Regelwerk zum Trennen von Sätzen           \\ \hline
 \label{sec:first-steps}
 \subsubsection{Genereller Aufruf}
 \label{sec:first-steps-general}
-Es gibt drei Skripte. Die checker.py entfernt mit den entsprechenden Parameter aus Tabelle 
-
-\newline
-Dabei sollte <PARAMETER> durch Parameter aus Tabelle 3 ersetzt werden. Bei  den Parametern -p bzw. -{}-process sowie bei -o bzw. -{}-output sollte dann zusätzlich <PFAD> (das hier in runden Klammern steht) durch den Pfad der Datei, aus der der Text extrahiert werden soll, ersetzt werden. 
+Es gibt drei Skripte: \begin{itemize}
+\item checker.py
+\item seperator.py
+\item trainy.py
+\end{itemize}
+Alle drei besitzen entsprechende Parameter die im allgemeinen so aufgerufen werden:
+\begin{lstlisting}[language=bash]
+python3 <PYTHONSCRIPT> <PARAMETER> (<PFAD>) 
+\end{lstlisting}
+Dabei sollte <PYTHONSCRIPT> durch eins der oben genannten Pythonskripte und <PARAMETER> durch Parameter jeweils aus den Tabellen 3, 4 und 5 ersetzt werden. Alle drei Skripte besitzen außerdem die Parameter -i bzw. -{}-input und -o bzw. -{}-output. Bei  diesen Parametern sollte dann zusätzlich <PFAD> (das hier in runden Klammern steht) durch den Pfad der Datei, aus der der Text extrahiert bzw. in den der Text geschrieben werden soll, ersetzt werden. 
 Außerdem ist zwingend darauf zu achten, dass das Modul mit python3 aufgerufen wird.
 \begin{table}[H]
 \begin{center}
-\label{params}
 \begin{tabular}{|l|l|l|}
 \hline
 \rowcolor[HTML]{C0C0C0} 
-Parameter (kurz) & Parameter (lang) & Erklärung                                                                                                                              \\ \hline
--h               & -{}-help           & Zeigt die Hilfe an                                                                                                                     \\ \hline
--p               & -{}-process        & Führt die Textextrahierung durch.  \\ \hline
--v				 & ------------------ & Verbose-Mode: Gibt den Text auf Konsole aus. \\ \hline
--o               & -{}-output         & Parameter für die Ausgabedatei.\\
-				 &					  &	Nur anwendbar mit Argument -p bzw. -{}-process \\ \hline
+{\color[HTML]{333333} Parameter (kurz)} & {\color[HTML]{333333} Parameter (lang)} & {\color[HTML]{333333} Beschreibung}                                                                                   \\ \hline
+-h                                      & --help                                  & Hilfetext wird angezeigt                                                                                              \\ \hline
+-i                                      & --input                                 & führt das Skript aus                                                                                                  \\ \hline
+-o                                      & --output                                & \begin{tabular}[c]{@{}l@{}}Parameter für die Ausgabedatei.\\ Nur anwendbar mit Parameter -i bzw. --input\end{tabular} \\ \hline
+-r                                      & ------------------                      & fügt Wiederholungen an das Ende einer Datei an                                                                        \\ \hline
+-v                                      & ------------------                      & Verbose-Mode: gibt den Text auf Konsole aus.                                                                          \\ \hline
 \end{tabular}
-\caption{Parameterübersicht}
+\caption{Parameterübersicht von checker.py}
+\end{center}
+\end{table}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+{\color[HTML]{333333} Parameter (kurz)} & {\color[HTML]{333333} Parameter (lang)} & {\color[HTML]{333333} Beschreibung}                                                                                   \\ \hline
+-h                                      & --help                                  & Hilfetext wird angezeigt                                                                                              \\ \hline
+-i                                      & --input                                 & führt das Skript aus                                                                                                  \\ \hline
+-o                                      & --output                                & \begin{tabular}[c]{@{}l@{}}Parameter für die Ausgabedatei.\\ Nur anwendbar mit Parameter -i bzw. --input\end{tabular} \\ \hline
+-v                                      & ------------------                      & Verbose-Mode: gibt den Text auf Konsole aus.                                                                          \\ \hline
+\end{tabular}
+\caption{Parameterübersicht von seperator.py}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+{\color[HTML]{333333} Parameter (kurz)} & {\color[HTML]{333333} Parameter (lang)} & {\color[HTML]{333333} Beschreibung}                                                                                   \\ \hline
+-h                                      & --help                                  & Hilfetext wird angezeigt                                                                                              \\ \hline
+-i                                      & --input                                 & führt das Skript aus                                                                                                  \\ \hline
+-o                                      & --output                                & \begin{tabular}[c]{@{}l@{}}Parameter für die Ausgabedatei.\\ Nur anwendbar mit Parameter -i bzw. --input\end{tabular} \\ \hline
+\end{tabular}
+\caption{Parameterübersicht von trainy.py}
 \end{center}
 \end{table}
 
@@ -223,7 +256,7 @@ python3 convertToTxt.py --process <DATEIPFAD> -v
 Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wird:
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.7\textwidth]{ersteSchritteExtract001}\par\vspace{0.25cm}
+%\includegraphics[width=0.7\textwidth]{ersteSchritteExtract001}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
 \label{fig:ersteSchritteExtract001}
 \end{figure}
@@ -232,12 +265,12 @@ oder
 \end{center}
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.7\textwidth]{ersteSchritteExtract002}\par\vspace{0.25cm}
+%\includegraphics[width=0.7\textwidth]{ersteSchritteExtract002}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
 \label{fig:ersteSchritteExtract002}
 \end{figure}
 \begin{figure}[htbp]
-\includegraphics[width=1.0\textwidth]{ersteSchritteExtract003}\par\vspace{0.25cm}
+%\includegraphics[width=1.0\textwidth]{ersteSchritteExtract003}\par\vspace{0.25cm}
 \caption{Beispielausgabe von docx}
 \label{fig:ersteSchritteExtract003}
 \end{figure}
@@ -257,7 +290,7 @@ python3 convertToTxt.py --process <DATEIPFAD> --output <AUSGABEDATEI>
 Es ist zu beachten, dass wenn die angegebene Ausgabedatei bereits existiert, der Inhalt durch den Text der im Moment extrahiert wird, überschrieben wird. 
 Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wird:
 \begin{figure}[htbp]
-\includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithoutConsole001}\par\vspace{0.25cm}
+%\includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithoutConsole001}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
 \label{fig:ersteSchritteExtractIntoFileWithoutConsole001}
 \end{figure}
@@ -265,7 +298,7 @@ Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wir
 oder
 \end{center}
 \begin{figure}[htbp]
-\includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithoutConsole002}\par
+%\includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithoutConsole002}\par
 
 \vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
@@ -273,7 +306,7 @@ oder
 \end{figure}
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.2\textwidth]{ersteSchritteExtractIntoFileWithoutConsole003}\par\vspace{0.25cm}
+%\includegraphics[width=0.2\textwidth]{ersteSchritteExtractIntoFileWithoutConsole003}\par\vspace{0.25cm}
 \caption{Beispielausgabe des Befehls ls, nachdem die Datei erstellt wurde}
 \label{fig:ersteSchritteExtractIntoFileWithoutConsole003}
 \end{figure}
@@ -293,7 +326,7 @@ python3 convertToTxt.py --process <DATEIPFAD> --output <AUSGABEDATEI> -v
 Es ist zu beachten, dass wenn die angegebene Ausgabedatei bereits existiert, der Inhalt durch den Text der im Moment extrahiert wird, überschrieben wird.
  Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wird:
 \begin{figure}[htbp]
-\includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithConsole001}\par\vspace{0.25cm}
+%\includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithConsole001}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
 \label{fig:ersteSchritteExtractIntoFileWithConsole001}
 \end{figure}
@@ -301,7 +334,7 @@ Es ist zu beachten, dass wenn die angegebene Ausgabedatei bereits existiert, der
 oder
 \end{center}
 \begin{figure}[htbp]
-\includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithConsole002}\par
+%\includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithConsole002}\par
 
 \vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
@@ -309,7 +342,7 @@ oder
 \end{figure}
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithConsole003}\par\vspace{0.25cm}
+%\includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithConsole003}\par\vspace{0.25cm}
 \caption{Ausgabe nach Aufruf des obigen Befehls}
 %\label{fig:ersteSchritteExtractIntoFileWithoutConsole003}
 \end{figure}
@@ -320,7 +353,7 @@ Zum Aufrufen der Hilfe einfach wie im folgenden Bild den Parameter -h bzw. -{}-h
 \newline
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.4\textwidth]{ersteSchritteHilfe1}\par\vspace{0.25cm}
+%\includegraphics[width=0.4\textwidth]{ersteSchritteHilfe1}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
 \label{fig:ersteSchritteHilfe1}
 \end{figure}
@@ -329,14 +362,14 @@ oder
 \end{center}
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.4\textwidth]{ersteSchritteHilfe2}\par\vspace{0.25cm}
+%\includegraphics[width=0.4\textwidth]{ersteSchritteHilfe2}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels - -help}
 \label{fig:ersteSchritte2}
 \end{figure}
 Die Ausgabe sollte wie folgt aussehen:
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=1.1\textwidth]{ersteSchritteHilfe3}\par\vspace{0.5cm}
+%\includegraphics[width=1.1\textwidth]{ersteSchritteHilfe3}\par\vspace{0.5cm}
 %\caption{Aufruf der Hilfe mittels - -help}
 \label{fig:ersteSchritteHilfe3}
 \end{figure}
