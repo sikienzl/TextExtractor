@@ -8,14 +8,15 @@
 \contentsline {subsection}{\numberline {2.3}Modulbestandteile}{9}
 \contentsline {subsection}{\numberline {2.4}Erste Schritte}{10}
 \contentsline {subsubsection}{\numberline {2.4.1}Genereller Aufruf}{10}
-\contentsline {subsubsection}{\numberline {2.4.2}Extrahieren von Text auf Konsole}{11}
-\contentsline {subsubsection}{\numberline {2.4.3}Extrahieren von Text in eine Datei ohne Konsolenausgabe}{12}
-\contentsline {subsubsection}{\numberline {2.4.4}Extrahieren von Text in eine Datei mit Konsolenausgabe}{13}
-\contentsline {subsubsection}{\numberline {2.4.5}Hilfe aufrufen}{14}
-\contentsline {section}{\numberline {3}Technischer Hintergrund}{15}
-\contentsline {subsection}{\numberline {3.1}Verwendete Fremdsoftware}{15}
-\contentsline {subsection}{\numberline {3.2}Aufbau}{15}
-\contentsline {subsubsection}{\numberline {3.2.1}convertToTxt.py}{15}
-\contentsline {subsubsection}{\numberline {3.2.2}extractTxt.py}{15}
-\contentsline {subsubsection}{\numberline {3.2.3}Die Module}{15}
-\contentsline {section}{\numberline {4}Kontaktdaten}{17}
+\contentsline {subsubsection}{\numberline {2.4.2}Entfernen von Kopf- und Fu\IeC {\ss }zeile}{12}
+\contentsline {subsubsection}{\numberline {2.4.3}Entfernen von Kopf- und Fu\IeC {\ss }zeile und anschlie\IeC {\ss }endes schreiben in eine Datei ohne Konsolenausgabe}{13}
+\contentsline {subsubsection}{\numberline {2.4.4}Entfernen von Kopf- und Fu\IeC {\ss }zeile und anschlie\IeC {\ss }endes schreiben in eine Datei mit Konsolenausgabe}{14}
+\contentsline {subsubsection}{\numberline {2.4.5}Entfernen von Kopf- und Fu\IeC {\ss }zeile und anschlie\IeC {\ss }endes schreiben von Text mit Wiederholungen in eine Datei ohne Konsolenausgabe}{15}
+\contentsline {subsubsection}{\numberline {2.4.6}Hilfe aufrufen}{16}
+\contentsline {section}{\numberline {3}Technischer Hintergrund}{17}
+\contentsline {subsection}{\numberline {3.1}Verwendete Fremdsoftware}{17}
+\contentsline {subsection}{\numberline {3.2}Aufbau}{17}
+\contentsline {subsubsection}{\numberline {3.2.1}convertToTxt.py}{17}
+\contentsline {subsubsection}{\numberline {3.2.2}extractTxt.py}{17}
+\contentsline {subsubsection}{\numberline {3.2.3}Die Module}{17}
+\contentsline {section}{\numberline {4}Kontaktdaten}{19}

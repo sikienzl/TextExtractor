@@ -201,9 +201,9 @@ Außerdem ist zwingend darauf zu achten, dass das Modul mit python3 aufgerufen w
 \hline
 \rowcolor[HTML]{C0C0C0} 
 {\color[HTML]{333333} Parameter (kurz)} & {\color[HTML]{333333} Parameter (lang)} & {\color[HTML]{333333} Beschreibung}                                                                                   \\ \hline
--h                                      & --help                                  & Hilfetext wird angezeigt                                                                                              \\ \hline
--i                                      & --input                                 & führt das Skript aus                                                                                                  \\ \hline
--o                                      & --output                                & \begin{tabular}[c]{@{}l@{}}Parameter für die Ausgabedatei.\\ Nur anwendbar mit Parameter -i bzw. --input\end{tabular} \\ \hline
+-h                                      & -{}-help                                  & Hilfetext wird angezeigt                                                                                              \\ \hline
+-i                                      & -{}-input                                 & führt das Skript aus                                                                                                  \\ \hline
+-o                                      & -{}-output                                & \begin{tabular}[c]{@{}l@{}}Parameter für die Ausgabedatei.\\ Nur anwendbar mit Parameter -i bzw. --input\end{tabular} \\ \hline
 -r                                      & ------------------                      & fügt Wiederholungen an das Ende einer Datei an                                                                        \\ \hline
 -v                                      & ------------------                      & Verbose-Mode: gibt den Text auf Konsole aus.                                                                          \\ \hline
 \end{tabular}
@@ -216,9 +216,9 @@ Außerdem ist zwingend darauf zu achten, dass das Modul mit python3 aufgerufen w
 \hline
 \rowcolor[HTML]{C0C0C0} 
 {\color[HTML]{333333} Parameter (kurz)} & {\color[HTML]{333333} Parameter (lang)} & {\color[HTML]{333333} Beschreibung}                                                                                   \\ \hline
--h                                      & --help                                  & Hilfetext wird angezeigt                                                                                              \\ \hline
--i                                      & --input                                 & führt das Skript aus                                                                                                  \\ \hline
--o                                      & --output                                & \begin{tabular}[c]{@{}l@{}}Parameter für die Ausgabedatei.\\ Nur anwendbar mit Parameter -i bzw. --input\end{tabular} \\ \hline
+-h                                      & -{}-help                                  & Hilfetext wird angezeigt                                                                                              \\ \hline
+-i                                      & -{}-input                                 & führt das Skript aus                                                                                                  \\ \hline
+-o                                      & -{}-output                                & \begin{tabular}[c]{@{}l@{}}Parameter für die Ausgabedatei.\\ Nur anwendbar mit Parameter -i bzw. --input\end{tabular} \\ \hline
 -v                                      & ------------------                      & Verbose-Mode: gibt den Text auf Konsole aus.                                                                          \\ \hline
 \end{tabular}
 \caption{Parameterübersicht von seperator.py}
@@ -231,32 +231,32 @@ Außerdem ist zwingend darauf zu achten, dass das Modul mit python3 aufgerufen w
 \hline
 \rowcolor[HTML]{C0C0C0} 
 {\color[HTML]{333333} Parameter (kurz)} & {\color[HTML]{333333} Parameter (lang)} & {\color[HTML]{333333} Beschreibung}                                                                                   \\ \hline
--h                                      & --help                                  & Hilfetext wird angezeigt                                                                                              \\ \hline
--i                                      & --input                                 & führt das Skript aus                                                                                                  \\ \hline
--o                                      & --output                                & \begin{tabular}[c]{@{}l@{}}Parameter für die Ausgabedatei.\\ Nur anwendbar mit Parameter -i bzw. --input\end{tabular} \\ \hline
+-h                                      & -{}-help                                  & Hilfetext wird angezeigt                                                                                              \\ \hline
+-i                                      & -{}-input                                 & führt das Skript aus                                                                                                  \\ \hline
+-o                                      & -{}-output                                & \begin{tabular}[c]{@{}l@{}}Parameter für die Ausgabedatei.\\ Nur anwendbar mit Parameter -i bzw. --input\end{tabular} \\ \hline
 \end{tabular}
 \caption{Parameterübersicht von trainy.py}
 \end{center}
 \end{table}
 
-Beispielaufrufe finden Sie weiter unten in diesem Kapitel. 
+Beispielaufrufe finden Sie in den weiteren Kapiteln. 
 \newpage
-\subsubsection{Extrahieren von Text auf Konsole}
+\subsubsection{Entfernen von Kopf- und Fußzeile}
 \label{sec:first-steps-extraction-console}
-Zum Extrahieren von Text tippen Sie einfach	
+Zum Entfernen von Kopf- und Fußzeile tippen Sie einfach	
 
 \begin{lstlisting}[language=bash]
-python3 convertToTxt.py -p <DATEIPFAD> -v 
+python3 checker.py -i <DATEIPFAD> -v 
 \end{lstlisting}\begin{center}
 oder 
 \end{center}
 \begin{lstlisting}[language=bash]
-python3 convertToTxt.py --process <DATEIPFAD> -v
+python3 checker.py --input <DATEIPFAD> -v
 \end{lstlisting}
-Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wird:
+Als Beispiel sehen Sie im Folgenden wie die Kopf- und Fußzeile aus einer Textdatei entfernt wird:
 \begin{figure}[htbp]
 \centering
-%\includegraphics[width=0.7\textwidth]{ersteSchritteExtract001}\par\vspace{0.25cm}
+\includegraphics[width=0.7\textwidth]{ersteSchritteKopfFuss001}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
 \label{fig:ersteSchritteExtract001}
 \end{figure}
@@ -265,44 +265,38 @@ oder
 \end{center}
 \begin{figure}[htbp]
 \centering
-%\includegraphics[width=0.7\textwidth]{ersteSchritteExtract002}\par\vspace{0.25cm}
+\includegraphics[width=0.7\textwidth]{ersteSchritteKopfFuss002}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
 \label{fig:ersteSchritteExtract002}
 \end{figure}
-\begin{figure}[htbp]
-%\includegraphics[width=1.0\textwidth]{ersteSchritteExtract003}\par\vspace{0.25cm}
-\caption{Beispielausgabe von docx}
-\label{fig:ersteSchritteExtract003}
-\end{figure}
+
 \newpage
-\subsubsection{Extrahieren von Text in eine Datei ohne Konsolenausgabe}
+\subsubsection{Entfernen von Kopf- und Fußzeile und anschließendes schreiben in eine Datei ohne Konsolenausgabe}
 \label{sec:first-steps-extraction-file-without}
-Zum Extrahieren von Text in eine Datei, ohne dabei den Text auf die Konsole auszugeben, tippen Sie einfach 
+Zum Entfernen von Kopf- und Fußzeile aus einer Datei, ohne dabei den Text auf die Konsole auszugeben, tippen Sie einfach 
 \begin{lstlisting}[language=bash]
-python3 convertToTxt.py -p <DATEIPFAD> -o <AUSGABEDATEI>
+python3 checker.py -i <DATEIPFAD> -o <AUSGABEDATEI>
 \end{lstlisting}
 \begin{center}
 oder
 \end{center}
 \begin{lstlisting}[language=bash]
-python3 convertToTxt.py --process <DATEIPFAD> --output <AUSGABEDATEI>
+python3 checker.py --input <DATEIPFAD> --output <AUSGABEDATEI>
 \end{lstlisting} 
-Es ist zu beachten, dass wenn die angegebene Ausgabedatei bereits existiert, der Inhalt durch den Text der im Moment extrahiert wird, überschrieben wird. 
-Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wird:
-\begin{figure}[htbp]
-%\includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithoutConsole001}\par\vspace{0.25cm}
+Es ist zu beachten, dass wenn die angegebene Ausgabedatei bereits existiert, der Inhalt durch den Text der im Moment durch Kopf- und Fußzeilen entfernt wird, überschrieben wird. 
+Beispiel:
+\begin{figure}[htbp]\includegraphics[width=1.0\textwidth]{ersteSchritteKopfFussIntoFileWithoutConsole002}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
-\label{fig:ersteSchritteExtractIntoFileWithoutConsole001}
+\label{fig:ersteSchritteKopfFussIntoFileWithoutConsole002}
 \end{figure}
 \begin{center}
 oder
 \end{center}
 \begin{figure}[htbp]
-%\includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithoutConsole002}\par
-
+\includegraphics[width=1.0\textwidth]{ersteSchritteKopfFussIntoFileWithoutConsole001}\par
 \vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
-\label{fig:ersteSchritteExtractIntoFileWithoutConsole002}
+\label{fig:ersteSchritteKopfFussIntoFileWithoutConsole001}
 \end{figure}
 \begin{figure}[htbp]
 \centering
@@ -311,41 +305,71 @@ oder
 \label{fig:ersteSchritteExtractIntoFileWithoutConsole003}
 \end{figure}
 \newpage
-\subsubsection{Extrahieren von Text in eine Datei mit Konsolenausgabe}
+\subsubsection{Entfernen von Kopf- und Fußzeile und anschließendes schreiben in eine Datei mit Konsolenausgabe}
 \label{sec:first-steps-extraction-file-with}
-Zum Extrahieren von Text in eine Datei mit Konsolenausgabe, tippen Sie einfach 
+Zum Entfernen von Kopf- und Fußzeile aus einer Datei, mit dabei den Text auf die Konsole auszugeben, tippen Sie einfach
 \begin{lstlisting}[language=bash]
-python3 convertToTxt.py -p <DATEIPFAD> -o <AUSGABEDATEI> -v
+python3 checker.py -i <DATEIPFAD> -o <AUSGABEDATEI> -v
 \end{lstlisting}
 \begin{center}
 oder
 \end{center}
 \begin{lstlisting}[language=bash] 
-python3 convertToTxt.py --process <DATEIPFAD> --output <AUSGABEDATEI> -v
+python3 convertToTxt.py --input <DATEIPFAD> --output <AUSGABEDATEI> -v
 \end{lstlisting}
-Es ist zu beachten, dass wenn die angegebene Ausgabedatei bereits existiert, der Inhalt durch den Text der im Moment extrahiert wird, überschrieben wird.
- Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wird:
+Es ist zu beachten, dass wenn die angegebene Ausgabedatei bereits existiert, der Inhalt durch den Text der im Moment durch Kopf- und Fußzeilen entfernt wird, überschrieben wird. 
+Beispiel:
 \begin{figure}[htbp]
-%\includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithConsole001}\par\vspace{0.25cm}
+\includegraphics[width=1.0\textwidth]{ersteSchritteKopfFussIntoFileWithConsole001}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
-\label{fig:ersteSchritteExtractIntoFileWithConsole001}
+\label{fig:ersteSchritteKopfFussIntoFileWithConsole001}
 \end{figure}
 \begin{center}
 oder
 \end{center}
 \begin{figure}[htbp]
-%\includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithConsole002}\par
+\includegraphics[width=1.0\textwidth]{ersteSchritteKopfFussIntoFileWithConsole002}\par
 
 \vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
-\label{fig:ersteSchritteExtractIntoFileWithConsole002}
+\label{fig:ersteSchritteKopfFussIntoFileWithConsole002}
 \end{figure}
 \begin{figure}[htbp]
 \centering
 %\includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithConsole003}\par\vspace{0.25cm}
-\caption{Ausgabe nach Aufruf des obigen Befehls}
 %\label{fig:ersteSchritteExtractIntoFileWithoutConsole003}
 \end{figure}
+\newpage
+\subsubsection{Entfernen von Kopf- und Fußzeile und anschließendes schreiben von Text mit Wiederholungen in eine Datei ohne Konsolenausgabe}
+\label{sec:first-steps-extraction-file-with}
+Zum Entfernen von Kopf- und Fußzeile aus einer Datei, ohne dabei den Text auf die Konsole auszugeben und Wiederholungen in die Ausgabedatei zu schreiben, tippen Sie einfach
+\begin{lstlisting}[language=bash]
+python3 checker.py -i <DATEIPFAD> -o <AUSGABEDATEI> -r
+\end{lstlisting}
+\begin{center}
+oder
+\end{center}
+\begin{lstlisting}[language=bash] 
+python3 convertToTxt.py --input <DATEIPFAD> --output <AUSGABEDATEI> -r
+\end{lstlisting}
+Es ist zu beachten, dass wenn die angegebene Ausgabedatei bereits existiert, der Inhalt durch den Text der im Moment durch Kopf- und Fußzeilen entfernt wird, überschrieben wird. 
+Beispiel:
+\begin{figure}[htbp]
+\includegraphics[width=1.0\textwidth]{ersteSchritteKopfFussIntoFileWithoutConsoleWithReplicates001}\par\vspace{0.25cm}
+%\caption{Aufruf der Hilfe mittels -h}
+\label{fig:ersteSchritteKopfFussIntoFileWithoutConsoleWithReplicates001}
+\end{figure}
+\begin{center}
+oder
+\end{center}
+\begin{figure}[htbp]
+\includegraphics[width=1.0\textwidth]{ersteSchritteKopfFussIntoFileWithoutConsoleWithReplicates002}\par
+
+\vspace{0.25cm}
+%\caption{Aufruf der Hilfe mittels -h}
+\label{fig:ersteSchritteKopfFussIntoFileWithConsoleWithReplicates002}
+\end{figure}
+
 \newpage
 \subsubsection{Hilfe aufrufen}
 \label{sec:first-steps-help}
