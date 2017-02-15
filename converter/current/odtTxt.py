@@ -1,7 +1,9 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 """ Modul zur Extrahierung von Text aus einer .odt-Datei """
 
 import subprocess
-import logging
+import loggingModule
 
 
 def odt_txt(filename):
@@ -14,4 +16,4 @@ def odt_txt(filename):
         process.stdout.close()
         return text
     except Exception as e:
-        logging.error(e)
+        loggingModule.logger6.error(e)

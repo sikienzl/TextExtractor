@@ -1,7 +1,9 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 """ Modul zur Extrahierung von Text einer .docx-Datei """
 
 import docx2txt
-import logging
+import loggingModule
 
 
 def docx_txt(filename):
@@ -10,6 +12,6 @@ def docx_txt(filename):
         text = docx2txt.process(filename)
         return text.encode()
     except AttributeError as aErr:
-        logging.error(aErr)
+        loggingModule.logger5.error(aErr)
     except FileNotFoundError as fErr:
-        logging.error(fErr)
+        loggingModule.logger5.error(fErr)

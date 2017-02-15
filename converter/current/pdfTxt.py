@@ -1,7 +1,9 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 """ Modul zur Extrahierung von Text aus einer .pdf-Datei """
 
 import subprocess
-import logging
+import loggingModule
 
 
 def pdf_txt(filename):
@@ -14,4 +16,4 @@ def pdf_txt(filename):
         return text
 
     except Exception as e:
-        logging.error(e)
+        loggingModule.logger7.error(e)

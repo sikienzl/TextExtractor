@@ -1,5 +1,13 @@
 #!/usr/bin/python3
 
+"""
+separator.py:
+separates the senteces in a file.
+"""
+
+__author__      = "Mark Unger, Siegfried Kienzle"
+
+
 import sys
 import getopt
 # from nltk import data
@@ -48,7 +56,7 @@ def seperator(filename):
     data = fp.read()
     tokenizerString = tokenizer.tokenize(data)
     # print(tokenizerString)
-    tmpstr = "\n-------\n"
+    tmpstr = "\n"
     # string = '\n'
     string = tmpstr.join(tokenizer.tokenize(data))
     return string
@@ -60,7 +68,7 @@ def writeIntoFile(filename2, string):
         fh.write(string)
         fh.close()
     except IOError:
-         loggingModule.logger1.error("fehler")
+         loggingModule.logger1.error("Error occured when trying to write in file")
 
 
 def help():

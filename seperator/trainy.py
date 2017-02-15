@@ -1,5 +1,10 @@
 #!/usr/bin/python3 -w
 
+"""trainy.py: Description of what foobar does."""
+
+__author__      = "Mark Unger, Siegfried Kienzle"
+
+
 import nltk.tokenize.punkt
 import pickle
 import codecs

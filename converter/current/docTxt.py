@@ -1,7 +1,10 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 """ Modul zur Extrahierung von Text aus einer .doc-Datei """
 
 import subprocess
-import logging
+import loggingModule
+
 
 
 def doc_txt(filename):
@@ -14,4 +17,4 @@ def doc_txt(filename):
         process.stdout.close()
         return text
     except Exception as e:
-        logging.error(e)
+        loggingModule.logger4.error(e)

@@ -1,8 +1,17 @@
 #!/usr/bin/python3
 
+"""
+checker.py: 
+Checks the files for repetitions and writes to a 
+file without the repetitions
+"""
+
+__author__      = "Mark Unger, Siegfried Kienzle"
+
 import sys
 import getopt
 import difflib
+import loggingModule
 
 MAX_PROCENT = 90
 MAX_LINE_COUNT = 200
@@ -15,13 +24,13 @@ def main():
     liste_wiederholungen = []
     output_liste = []
     if(len(sys.argv) == 1):
-        print("Please put a correct parameter!\n")
-        print(help())
+        loggingModule.logger1.info("Please put a correct parameter!\n")
+        loggingModule.logger1.info(help())
     try:
         opts, args = getopt.getopt(
             argv, "rhvi:o:", ['help', 'input=', 'output='])
     except getopt.GetoptError as e:
-        print("Please put a correct parameter!\n")
+        loggingModule.logger1.info("Please put a correct parameter!\n")
     verbose = False
     repetitions = False
     for o, a in opts:
@@ -30,7 +39,7 @@ def main():
         elif o == "-r":
             repetitions = True
         elif o in ("-h", "--help"):
-            print(help())
+            loggingModule.logger1.info(help())
         elif o in ("-i", "--input"):
             liste = getListWithoutEmptyLines(a)
             liste_wiederholungen = get_wiederholung_list(liste)
@@ -44,9 +53,9 @@ def main():
     if verbose:
         if liste is not None:
             for zeile in output_liste:
-                print(zeile)
+                loggingModule.logger1.info(zeile)
         else:
-            print(help())
+            loggingModule.logger1.info(help())
 
 
 def getListWithoutEmptyLines(file):
@@ -128,12 +137,14 @@ def get_wiederholung_list(list_without_empty_lines):
 
 
 def write_into_file(out_file, liste):
-    OUTPUT_FILE = open(out_file, "wt")
-    for i in liste:
-        OUTPUT_FILE.write(i + '\n')
-    OUTPUT_FILE.close()
-
-
+    try:
+        OUTPUT_FILE = open(out_file, "wt")
+        for i in liste:
+            OUTPUT_FILE.write(i + '\n')
+        OUTPUT_FILE.close()
+    except:
+        loggingModule.logger1.error("Error: when trying to write to file")
+    
 def help():
     return("arguments\n" +
            "-h,                     --help                        " +
