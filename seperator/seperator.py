@@ -4,6 +4,7 @@ import sys
 import getopt
 # from nltk import data
 import nltk.data
+import loggingModule
 
 # PICKLE_FILE = 'tokenizers/punkt/german.pickle'
 PICKLE_FILE = 'business.pickle'
@@ -13,31 +14,32 @@ def main():
     argv = sys.argv[1:]
     string = None
     if(len(sys.argv) == 1):
-        print("Please put a correct parameter!\n")
-        print(help())
+        loggingModule.logger1.info("Please put a correct parameter!\n")
+        loggingModule.logger1.info(help())
+        
     try:
         opts, args = getopt.getopt(
             argv, "hvi:o:", ['help', 'input=', 'output='])
     except getopt.GetoptError as e:
-        print("Please put a correct parameter!\n")
+         loggingModule.logger1.info("Please put a correct parameter!\n")
 
     verbose = False
     for o, a in opts:
         if o == "-v":
             verbose = True
         elif o in ("-h", "--help"):
-            print(help())
+             loggingModule.logger1.info(help())
         elif o in ("-i", "--input"):
             string = seperator(a)
         elif o in ("-o", "--output"):
             writeIntoFile(a, string)
         else:
-            print(help())
+             loggingModule.logger1.info(help())
     if verbose:
         if string is not None:
-            print(string)
+             loggingModule.logger1.info(string)
         else:
-            print(help())
+             loggingModule.logger1.info(help())
 
 
 def seperator(filename):
@@ -58,7 +60,7 @@ def writeIntoFile(filename2, string):
         fh.write(string)
         fh.close()
     except IOError:
-        print("fehler")
+         loggingModule.logger1.error("fehler")
 
 
 def help():
