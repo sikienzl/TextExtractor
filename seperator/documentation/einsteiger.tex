@@ -301,7 +301,7 @@ oder
 \begin{figure}[htbp]
 \centering
 %\includegraphics[width=0.2\textwidth]{ersteSchritteExtractIntoFileWithoutConsole003}\par\vspace{0.25cm}
-\caption{Beispielausgabe des Befehls ls, nachdem die Datei erstellt wurde}
+%\caption{Beispielausgabe des Befehls ls, nachdem die Datei erstellt wurde}
 \label{fig:ersteSchritteExtractIntoFileWithoutConsole003}
 \end{figure}
 \newpage
@@ -377,7 +377,7 @@ Zum Aufrufen der Hilfe einfach wie im folgenden Bild den Parameter -h bzw. -{}-h
 \newline
 \begin{figure}[htbp]
 \centering
-%\includegraphics[width=0.4\textwidth]{ersteSchritteHilfe1}\par\vspace{0.25cm}
+\includegraphics[width=0.4\textwidth]{ersteSchritteHilfeChecker1}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
 \label{fig:ersteSchritteHilfe1}
 \end{figure}
@@ -386,18 +386,220 @@ oder
 \end{center}
 \begin{figure}[htbp]
 \centering
-%\includegraphics[width=0.4\textwidth]{ersteSchritteHilfe2}\par\vspace{0.25cm}
+\includegraphics[width=0.4\textwidth]{ersteSchritteHilfeChecker2}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels - -help}
 \label{fig:ersteSchritte2}
 \end{figure}
 Die Ausgabe sollte wie folgt aussehen:
 \begin{figure}[htbp]
 \centering
-%\includegraphics[width=1.1\textwidth]{ersteSchritteHilfe3}\par\vspace{0.5cm}
+\includegraphics[width=1.1\textwidth]{ersteSchritteHilfeChecker3}\par\vspace{0.5cm}
 %\caption{Aufruf der Hilfe mittels - -help}
 \label{fig:ersteSchritteHilfe3}
 \end{figure}
 \newpage
+
+
+%-----ab hier seperator%
+
+
+\subsubsection{Trennen von Sätzen}
+\label{sec:first-steps-extraction-console}
+Zum Trennen von Sätzen tippen Sie einfach	
+
+\begin{lstlisting}[language=bash]
+python3 seperator.py -i <DATEIPFAD> -v 
+\end{lstlisting}\begin{center}
+oder 
+\end{center}
+\begin{lstlisting}[language=bash]
+python3 seperator.py --input <DATEIPFAD> -v
+\end{lstlisting}
+Als Beispiel sehen Sie im Folgenden wie die Sätze aus einer Textdatei getrennt werden:
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\textwidth]{ersteSchritteSaetzeTrennen001}\par\vspace{0.25cm}
+%\caption{Aufruf der Hilfe mittels -h}
+\label{fig:ersteSchritteSaetzeTrennen001}
+\end{figure}
+\begin{center}
+oder
+\end{center}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\textwidth]{ersteSchritteSaetzeTrennen002}\par\vspace{0.25cm}
+%\caption{Aufruf der Hilfe mittels -h}
+\label{fig:ersteSchritteSaetzeTrennen002}
+\end{figure}
+
+\newpage
+\subsubsection{Trennen von Sätzen und anschließendes schreiben in eine Datei ohne Konsolenausgabe}
+\label{sec:first-steps-extraction-file-without}
+Zum Trennen von Sätzen aus einer Datei, ohne dabei den Text auf die Konsole auszugeben, tippen Sie einfach 
+\begin{lstlisting}[language=bash]
+python3 seperator.py -i <DATEIPFAD> -o <AUSGABEDATEI>
+\end{lstlisting}
+\begin{center}
+oder
+\end{center}
+\begin{lstlisting}[language=bash]
+python3 seperator.py --input <DATEIPFAD> --output <AUSGABEDATEI>
+\end{lstlisting} 
+Es ist zu beachten, dass wenn die angegebene Ausgabedatei bereits existiert, überschrieben wird. 
+Beispiel:
+\begin{figure}[htbp]\includegraphics[width=1.0\textwidth]{ersteSchritteSeperatorIntoFileWithoutConsole001}\par\vspace{0.25cm}
+%\caption{Aufruf der Hilfe mittels -h}
+\label{fig:ersteSchritteSeperatorIntoFileWithoutConsole001}
+\end{figure}
+\begin{center}
+oder
+\end{center}
+\begin{figure}[htbp]
+\includegraphics[width=1.0\textwidth]{ersteSchritteSeperatorIntoFileWithoutConsole002}\par
+\vspace{0.25cm}
+%\caption{Aufruf der Hilfe mittels -h}
+\label{fig:ersteSchritteSeperatorIntoFileWithoutConsole002}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+%\includegraphics[width=0.2\textwidth]{ersteSchritteExtractIntoFileWithoutConsole003}\par\vspace{0.25cm}
+%\caption{Beispielausgabe des Befehls ls, nachdem die Datei erstellt wurde}
+\label{fig:ersteSchritteExtractIntoFileWithoutConsole003}
+\end{figure}
+\newpage
+\subsubsection{Trennen von Sätzen und anschließendes schreiben in eine Datei mit Konsolenausgabe}
+\label{sec:first-steps-extraction-file-with}
+Zum Trennen von Sätzen aus einer Datei, mit dabei den Text auf die Konsole auszugeben, tippen Sie einfach
+\begin{lstlisting}[language=bash]
+python3 seperator.py -i <DATEIPFAD> -o <AUSGABEDATEI> -v
+\end{lstlisting}
+\begin{center}
+oder
+\end{center}
+\begin{lstlisting}[language=bash] 
+python3 seperator.py --input <DATEIPFAD> --output <AUSGABEDATEI> -v
+\end{lstlisting}
+Es ist zu beachten, dass wenn die angegebene Ausgabedatei bereits existiert, überschrieben wird. 
+Beispiel:
+\begin{figure}[htbp]
+\includegraphics[width=1.0\textwidth]{ersteSchrittSaetzeTrennenFileWithConsole001}\par\vspace{0.25cm}
+%\caption{Aufruf der Hilfe mittels -h}
+\label{fig:ersteSchrittSaetzeTrennenFileWithConsole001}
+\end{figure}
+\begin{center}
+oder
+\end{center}
+\begin{figure}[htbp]
+\includegraphics[width=1.0\textwidth]{ersteSchrittSaetzeTrennenFileWithConsole002}\par
+
+\vspace{0.25cm}
+%\caption{Aufruf der Hilfe mittels -h}
+\label{fig:ersteSchrittSaetzeTrennenFileWithConsole002}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+%\includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithConsole003}\par\vspace{0.25cm}
+%\label{fig:ersteSchritteExtractIntoFileWithoutConsole003}
+\end{figure}
+\newpage
+\subsubsection{Hilfe aufrufen}
+\label{sec:first-steps-help}
+Zum Aufrufen der Hilfe einfach wie im folgenden Bild den Parameter -h bzw. -{}-help eingeben.
+\newline
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.4\textwidth]{ersteSchritteHilfeSeperator1}\par\vspace{0.25cm}
+%\caption{Aufruf der Hilfe mittels -h}
+\label{fig:ersteSchritteHilfeSeperator1}
+\end{figure}
+\begin{center}
+oder
+\end{center}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.4\textwidth]{ersteSchritteHilfeSeperator2}\par\vspace{0.25cm}
+%\caption{Aufruf der Hilfe mittels - -help}
+\label{fig:ersteSchritteHilfeSeperator2}
+\end{figure}
+Die Ausgabe sollte wie folgt aussehen:
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.1\textwidth]{ersteSchritteHilfeSeperator3}\par\vspace{0.5cm}
+%\caption{Aufruf der Hilfe mittels - -help}
+\label{fig:ersteSchritteHilfeSeperator3}
+\end{figure}
+
+\newpage
+
+
+%-------ab hier trainy.py%
+\subsubsection{Erstellen der Satztrennungs-Erkennungs-Datei *.pickle}
+\label{sec:first-steps-sentence-console}
+Zum Erstellen der Satztrennungs-Erkennungs-Datei tippen sie einfach:
+\begin{lstlisting}[language=bash]
+python3 trainy.py -i <DATEIPFAD> -o <AUSGABEDATEI>
+\end{lstlisting}
+\begin{center}
+oder
+\end{center}
+\begin{lstlisting}[language=bash] 
+python3 trainy.py --input <DATEIPFAD> --output <AUSGABEDATEI>
+\end{lstlisting}
+Es ist zu beachten, dass wenn die angegebene Ausgabedatei bereits existiert, überschrieben wird. 
+Beispiel:
+\begin{figure}[htbp]
+\includegraphics[width=1.0\textwidth]{ersteSchrittSaetzeTrennenTrainerFileWithConsole001}\par\vspace{0.25cm}
+%\caption{Aufruf der Hilfe mittels -h}
+\label{fig:ersteSchrittSaetzeTrennenTrainerFileWithConsole001}
+\end{figure}
+\begin{center}
+oder
+\end{center}
+\begin{figure}[htbp]
+\includegraphics[width=1.0\textwidth]{ersteSchrittSaetzeTrennenTrainerFileWithConsole002}\par
+
+\vspace{0.25cm}
+%\caption{Aufruf der Hilfe mittels -h}
+\label{fig:ersteSchrittSaetzeTrennenTrainerFileWithConsole002}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+%\includegraphics[width=1.0\textwidth]{ersteSchritteExtractIntoFileWithConsole003}\par\vspace{0.25cm}
+%\label{fig:ersteSchritteExtractIntoFileWithoutConsole003}
+\end{figure}
+\newpage
+\subsubsection{Hilfe aufrufen}
+\label{sec:first-steps-help}
+Zum Aufrufen der Hilfe einfach wie im folgenden Bild den Parameter -h bzw. -{}-help eingeben.
+\newline
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.4\textwidth]{ersteSchritteHilfeSeperator1}\par\vspace{0.25cm}
+%\caption{Aufruf der Hilfe mittels -h}
+\label{fig:ersteSchritteHilfeSeperator1}
+\end{figure}
+\begin{center}
+oder
+\end{center}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.4\textwidth]{ersteSchritteHilfeSeperator2}\par\vspace{0.25cm}
+%\caption{Aufruf der Hilfe mittels - -help}
+\label{fig:ersteSchritteHilfeSeperator2}
+\end{figure}
+Die Ausgabe sollte wie folgt aussehen:
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.1\textwidth]{ersteSchritteHilfeSeperator3}\par\vspace{0.5cm}
+%\caption{Aufruf der Hilfe mittels - -help}
+\label{fig:ersteSchritteHilfeSeperator3}
+\end{figure}
+
+
+
+
+\newpage
+
 \section{Technischer Hintergrund}
 \label{sec:technical-background}
 \subsection{Verwendete Fremdsoftware}
