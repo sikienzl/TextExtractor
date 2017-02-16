@@ -57,7 +57,9 @@ def main():
         else:
             loggingModule.logger1.info(help())
 
-
+'''
+Deletes empty line in the string
+'''
 def getListWithoutEmptyLines(file):
     INPUT_FILE = open(file, "r")
     list_without_empty_lines = []
@@ -84,6 +86,7 @@ def delete_empty_lines(input_file):
     list_without_empty_lines = []
     for line in input_file:
         one_line = line.rstrip()
+        one_line = one_line.strip('\n\r\t')
         if(one_line != ''):
             list_without_empty_lines.append(one_line)
     return list_without_empty_lines
