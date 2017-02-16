@@ -172,6 +172,7 @@ files.tar    & Tar-Datei, die die Python-Module enthält                        
 \hline
 \rowcolor[HTML]{9B9B9B} 
 Datei                & Verwendung                                 \\ \hline
+loggingModule.py           & Hilfsdatei die Fehler in Logging-Datei schreibt        \\ \hline
 checker.py           & Entfernt die Kopf- und Fu"sszeilen         \\ \hline
 seperator.py         & Trennt die Sätze                           \\ \hline
 trainy.py            & Erstellt Regelwerk zum Trennen von Sätzen  \\ \hline
@@ -189,11 +190,16 @@ Es gibt drei Skripte: \begin{itemize}
 \item seperator.py
 \item trainy.py
 \end{itemize}
-Alle drei besitzen entsprechende Parameter die im allgemeinen so aufgerufen werden:
+und ein Modul:
+\begin{itemize}
+\item loggingModule.py
+\end{itemize}
+Alle drei Skripte besitzen entsprechende Parameter die im allgemeinen so aufgerufen werden:
 \begin{lstlisting}[language=bash]
 python3 <PYTHONSCRIPT> <PARAMETER> (<PFAD>) 
 \end{lstlisting}
 Dabei sollte <PYTHONSCRIPT> durch eins der oben genannten Pythonskripte und <PARAMETER> durch Parameter jeweils aus den Tabellen 3, 4 und 5 ersetzt werden. Alle drei Skripte besitzen außerdem die Parameter -i bzw. -{}-input und -o bzw. -{}-output. Bei  diesen Parametern sollte dann zusätzlich <PFAD> (das hier in runden Klammern steht) durch den Pfad der Datei, aus der der Text extrahiert bzw. in den der Text geschrieben werden soll, ersetzt werden. 
+Das Modul loggingModule.py dient lediglich dazu Fehler in einer Logging-Datei festzuhalten. 
 Außerdem ist zwingend darauf zu achten, dass das Modul mit python3 aufgerufen wird.
 \begin{table}[H]
 \begin{center}
@@ -307,7 +313,7 @@ oder
 \newpage
 \subsubsection{Entfernen von Kopf- und Fußzeile und anschließendes schreiben in eine Datei mit Konsolenausgabe}
 \label{sec:first-steps-extraction-file-with}
-Zum Entfernen von Kopf- und Fußzeile aus einer Datei, mit dabei den Text auf die Konsole auszugeben, tippen Sie einfach
+Zum Entfernen von Kopf- und Fußzeile aus einer Datei und dabei den Text auf die Konsole auszugeben, tippen Sie einfach
 \begin{lstlisting}[language=bash]
 python3 checker.py -i <DATEIPFAD> -o <AUSGABEDATEI> -v
 \end{lstlisting}
@@ -469,7 +475,7 @@ oder
 \newpage
 \subsubsection{Trennen von Sätzen und anschließendes schreiben in eine Datei mit Konsolenausgabe}
 \label{sec:first-steps-extraction-file-with}
-Zum Trennen von Sätzen aus einer Datei, mit dabei den Text auf die Konsole auszugeben, tippen Sie einfach
+Zum Trennen von Sätzen aus einer Datei und dabei den Text auf die Konsole auszugeben, tippen Sie einfach
 \begin{lstlisting}[language=bash]
 python3 seperator.py -i <DATEIPFAD> -o <AUSGABEDATEI> -v
 \end{lstlisting}
@@ -508,25 +514,25 @@ Zum Aufrufen der Hilfe einfach wie im folgenden Bild den Parameter -h bzw. -{}-h
 \newline
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.4\textwidth]{ersteSchritteHilfeSeperator1}\par\vspace{0.25cm}
+\includegraphics[width=0.4\textwidth]{ersteSchritteHilfeTrainy1}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels -h}
-\label{fig:ersteSchritteHilfeSeperator1}
+\label{fig:ersteSchritteHilfeTrainy1}
 \end{figure}
 \begin{center}
 oder
 \end{center}
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.4\textwidth]{ersteSchritteHilfeSeperator2}\par\vspace{0.25cm}
+\includegraphics[width=0.4\textwidth]{ersteSchritteHilfeTrainy2}\par\vspace{0.25cm}
 %\caption{Aufruf der Hilfe mittels - -help}
-\label{fig:ersteSchritteHilfeSeperator2}
+\label{fig:ersteSchritteHilfeTrainy2}
 \end{figure}
 Die Ausgabe sollte wie folgt aussehen:
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=1.1\textwidth]{ersteSchritteHilfeSeperator3}\par\vspace{0.5cm}
+\includegraphics[width=1.1\textwidth]{ersteSchritteHilfeTrainy3}\par\vspace{0.5cm}
 %\caption{Aufruf der Hilfe mittels - -help}
-\label{fig:ersteSchritteHilfeSeperator3}
+\label{fig:ersteSchritteHilfeTrainy3}
 \end{figure}
 
 \newpage
@@ -612,36 +618,28 @@ Die Ausgabe sollte wie folgt aussehen:
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Datiename  & verwendete Zusatzsoftware & {\color[HTML]{000000} Entwicklerwebseite}     \\ \hline
-docTxt.py  & catdoc                    & http://freecode.com/projects/catdoc           \\ \hline
-docxTxt.py & Python-Modul docx2txt     & http://docx2txt.sourceforge.net/              \\ \hline
-pdfTxt.py  & pdftotext                 & https://poppler.freedesktop.org/              \\ \hline
-odtTxt.py  & odt2txt                   & https://github.com/dstosberg/odt2txt          \\ \hline
-rtfTxt.py  & unrtf                     & https://www.gnu.org/software/unrtf/unrtf.html \\ \hline
+seperator.py  & nltk                    & http://www.nltk.org/data.html           \\ \hline
+trainy.py & nltk     & http://www.nltk.org/data.html              \\ \hline
 \end{tabular}
 \caption{Auflistung der verwendeten Software}
 \end{table}
 \subsection{Aufbau}
 \label{sec:technical-background-aufbau}
-Wie schon aus der Tabelle in Kapitel \ref{modulbestandteil} zu sehen ist, besteht das Projekt aus einer Hauptdatei convertToTxt.py die aufgerufen wird, einer Hilfsdatei extractTxt.py in die die Programmlogik ausgelagert wurde und den einzelnen Modulen.
-Im weiteren werden die einzelnen Dateien technisch erläutert.
-\subsubsection{convertToTxt.py}
-\label{sec:technical-background-convertToTxt}
-Die convertToTxt.py nimmt alle Anfragen entgegen und beinhaltet die einzelnen Argumente sowie die Hilfe-Funktion.
-Die Verarbeitung der Argumente und Optionen wurden mittels dem Modul getopt realisert.
-\subsubsection{extractTxt.py}
-\label{sec:technical-background-extractTxt}
-Die Datei extractTxt.py enthält die eigentliche Logik des Extrahierungs-Skriptes. Sie enthält die Funktionen process(path) und file(text, a).
-Die process(path)-Funktion nimmt den Pfad aus der zu extrahierenden Datei über den Parameter path entgegen und übergibt den Pfad dem entsprechenden Modul, indem es sich die Dateiendung betrachtet. 
-Der heraus zu extrahierende Text, der von einzelnen Modulen zurückgegeben wird, wird mit UTF-8 dekodiert und so dann endgültig zurückgegeben. 
-file(text, a) speichert den heraus extrahierten Text in eine Datei. Dazu wird dem Parameter text der zu speichernde Text und dem Parameter a der Speicherort übergeben. 
-\subsubsection{Die Module}
-\label{sec:technical-background-module}
-Wie im Abschnitt \ref{additional-software-table} in der Tabelle zu sehen ist, gibt es fünf Module. Alle Module rufen, bis auf docxTxt.py, ein Konsolen-Programm mittels subprocess.Popen() auf.
-Es wird dazu das Modul subprocess importiert. In einer Liste, die dem subprocess.Popen() übergeben wird, steht das zu ausführende Programm und der Dateiname. Außerdem wird die Standardausgabe und die Ausgabe für die Fehler in eine Pipe umgeleitet, damit der zu extrahierte Text später weiterverarbeitet werden kann. Am Ende wird dann process.stdout.read() zurückgeliefert und mit process.stdout.close(), wird der Lese-Stream dann wieder geschlossen.
-Die Fehlerbehandlung wurde mittels try-except-Anweisung realisiert und es wird bei einer auftretenden Exception ins Logfile geschrieben. 
-\newline
-Das Modul docxTxt.py unterscheidet sich von den anderen Modulen in sofern, dass ein Modul namens docx2txt importiert wird und dieses eigene Methoden zum Aufrufen besitzt. In docxTxt.py wird lediglich die Funktion process() verwendet. 
-An die Funktion wird der Dateiname, aus der der Text extrahiert werden soll, übergeben und process() liefert dann einen String mit dem darin extrahierten Text zurück. 
+Wie schon aus der Tabelle in Kapitel \ref{modulbestandteil} zu sehen ist, besteht das Projekt aus zwei Hauptdateien der seperator.py und der checker.py, einem Modul loggingModule.py und dem Trainer für die checker.py.
+\subsubsection{seperator.py}
+\label{sec:technical-background-seperator}
+Die seperator.py nimmt die Argumente entgegen und trennt mittels dem Modul nltk und der aus dem Trainer erstellten *.pickle-Datei, den Text, aus der Input-Datei.   
+Die Verarbeitung der Argumente und Optionen wurden mittels dem Modul getopt realisiert.
+\subsubsection{trainy.py}
+\label{sec:technical-background-trainy}
+Die Datei trainy.py erstellt mittels dem nltk-Modul die *.pickle-Datei. Dazu wird das Modul nltk.tokenize.punkt importiert. Mit diesem Modul werden mittels dem Aufruf tokenizer.train(text) die Texte in einen pickle-Text umgewandelt. Danach wird das Ganze in eine *.pickle-Datei gespeichert.   
+\subsubsection{checker.py}
+\label{sec:technical-background-checker}
+Die checker.py dient dazu die Kopf- und Fußzeilen zu entfernen. Dazu wurde das Modul difflib importiert. Es werden zunächst alle leeren Zeilen entfernt und die nicht leeren Zeilen in eine Liste gespeichert. Aus dieser Liste werden mittels difflib alle Zeilen auf Wiederholungen geprüft und in eine neue Liste geschrieben. Anschließend wird in der Methode extract\_repeated\_lines(list\_without\_empty\_lines, list\_wiederholungen), die Liste aus der alle Leerzeilen entfernt wurden und die Liste in der alle Wiederholungen vorkommen, mittels difflib nochmals geprüft. Überschreitet der Unterschied zwischen den beiden Listen einen bestimmten Prozentsatz (hier: 90 Prozent), wird diese Zeile nicht in eine neue Liste eingefügt. Danach wird der Text ohne Kopf- und Fußzeilen in eine Datei geschrieben. 
+Die Verarbeitung der Argumente und Optionen wurden mittels dem Modul getopt realisiert.
+\subsubsection{loggingModule.py}
+\label{sec:technical-background-loggingModule}
+Das Modul loggingModule.py dient lediglich dazu die Fehler und entstehenden Exceptions in ein Logging-File namens logging.log zu schreiben. Dazu wurde das Modul logging importiert. 
 \newpage
 \section{Kontaktdaten}
 \label{sec:kontaktdaten}
