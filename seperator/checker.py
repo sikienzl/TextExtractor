@@ -67,7 +67,9 @@ def getListWithoutEmptyLines(file):
     INPUT_FILE.close()
     return list_without_empty_lines
 
-
+'''
+shows and compares with the repetitions, and if its a repetitions it is deleted
+'''
 def extract_repeated_lines(list_without_empty_lines, liste_wiederholungen):
     liste_final = []
     for i in list_without_empty_lines:
@@ -82,6 +84,9 @@ def extract_repeated_lines(list_without_empty_lines, liste_wiederholungen):
     return liste_final
 
 
+'''
+deletes empty lines in the string
+'''
 def delete_empty_lines(input_file):
     list_without_empty_lines = []
     for line in input_file:
@@ -92,6 +97,9 @@ def delete_empty_lines(input_file):
     return list_without_empty_lines
 
 
+'''
+returns all repetitions
+'''
 def get_wiederholung_list(list_without_empty_lines):
     liste_zwischen = []
     liste_wiederholungen = []
@@ -139,6 +147,9 @@ def get_wiederholung_list(list_without_empty_lines):
     return liste_wiederholungen
 
 
+'''
+writes the builded string into a file 
+'''
 def write_into_file(out_file, liste):
     try:
         OUTPUT_FILE = open(out_file, "wt")
@@ -147,7 +158,10 @@ def write_into_file(out_file, liste):
         OUTPUT_FILE.close()
     except:
         loggingModule.logger1.error("Error: when trying to write to file")
-    
+
+'''
+returns the help text
+'''
 def help():
     return("arguments\n" +
            "-h,                     --help                        " +
