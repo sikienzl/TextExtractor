@@ -182,6 +182,7 @@ moduls.tar & Tar-Datei, die die Python-Module enthält                          
 Datei           & Verwendung                           \\ \hline
 convertToTxt.py & Datei die für das Extrahieren aufgerufen wird \\ \hline
 extractTxt.py   & Hauptdatei für die Extrahierung      \\ \hline
+loggingModule.py           & Hilfsdatei die Fehler in Logging-Datei schreibt        \\ \hline
 docTxt.py       & Modul für die Dateiendung doc        \\ \hline
 docxTxt.py      & Modul für die Dateiendung docx       \\ \hline
 odtTxt.py       & Modul für die Dateiendung odt        \\ \hline
@@ -396,7 +397,7 @@ file(text, a) speichert den heraus extrahierten Text in eine Datei. Dazu wird de
 \label{sec:technical-background-module}
 Wie im Abschnitt \ref{additional-software-table} in der Tabelle zu sehen ist, gibt es fünf Module. Alle Module rufen, bis auf docxTxt.py, ein Konsolen-Programm mittels subprocess.Popen() auf.
 Es wird dazu das Modul subprocess importiert. In einer Liste, die dem subprocess.Popen() übergeben wird, steht das zu ausführende Programm und der Dateiname. Außerdem wird die Standardausgabe und die Ausgabe für die Fehler in eine Pipe umgeleitet, damit der zu extrahierte Text später weiterverarbeitet werden kann. Am Ende wird dann process.stdout.read() zurückgeliefert und mit process.stdout.close(), wird der Lese-Stream dann wieder geschlossen.
-Die Fehlerbehandlung wurde mittels try-except-Anweisung realisiert und es wird bei einer auftretenden Exception ins Logfile geschrieben. 
+Die Fehlerbehandlung wurde mittels try-except-Anweisung realisiert und es wird bei einer auftretenden Exception in ein Logfile namens logging.log geschrieben. Das komplette Logging wurde in die Datei loggingModule.py ausgelagert. 
 \newline
 Das Modul docxTxt.py unterscheidet sich von den anderen Modulen in sofern, dass ein Modul namens docx2txt importiert wird und dieses eigene Methoden zum Aufrufen besitzt. In docxTxt.py wird lediglich die Funktion process() verwendet. 
 An die Funktion wird der Dateiname, aus der der Text extrahiert werden soll, übergeben und process() liefert dann einen String mit dem darin extrahierten Text zurück. 
