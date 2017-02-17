@@ -23,7 +23,7 @@ def main():
 
     try:
         opts, args = getopt.getopt(
-            argv, "hi:p:", ['help', 'input=', 'path='])
+            argv, "hi:p:d", ['help', 'input=', 'path=', 'delete'])
     except getopt.GetoptError as e:
         loggingModule.logger9.info("Please put a correct parameter!\n")
 
@@ -61,14 +61,6 @@ def path_with_files(path):
         loggingModule.logger9.info(input_path + " goes in process")
         
         work(input_path)
-    
-    #    try:
-     #       file_name_process = input_file.split('.')
-      #      file_name = file_name_process[0]
-       #     work()
-
-       # except Exception as e:
-        #    loggingModule.logger9.error("Cannot split file name: " + str(e))
     
     loggingModule.logger9.info("----------READY----------")
 '''
@@ -134,10 +126,8 @@ def help():
            "show help message and exit\n" +
            "-i [path to file]        --input  [path to file]         " +
            "to run the program\n" +
-           "-o [path to outputfile]  --output [path to outputfile]   " +
-           "to extract text into file\n" +
-           "-v                                                       " +
-           "verbose-Mode")
+           "-p [path to folder]  --path [path to folder]   " +
+           "process all file in a folder\n")
 
 if __name__ == '__main__':
     main()
