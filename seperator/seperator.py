@@ -52,23 +52,27 @@ def main():
 
 def seperator(filename):
     tokenizer = nltk.data.load(PICKLE_FILE)
-    fp = open(filename)
-    data = fp.read()
-    tokenizerString = tokenizer.tokenize(data)
-    # print(tokenizerString)
-    tmpstr = "\n"
-    # string = '\n'
-    string = tmpstr.join(tokenizer.tokenize(data))
-    return string
+    try:
+        fp = open(filename)
+        data = fp.read()
+        tokenizerString = tokenizer.tokenize(data)
+        # print(tokenizerString)
+        tmpstr = "\n-----\n"
+        # string = '\n'
+        string = tmpstr.join(tokenizer.tokenize(data))
+        return string
+    except Exception as e:
+        loggingModule.logger1.error("Error: " + str(e))
 
 
 def writeIntoFile(filename2, string):
-    try:
-        fh = open(filename2, 'w+')
-        fh.write(string)
-        fh.close()
-    except IOError:
-         loggingModule.logger1.error("Error occured when trying to write in file")
+    if string:
+        try:
+            fh = open(filename2, 'w+')
+            fh.write(string)
+            fh.close()
+        except IOError:
+             loggingModule.logger1.error("Error occured when trying to write in file")
 
 
 def help():
