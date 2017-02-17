@@ -70,6 +70,7 @@ def getListWithoutEmptyLines(file):
         return list_without_empty_lines
     except Exception as e:
         loggingModule.logger2.error("Error: " + str(e))
+
 '''
 shows and compares with the repetitions, and if its a repetitions it is deleted
 '''
@@ -159,9 +160,9 @@ writes the builded string into a file
 def write_into_file(out_file, liste):
     if liste:
         try:
-            OUTPUT_FILE = open(out_file, "wt")
+            OUTPUT_FILE = open(out_file, "w+")
             for i in liste:
-                OUTPUT_FILE.write(i + '\n')
+                OUTPUT_FILE.write(i)
             OUTPUT_FILE.close()
         except:
             loggingModule.logger2.error("Error: when trying to write to file")
