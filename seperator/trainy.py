@@ -11,8 +11,8 @@ import codecs
 import sys
 import getopt
 
+FILENAME_BUSINESS = "business.pickle"
 tokenizer = nltk.tokenize.punkt.PunktSentenceTokenizer()
-
 
 def main():
     argv = sys.argv[1:]
@@ -34,7 +34,7 @@ def main():
             if a is not None:
                 writePickleFile(text, a)
             else:
-                print("No filename for output-file\n")
+                writePickleFile(text, FILENAME_BUSINESS)
         else:
             print(help())
 
