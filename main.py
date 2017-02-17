@@ -12,6 +12,7 @@ import sys
 import getopt
 import loggingModule
 import subprocess
+import os
 
 
 def main():
@@ -109,6 +110,7 @@ def work(input_file):
              file_name_removedLines],
             stdout=subprocess.PIPE)
         proc1.wait()
+        os.remove(file_name_converted)
     except Exception as e:
         loggingModule.logger9.error("Cannot check file: " + str(e))
 
@@ -123,6 +125,7 @@ def work(input_file):
              file_name_seperator],
             stdout=subprocess.PIPE)
         proc2.wait()
+        os.remove(file_name_removedLines)
     except Exception as e:
         loggingModule.logger9.error("Cannot seperate sentence: " + str(e))
 
