@@ -41,18 +41,26 @@ def main():
 
 
 def path_with_files(path):
+    endings = ['pdf', 'rtf', 'doc', 'docx', 'odt']
     listr = []
     encoding = 'utf-8'
-    
-    
+    clean_list = []
+
     try:
         proc3 = subprocess.Popen(["ls", path], stdout=subprocess.PIPE)
         list_with_filenames = proc3.stdout.readlines()
     except Exception as e:
         loggingModule.logger9.error("Cannot get files: " + str(e))
     
-
-    for filename in list_with_filenames:
+    for filename1 in list_with_filenames:
+        filename2 = str(filename1)
+        get_info_about_file = filename2.split('.')
+        get_info_about_file2 = get_info_about_file[-1].rstrip(' \\n \'')
+        
+        if(get_info_about_file2 in endings):
+            clean_list.append(filename1)
+        
+    for filename in clean_list:
         filename_encoded = str(filename, encoding)
         clean_filename = filename_encoded.strip(' \n\r\t')
 

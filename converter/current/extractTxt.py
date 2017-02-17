@@ -33,14 +33,14 @@ def process(path):
             try:
                 encodedText = text.decode('utf-8', "strict")
             except Exception as e:
-                loggingModule.logger3.error("Error: " + str(e))
+                loggingModule.logger3.error("Error 1: " + str(e) + " on path:" + str(path))
                 sys.exit(2)
         else:
             rtfString = text.decode("windows-1252")
             encodedText = rtfString.split('-' * 17 + '\n', 1)[-1]
         return encodedText
     else:
-        loggingModule.logger3.warning("File not exist: error \n")
+        loggingModule.logger3.warning("Warning 1: File not exist: error \n")
         sys.exit(1)
 
 
@@ -51,7 +51,7 @@ def file(text, a):
             text_file.write(text)
             text_file.close()
         except Exception as e:
-            loggingModule.logger3.error("Cannot write to file:" + str(e))
+            loggingModule.logger3.error("Error 2:" + str(e))
     else:
         loggingModule.logger3.error('Correct use: convertToTxt.py -p <PATH> -o <OUTPUTPATH>')
         sys.exit(2)
