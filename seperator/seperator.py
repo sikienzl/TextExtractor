@@ -57,7 +57,7 @@ def seperator(filename):
         data = fp.read()
         tokenizerString = tokenizer.tokenize(data)
         # print(tokenizerString)
-        tmpstr = "\n-----\n"
+        tmpstr = "\n"
         # string = '\n'
         string = tmpstr.join(tokenizer.tokenize(data))
         return string
