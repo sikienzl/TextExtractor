@@ -45,3 +45,19 @@ p{
     width: 90%;
     margin-top:5em;
 }
+
+#slide11 > p{
+    margin-top:4em;
+}
+.test{
+    margin-top:1em;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    height: 100%;
+    flex-direction: row;
+    padding-left: 0%;
+}
+.vergleich{
+    font-size:0.6em;
+}
