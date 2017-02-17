@@ -14,6 +14,7 @@ import errno
 logging.getLogger().setLevel(logging.INFO)
 
 logger1 = logging.getLogger('separator.py')
+logger2 = logging.getLogger('checker.py')
 
 formatter = logging.Formatter('%(message)s')
 
@@ -36,3 +37,5 @@ filehandler.setLevel(logging.WARNING)
 
 logger1.addHandler(console)
 logger1.addHandler(filehandler)
+logger2.addHandler(console)
+logger2.addHandler(filehandler)
