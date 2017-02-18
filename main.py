@@ -13,7 +13,10 @@ import getopt
 import loggingModule
 import subprocess
 import os
+import configparser
 
+config = configparser.ConfigParser()
+config.read('path.cfg')
 
 def main():
     argv = sys.argv[1:]
@@ -80,9 +83,9 @@ The tree files _converted, _removed_lines and _final stay where the input_file i
 
 
 def work(input_file):
-    converter_path = 'converter/current/convertToTxt.py'
-    checker_path = 'seperator/checker.py'
-    seperator_path = 'seperator/seperator.py'
+    converter_path=config['PFAD']['converter'] 
+    checker_path=config['PFAD']['checker'] 
+    seperator_path=config['PFAD']['seperator'] 
 
     file_name_process = input_file.split('.')
     file_name = file_name_process[0]
