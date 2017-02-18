@@ -52,39 +52,41 @@ def path_with_files(path):
         list_with_filenames = proc3.stdout.readlines()
     except Exception as e:
         loggingModule.logger9.error("Cannot get files: " + str(e))
-    
+
     for filename1 in list_with_filenames:
         filename2 = str(filename1)
         get_info_about_file = filename2.split('.')
         get_info_about_file2 = get_info_about_file[-1].rstrip(' \\n \'')
-        
+
         if(get_info_about_file2 in endings):
             clean_list.append(filename1)
-        
+
     for filename in clean_list:
         filename_encoded = str(filename, encoding)
         clean_filename = filename_encoded.strip(' \n\r\t')
 
         input_path = path + clean_filename
-        
+
         loggingModule.logger9.info(input_path + " goes in process")
-        
+
         work(input_path)
-    
+
     loggingModule.logger9.info("----------READY----------")
 '''
 work():
 calls the moduls to converts, remove duplications and seperates sentences.
 The tree files _converted, _removed_lines and _final stay where the input_file is.
 '''
+
+
 def work(input_file):
     converter_path = 'converter/current/convertToTxt.py'
     checker_path = 'seperator/checker.py'
     seperator_path = 'seperator/seperator.py'
-    
+
     file_name_process = input_file.split('.')
     file_name = file_name_process[0]
-    
+
     file_name_converted = file_name + '_converted.txt'
     try:
         proc = subprocess.Popen(
@@ -128,7 +130,6 @@ def work(input_file):
         os.remove(file_name_removedLines)
     except Exception as e:
         loggingModule.logger9.error("Cannot seperate sentence: " + str(e))
-
 
 
 def help():
