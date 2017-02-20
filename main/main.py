@@ -15,21 +15,23 @@ import subprocess
 import os
 import configparser
 
+
 config = configparser.ConfigParser()
 config.read('path.cfg')
 
 def main():
     argv = sys.argv[1:]
     string = None
+#    opts = None
     if(len(sys.argv) == 1):
         loggingModule.logger9.info("Please put a correct parameter!\n")
         loggingModule.logger9.info(help())
 
-    try:
-        opts, args = getopt.getopt(
+#    try:
+    opts, args = getopt.getopt(
             argv, "hi:p:d", ['help', 'input=', 'path=', 'delete'])
-    except getopt.GetoptError as e:
-        loggingModule.logger9.info("Please put a correct parameter!\n")
+#    except getopt.GetoptError as e:
+#        loggingModule.logger9.info("Please put a correct parameter!\n")
 
     for o, a in opts:
         if o in ("-h", "--help"):
@@ -69,10 +71,9 @@ def path_with_files(path):
         clean_filename = filename_encoded.strip(' \n\r\t')
 
         input_path = path + clean_filename
-
         loggingModule.logger9.info(input_path + " goes in process")
 
-        work(input_path)
+        work(input_path, clean_filename)
 
     loggingModule.logger9.info("----------READY----------")
 '''
@@ -82,15 +83,17 @@ The tree files _converted, _removed_lines and _final stay where the input_file i
 '''
 
 
-def work(input_file):
+def work(input_file, filename):
     converter_path=config['PFAD']['converter'] 
     checker_path=config['PFAD']['checker'] 
     seperator_path=config['PFAD']['seperator'] 
 
     file_name_process = input_file.split('.')
     file_name = file_name_process[0]
+    right_filename = filename.split('.')
+    file_name2 = str(right_filename[0])
 
-    file_name_converted = file_name + '_converted.txt'
+    file_name_converted = file_name2 + '_converted.txt'
     try:
         proc = subprocess.Popen(
             ["python3",
@@ -104,7 +107,7 @@ def work(input_file):
     except Exception as e:
         loggingModule.logger9.error("Cannot convert file: " + str(e))
 
-    file_name_removedLines = file_name + '_removed_lines.txt'
+    file_name_removedLines = file_name2 + '_removed_lines.txt'
     try:
         proc1 = subprocess.Popen(
             ["python3",
@@ -119,10 +122,10 @@ def work(input_file):
     except Exception as e:
         loggingModule.logger9.error("Cannot check file: " + str(e))
 
-    file_name_seperator = file_name + '_final.txt'
+    file_name_seperator = file_name2 + '_final.txt'
     try:
         proc2 = subprocess.Popen(
-            ["python3",
+            ["/usr/bin/python3",
              seperator_path,
              '-i',
              file_name_removedLines,
