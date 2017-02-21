@@ -215,7 +215,7 @@ Außerdem ist zwingend darauf zu achten, dass das Modul mit python3 aufgerufen w
 \rowcolor[HTML]{C0C0C0} 
 Parameter (kurz) & Parameter (lang) & Erklärung                                                                                                                              \\ \hline
 -h               & -{}-help           & Zeigt die Hilfe an                                                                                                                     \\ \hline
--p               & -{}-process        & Führt die Textextrahierung durch.  \\ \hline
+-i               & -{}-input        & Paramete für die Eingabedatei.  \\ \hline
 -v				 & ------------------ & Verbose-Mode: Gibt den Text auf Konsole aus. \\ \hline
 -o               & -{}-output         & Parameter für die Ausgabedatei.\\
 				 &					  &	Nur anwendbar mit Argument -p bzw. -{}-process \\ \hline
@@ -231,12 +231,12 @@ Beispielaufrufe finden Sie weiter unten in diesem Kapitel.
 Zum Extrahieren von Text tippen Sie einfach	
 
 \begin{lstlisting}[language=bash]
-python3 convertToTxt.py -p <DATEIPFAD> -v 
+python3 convertToTxt.py -i <DATEIPFAD> -v 
 \end{lstlisting}\begin{center}
 oder 
 \end{center}
 \begin{lstlisting}[language=bash]
-python3 convertToTxt.py --process <DATEIPFAD> -v
+python3 convertToTxt.py --input <DATEIPFAD> -v
 \end{lstlisting}
 Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wird:
 \begin{figure}[htbp]
@@ -264,13 +264,13 @@ oder
 \label{sec:first-steps-extraction-file-without}
 Zum Extrahieren von Text in eine Datei, ohne dabei den Text auf die Konsole auszugeben, tippen Sie einfach 
 \begin{lstlisting}[language=bash]
-python3 convertToTxt.py -p <DATEIPFAD> -o <AUSGABEDATEI>
+python3 convertToTxt.py -i <DATEIPFAD> -o <AUSGABEDATEI>
 \end{lstlisting}
 \begin{center}
 oder
 \end{center}
 \begin{lstlisting}[language=bash]
-python3 convertToTxt.py --process <DATEIPFAD> --output <AUSGABEDATEI>
+python3 convertToTxt.py --input <DATEIPFAD> --output <AUSGABEDATEI>
 \end{lstlisting} 
 Es ist zu beachten, dass wenn die angegebene Ausgabedatei bereits existiert, der Inhalt durch den Text der im Moment extrahiert wird, überschrieben wird. 
 Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wird:
@@ -300,13 +300,13 @@ oder
 \label{sec:first-steps-extraction-file-with}
 Zum Extrahieren von Text in eine Datei mit Konsolenausgabe, tippen Sie einfach 
 \begin{lstlisting}[language=bash]
-python3 convertToTxt.py -p <DATEIPFAD> -o <AUSGABEDATEI> -v
+python3 convertToTxt.py -i <DATEIPFAD> -o <AUSGABEDATEI> -v
 \end{lstlisting}
 \begin{center}
 oder
 \end{center}
 \begin{lstlisting}[language=bash] 
-python3 convertToTxt.py --process <DATEIPFAD> --output <AUSGABEDATEI> -v
+python3 convertToTxt.py --input <DATEIPFAD> --output <AUSGABEDATEI> -v
 \end{lstlisting}
 Es ist zu beachten, dass wenn die angegebene Ausgabedatei bereits existiert, der Inhalt durch den Text der im Moment extrahiert wird, überschrieben wird.
  Als Beispiel sehen Sie im folgenden wie Text aus einer DOCX-Datei extrahiert wird:
