@@ -1,4 +1,7 @@
 #!/bin/sh
+if [ ! -f "/usr/bin/pip3" ] ; then
+	apt-get install python3-pip
+fi
 pip3 install -U nltk
 #/usr/bin/python3 -m nltk.downloader -d /usr/share/nltk_data punkt
 pathTar="seperator.tar"
