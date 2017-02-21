@@ -4,7 +4,7 @@ import pymysql as mariadb
 import configparser
 
 config = configparser.ConfigParser()
-config.read(os.path.dirname(__file__ + '/connect.cfg')
+config.read(os.path.dirname(os.path.abspath(__file__)) + '/connect.cfg')
 
 try:
     # CONNECTION-Settings
