@@ -17,11 +17,10 @@ import configparser
 
 
 config = configparser.ConfigParser()
-config.read(os.path.dirname(os.path.abspath(__file__)) + '/path.cfg')
-
+config.read('path.cfg')
 
 def main():
-    output = './'
+    output='' #'./'
     argv = sys.argv[1:]
     string = None
 #    opts = None
@@ -31,37 +30,52 @@ def main():
 
 #    try:
     opts, args = getopt.getopt(
-        argv, "hi:o:p:d", ['help', 'input=', 'output=', 'path=', 'delete'])
+            argv, "hi:o:p:d", ['help', 'input=', 'output=','path=', 'delete'])
 #    except getopt.GetoptError as e:
 #        loggingModule.logger9.info("Please put a correct parameter!\n")
 
     output_flag = False
     input_flag = False
+    inputparameter_flag = False
     outputpath = ""
+    inputpath = ""
     for o, a in opts:
         if o in ("-h", "--help"):
             loggingModule.logger9.info(help())
         elif o in ("-i", "--input"):
-            input_file = a
-            work(input_file)
+            inputpath = a
+            inputparameter_flag = True
         elif o in ("-p", "--path"):
             path = a
             input_flag = True
-            # path_with_files(path)
+            #path_with_files(path)
         elif o in ("-o", "--output"):
             outputpath = a
             output_flag = True
         else:
             loggingModule.logger9.info(help())
 
+    if inputparameter_flag and output_flag:
+        output = outputpath
+        if not os.path.exists(output):
+            os.makedirs(output)
+        if not os.path.dirname(inputpath):
+            work(os.getcwd() + '/' + inputpath, os.getcwd() + '/' + inputpath, output)
+        else:
+            work(inputpath, inputpath, output+'/')
+    elif inputparameter_flag:
+        if not os.path.dirname(inputpath):
+            work(os.getcwd() + '/' + inputpath, os.getcwd() + '/' + inputpath, output)
+        else:
+            work(inputpath,inputpath, output) 
+
     if output_flag and input_flag:
         output = outputpath
         if not os.path.exists(output):
             os.makedirs(output)
-        path_with_files(path, output + '/')
+        path_with_files(path, output+'/')
     elif input_flag:
         path_with_files(path, output)
-
 
 def path_with_files(path, output):
     endings = ['pdf', 'rtf', 'doc', 'docx', 'odt']
@@ -101,15 +115,14 @@ The tree files _converted, _removed_lines and _final stay where the input_file i
 
 
 def work(input_file, filename, output):
-    converter_path = config['PFAD']['converter']
-    checker_path = config['PFAD']['checker']
-    seperator_path = config['PFAD']['seperator']
+    converter_path=config['PFAD']['converter'] 
+    checker_path=config['PFAD']['checker'] 
+    seperator_path=config['PFAD']['seperator'] 
 
     file_name_process = input_file.split('.')
     file_name = file_name_process[0]
     right_filename = filename.split('.')
     file_name2 = str(right_filename[0])
-
     file_name_converted = output + file_name2 + '_converted.txt'
     try:
         proc = subprocess.Popen(
@@ -162,7 +175,7 @@ def help():
            "-i [path to file]          --input  [path to file]         " +
            "to run the program\n" +
            "-p [path to folder]        --path [path to folder]   " +
-           "process all file in a folder\n" +
+           "process all file in a folder\n" + 
            "-o [path to outputfolder]  --output [path to outputfolder] " +
            "write output into a folder\n")
 
