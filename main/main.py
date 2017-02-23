@@ -17,7 +17,7 @@ import configparser
 
 
 config = configparser.ConfigParser()
-config.read('path.cfg')
+config.read(os.path.abspath(os.path.dirname(__file__)) + '/path.cfg')
 
 def main():
     output='' #'./'
