@@ -15,7 +15,7 @@ import nltk.data
 import loggingModule
 
 # PICKLE_FILE = 'tokenizers/punkt/german.pickle'
-PICKLE_FILE = 'business.pickle'
+PICKLE_FILE = os.path.abspath(os.path.dirname(__file__)) + '/business.pickle'
 
 
 def main():
