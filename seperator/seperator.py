@@ -12,6 +12,7 @@ import sys
 import getopt
 # from nltk import data
 import nltk.data
+import os
 import loggingModule
 
 # PICKLE_FILE = 'tokenizers/punkt/german.pickle'
