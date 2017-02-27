@@ -28,62 +28,62 @@ def main():
     if(len(sys.argv) == 1):
         loggingModule.logger9.info("Please put a correct parameter!\n")
         loggingModule.logger9.info(help())
+    else:
+        try:
+            opts, args = getopt.getopt(
+                argv, "hi:o:p:d", [
+                    'help', 'input=', 'output=', 'path=', 'delete'])
 
-    try:
-        opts, args = getopt.getopt(
-            argv, "hi:o:p:d", ['help', 'input=', 'output=', 'path=', 'delete'])
+            output_flag = False
+            input_flag = False
+            inputparameter_flag = False
+            outputpath = ""
+            inputpath = ""
+            for o, a in opts:
+                if o in ("-h", "--help"):
+                    loggingModule.logger9.info(help())
+                elif o in ("-i", "--input"):
+                    inputpath = a
+                    inputparameter_flag = True
+                elif o in ("-p", "--path"):
+                    path = a
+                    input_flag = True
+                # path_with_files(path)
+                elif o in ("-o", "--output"):
+                    outputpath = a
+                    output_flag = True
+                else:
+                    loggingModule.logger9.info(help())
 
-    output_flag = False
-    input_flag = False
-    inputparameter_flag = False
-    outputpath = ""
-    inputpath = ""
-    for o, a in opts:
-        if o in ("-h", "--help"):
-            loggingModule.logger9.info(help())
-        elif o in ("-i", "--input"):
-            inputpath = a
-            inputparameter_flag = True
-        elif o in ("-p", "--path"):
-            path = a
-            input_flag = True
-            # path_with_files(path)
-        elif o in ("-o", "--output"):
-            outputpath = a
-            output_flag = True
-        else:
-            loggingModule.logger9.info(help())
+            if inputparameter_flag and output_flag:
+                output = outputpath
+                if not os.path.exists(output):
+                    os.makedirs(output)
+                if not os.path.dirname(inputpath):
+                    work(
+                        os.getcwd() + '/' + inputpath,
+                        os.getcwd() + '/' + inputpath,
+                        output)
+                else:
+                    work(inputpath, inputpath, output + '/')
+            elif inputparameter_flag:
+                if not os.path.dirname(inputpath):
+                    work(
+                        os.getcwd() + '/' + inputpath,
+                        os.getcwd() + '/' + inputpath,
+                        output)
+                else:
+                    work(inputpath, inputpath, output)
 
-    if inputparameter_flag and output_flag:
-        output = outputpath
-        if not os.path.exists(output):
-            os.makedirs(output)
-        if not os.path.dirname(inputpath):
-            work(
-                os.getcwd() + '/' + inputpath,
-                os.getcwd() + '/' + inputpath,
-                output)
-        else:
-            work(inputpath, inputpath, output + '/')
-    elif inputparameter_flag:
-        if not os.path.dirname(inputpath):
-            work(
-                os.getcwd() + '/' + inputpath,
-                os.getcwd() + '/' + inputpath,
-                output)
-        else:
-            work(inputpath, inputpath, output)
-
-    if output_flag and input_flag:
-        output = outputpath
-        if not os.path.exists(output):
-            os.makedirs(output)
-        path_with_files(path, output + '/')
-    elif input_flag:
-        path_with_files(path, output)
-
-    except getopt.GetoptError as e:
-        loggingModule.logger9.info("Please put a correct parameter!\n")
+            if output_flag and input_flag:
+                output = outputpath
+                if not os.path.exists(output):
+                    os.makedirs(output)
+                    path_with_files(path, output + '/')
+            elif input_flag:
+                path_with_files(path, output)
+        except getopt.GetoptError as e:
+            loggingModule.logger9.info("Please put a correct parameter!\n")
 
 
 def path_with_files(path, output):
