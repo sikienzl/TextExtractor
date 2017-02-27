@@ -10,6 +10,8 @@ import logging.handlers
 import os
 import errno
 
+LOG_FILE = os.path.abspath(os.path.dirname(__file__)) + "/logging.log"
+
 # logger for console and file with maxbyte=1mb
 logging.getLogger().setLevel(logging.INFO)
 
@@ -30,11 +32,11 @@ console.setFormatter(formatter)
 console.setLevel(logging.INFO)
 
 # file
-filehandler = logging.FileHandler(os.path.abspath(os.path.dirname(__file__)) + "/logging.log")
+filehandler = logging.FileHandler(LOG_FILE)
 file_formatter = logging.Formatter(
     '%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
 filehandler = logging.handlers.RotatingFileHandler(
-    "logging.log",
+    LOG_FILE,
     mode='a',
     maxBytes=1000000,
     backupCount=1)
