@@ -32,8 +32,6 @@ def main():
     try:
         opts, args = getopt.getopt(
             argv, "hi:o:p:d", ['help', 'input=', 'output=', 'path=', 'delete'])
-    except getopt.GetoptError as e:
-        loggingModule.logger9.info("Please put a correct parameter!\n")
 
     output_flag = False
     input_flag = False
@@ -83,6 +81,9 @@ def main():
         path_with_files(path, output + '/')
     elif input_flag:
         path_with_files(path, output)
+
+    except getopt.GetoptError as e:
+        loggingModule.logger9.info("Please put a correct parameter!\n")
 
 
 def path_with_files(path, output):
