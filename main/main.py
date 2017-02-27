@@ -39,6 +39,7 @@ def main():
             inputparameter_flag = False
             outputpath = ""
             inputpath = ""
+            path = ""
             for o, a in opts:
                 if o in ("-h", "--help"):
                     loggingModule.logger9.info(help())
@@ -55,33 +56,47 @@ def main():
                 else:
                     loggingModule.logger9.info(help())
 
-            if inputparameter_flag and output_flag:
+            # if-statement for Parameter -i or --input
+            if inputparameter_flag and output_flag and "." in inputpath:
                 output = outputpath
                 if not os.path.exists(output):
                     os.makedirs(output)
                 if not os.path.dirname(inputpath):
+                    loggingModule.logger9.info(inputpath + " goes in process")
                     work(
                         os.getcwd() + '/' + inputpath,
                         os.getcwd() + '/' + inputpath,
                         output)
                 else:
+                    loggingModule.logger9.info(inputpath + " goes in process")
                     work(inputpath, inputpath, output + '/')
-            elif inputparameter_flag:
+            elif inputparameter_flag and "." in inputpath:
                 if not os.path.dirname(inputpath):
+                    loggingModule.logger9.info(inputpath + " goes in process")
                     work(
                         os.getcwd() + '/' + inputpath,
                         os.getcwd() + '/' + inputpath,
                         output)
                 else:
-                    work(inputpath, inputpath, output)
+                    loggingModule.logger9.info(inputpath + " goes in process")
+                    work(inputpath, inputpath, os.getcwd() + '/' + output)
+            elif "." not in inputpath and inputparameter_flag:
+                loggingModule.logger9.info(
+                    "Parameter -i or --input only for files")
+                print(help())
 
-            if output_flag and input_flag:
+            # if-statement for Parameter -p or --path
+            if output_flag and input_flag and "." not in path:
                 output = outputpath
                 if not os.path.exists(output):
                     os.makedirs(output)
-                    path_with_files(path, output + '/')
-            elif input_flag:
+                path_with_files(path, output + '/')
+            elif input_flag and "." not in path:
                 path_with_files(path, output)
+            elif "." in path and input_flag:
+                loggingModule.logger9.info(
+                    "Parameter -p or --path only for folders")
+                print(help())
         except getopt.GetoptError as e:
             loggingModule.logger9.info("Please put a correct parameter!\n")
 
@@ -131,7 +146,12 @@ def work(input_file, filename, output):
     file_name_process = input_file.split('.')
     file_name = file_name_process[0]
     right_filename = filename.split('.')
-    file_name2 = str(right_filename[0])
+    right_filename_str = str(right_filename[0])
+    if "/" in right_filename_str:
+        right_filename_str = os.path.split(os.path.abspath(right_filename_str))
+        file_name2 = str(right_filename_str[1])
+    else:
+        file_name2 = str(right_filename[0])
     file_name_converted = output + file_name2 + '_converted.txt'
     try:
         proc = subprocess.Popen(
