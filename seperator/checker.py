@@ -14,7 +14,7 @@ import difflib
 import loggingModule
 
 MAX_PROCENT = 90
-MAX_LINE_COUNT = 200
+MAX_LINE_COUNT = 400
 MAX_COUNT_REPETITION = 5
 
 
@@ -79,8 +79,7 @@ def extract_repeated_lines(list_without_empty_lines, liste_wiederholungen):
     for i in list_without_empty_lines:
         is_repetition = False
         for ii in liste_wiederholungen:
-            unterschied = difflib.SequenceMatcher(None, i, ii)
-            prozent = unterschied.ratio() * 100
+            prozent = difference(i, ii) #call difference function
             if(prozent > MAX_PROCENT):
                 is_repetition = True
         if(is_repetition is False):
@@ -119,8 +118,7 @@ def get_wiederholung_list(list_without_empty_lines):
 
             for a in reversed(liste_zwischen):
                 count_liste_zwischen += 1
-                unterschied = difflib.SequenceMatcher(None, one_line, a)
-                prozent = unterschied.ratio() * 100
+                prozent = difference(one_line, a)#call difference function
 
                 if(prozent > MAX_PROCENT):
                 # if the line on the whole document and the line in liste_zwischen
@@ -129,8 +127,7 @@ def get_wiederholung_list(list_without_empty_lines):
                     # check if the line or a similar line is already inside
                     # dictionary_wiederholungen
                     for key, value in dictionary_wiederholungen.items():
-                        unterschied = difflib.SequenceMatcher(None, key, a)
-                        prozent = unterschied.ratio() * 100
+                        prozent = difference(key, a) #call difference function
                         if(prozent > MAX_PROCENT):
                             dictionary_wiederholungen[
                                 key] += 1  # key exist and
@@ -151,9 +148,13 @@ def get_wiederholung_list(list_without_empty_lines):
 
             if(count_empty_list > MAX_LINE_COUNT):
                 break
+
         return liste_wiederholungen
 
-
+def difference(string1, string2):
+    difference = difflib.SequenceMatcher(None, string1, string2)
+    prozent = difference.ratio() * 100
+    return prozent
 '''
 writes the builded string into a file 
 '''
