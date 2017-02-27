@@ -30,7 +30,7 @@ console.setFormatter(formatter)
 console.setLevel(logging.INFO)
 
 # file
-filehandler = logging.FileHandler("logging.log")
+filehandler = logging.FileHandler(os.path.abspath(os.path.dirname(__file__)) + "/logging.log")
 file_formatter = logging.Formatter(
     '%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
 filehandler = logging.handlers.RotatingFileHandler(
