@@ -1,8 +1,11 @@
-# Teamprojekt
+# Teamproject  
 -------------
-Dieses Projekt beinhaltet Python-Module zur Textextrahierung verschiedener Formate, Kopf- und Fußzeilenentfernung und Satztrennung.
 
-Die hierfür verwendete Python-Version war 3.4.3 und die Module wurden für die Server-Distribution von Ubuntu entwickelt.
+This project contains python-modules to
+  * extract text from different formats
+  * removes header and footer
+  * seperate sentences
 
-Zur Installation einfach die inst.sh im Ordner install aufrufen.
+It contains setup-files for the server distribution of ubuntu and the python-version 3.4.3.
 
+If you would like to install these files, you go into the folder install and type ```./inst.sh```.
