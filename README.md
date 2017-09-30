@@ -2,7 +2,7 @@
 -------------
 
 This project contains python-modules to
-  * extract text from different formats
+  * extract text from different formats (\*\.doc, \*\.docx, \*\.odt, \*\.pdf, \*\.rtf) 
   * removes header and footer
   * seperate sentences
 
