@@ -14,4 +14,4 @@ The project is distributed under the terms of the MIT-License.
 
 The seperator-module use the [Natural Language Toolkit](http://www.nltk.org/) and is distributed under the terms of the Apache License Version 2.0.
 
-The docx-module of the converter use the [docx2txt](http://docx2txt.sourceforge.net/) and is distributed under the terms of the GPLv3.
+The docx-module of the converter use [docx2txt](http://docx2txt.sourceforge.net/) and is distributed under the terms of the GPLv3.
