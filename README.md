@@ -14,6 +14,6 @@ The seperator-module use the [Natural Language Toolkit](http://www.nltk.org/) an
 
 We refer to the following book:
 
-   *Bird, Steven, Edward Loper and Ewan Klein (2009), Natural Language Processing with Python. O’Reilly Media Inc.*
+:*Bird, Steven, Edward Loper and Ewan Klein (2009), Natural Language Processing with Python. O’Reilly Media Inc.*
 
 The docx-module of the converter use [docx2txt](http://docx2txt.sourceforge.net/) and is distributed under the terms of the GPLv3.
