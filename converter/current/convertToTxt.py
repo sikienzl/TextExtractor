@@ -12,7 +12,7 @@ import loggingModule
 def main():
     NO_ARG_TXT="No argument"
     PUT_CORRECT_PARAM_TXT="Please put a correct parameter: error \n" + help()
-    UNEXPECTED_ERR_TXT="Unexpected error")
+    UNEXPECTED_ERR_TXT="Unexpected error"
 
     argv = sys.argv[1:]
     text = None

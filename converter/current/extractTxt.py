@@ -14,20 +14,10 @@ import os.path
 import loggingModule
 
 def process(path):
-
     if(os.path.isfile(path)):
         loggingModule.logger3.debug('Started text extract')
         extension = path.split(".")
-        if extension[-1] == "doc":
-            text = docTxt.doc_txt(path)
-        if extension[-1] == "docx":
-            text = docxTxt.docx_txt(path)
-        if extension[-1] == "pdf":
-            text = pdfTxt.pdf_txt(path)
-        if extension[-1] == "rtf":
-            text = rtfTxt.rtf_txt(path)
-        if extension[-1] == "odt":
-            text = odtTxt.odt_txt(path)
+        text = select_textextension_type(extension, path)
         loggingModule.logger3.debug('End text extract')
         if extension[-1] != "rtf":
             try:
@@ -37,12 +27,24 @@ def process(path):
                 sys.exit(2)
         else:
             rtf_string = text.decode("windows-1252")
-            encoded_text = rtf_string.split('-' * 17 + '\n', 1)[-1]
+            encoded_text = rtf_string.split('-' * 17 + '\n', 1)[-1] 
         return encoded_text
     else:
         loggingModule.logger3.warning("Warning 1: File not exist: error \n")
         sys.exit(1)
 
+def select_textextension_type(extension, path):
+    if extension[-1] == "doc":
+        text = docTxt.doc_txt(path)
+    if extension[-1] == "docx":
+       text = docxTxt.docx_txt(path)
+    if extension[-1] == "pdf":
+       text = pdfTxt.pdf_txt(path)
+    if extension[-1] == "rtf":
+       text = rtfTxt.rtf_txt(path)
+    if extension[-1] == "odt":
+       text = odtTxt.odt_txt(path)
+    return text
 
 def file(text, a):
     if text is not None and a is not None:
