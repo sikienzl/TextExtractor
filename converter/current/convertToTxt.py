@@ -10,26 +10,30 @@ import extractTxt
 import loggingModule
 
 def main():
+    NO_ARG_TXT="No argument"
+    PUT_CORRECT_PARAM_TXT="Please put a correct parameter: error \n" + help()
+    UNEXPECTED_ERR_TXT="Unexpected error")
+
     argv = sys.argv[1:]
     text = None
 
     if(len(sys.argv) == 1):  # if no argument
-        loggingModule.logger2.info('No argument')
-        loggingModule.logger2.info("Please put a correct parameter: error \n" + help())
+        loggingModule.logger2.info(NO_ARG_TXT)
+        loggingModule.logger2.info(PUT_CORRECT_PARAM_TXT)
     try:
         opts, args = getopt.getopt(
             argv, "hvi:o:", ['help', 'input=', 'output='])
     except getopt.GetoptError as e:
         loggingModule.logger2.error(e)  # write into logfile
         loggingModule.logger2.info(sys.argv[1] + " is not an argument")  # write into logfile
-        loggingModule.logger2.info("Please put a correct parameter: error \n" + help())
+        loggingModule.logger2.info(PUT_CORRECT_PARAM_TXT)
         sys.exit(2)
     except:
-        loggingModule.logger2.info("Unexpected error")
+        loggingModule.logger2.info(UNEXPECTED_ERR_TXT)
 
-    if len(args) is not 0:
+    if len(args) != 0:
         logging.info(sys.argv[1] + " is not an argument")
-        loggingModule.logger2.error("Please put a correct parameter: error \n" + help())
+        loggingModule.logger2.error(PUT_CORRECT_PARAM_TXT)
 
     verbose = False
     for o, a in opts:
@@ -42,7 +46,7 @@ def main():
         elif o in ("-o", "--output"):
             extractTxt.file(text, a)
         else:
-            loggingModule.logger2.info("Please put a correct parameter: error \n" + help())
+            loggingModule.logger2.info(PUT_CORRECT_PARAM_TXT)
     if verbose:
         if text is not None:
             loggingModule.logger2.info(text)

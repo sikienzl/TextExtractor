@@ -7,7 +7,6 @@ import loggingModule
 
 
 def odt_txt(filename):
-    stderr = None
     try:
         process = subprocess.Popen(
             ['odt2txt', filename],

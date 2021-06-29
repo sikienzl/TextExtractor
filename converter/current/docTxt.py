@@ -8,7 +8,6 @@ import loggingModule
 
 
 def doc_txt(filename):
-    stderr = None
     try:
         process = subprocess.Popen(
             ['catdoc', '-w', filename],

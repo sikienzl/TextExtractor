@@ -31,14 +31,14 @@ def process(path):
         loggingModule.logger3.debug('End text extract')
         if extension[-1] != "rtf":
             try:
-                encodedText = text.decode('utf-8', "strict")
+                encoded_text = text.decode('utf-8', "strict")
             except Exception as e:
                 loggingModule.logger3.error("Error 1: " + str(e) + " on path:" + str(path))
                 sys.exit(2)
         else:
-            rtfString = text.decode("windows-1252")
-            encodedText = rtfString.split('-' * 17 + '\n', 1)[-1]
-        return encodedText
+            rtf_string = text.decode("windows-1252")
+            encoded_text = rtf_string.split('-' * 17 + '\n', 1)[-1]
+        return encoded_text
     else:
         loggingModule.logger3.warning("Warning 1: File not exist: error \n")
         sys.exit(1)
