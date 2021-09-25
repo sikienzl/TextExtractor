@@ -17,3 +17,12 @@ We refer to the following book:
 *Bird, Steven, Edward Loper and Ewan Klein (2009), Natural Language Processing with Python. O’Reilly Media Inc.*
 
 The docx-module of the converter use [docx2txt](http://docx2txt.sourceforge.net/) and is distributed under the terms of the GPLv3.
+
+## Tested
+The following table shows you on which ubuntu versions the project is tested:
+
+| Version | Tested | 
+| ------- | ------ |
+| 16.04 Server   | :heavy_check_mark: |
+| 18.04 Server   | :heavy_check_mark: |
+| 20.04 Server   | :heavy_check_mark: |
