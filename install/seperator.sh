@@ -8,17 +8,17 @@ pathTar="seperator.tar"
 
 while true
    do
-	path=`dialog --inputbox "Wohin sollen die Seperator-Scripte installiert werden?" 0 0 3>&1 1>&2 2>&3`
+	path=`dialog --inputbox "Where should the seperator scripts be installed?" 0 0 3>&1 1>&2 2>&3`
 	respose=$?
 	case $respose in
 	  0)
 
 	if [ ! -d $path ] ; then
-		dialog --title "Create Path" --yesno "Soll Pfad erstellt werden?" 15 60
+		dialog --title "Create Path" --yesno "Should path be created?" 15 60
 		antwort=$?
 		case $antwort in
 			0)
-				dialog --backtitle Pfad --title Erstellen --msgbox "Pfad wird erstellt!" 15 40
+				dialog --backtitle "Path" --title "Create" --msgbox "Path is created!" 15 40
 				touch tmpSeperator.txt
 				echo $path > tmpSeperator.txt
 				mkdir $path
