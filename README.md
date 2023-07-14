@@ -1,5 +1,6 @@
-# Teamproject  
+# TextExtractor  
 -------------
+[![CodeQL](https://github.com/sikienzl/TextExtractor/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/sikienzl/TextExtractor/actions/workflows/codeql-analysis.yml)
 
 This project contains python-modules to
   * extract text from different formats (\*\.doc, \*\.docx, \*\.odt, \*\.pdf, \*\.rtf) 
